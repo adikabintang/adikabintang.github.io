@@ -4,8 +4,7 @@
 First name: Adika <br />
 Middle name: Bintang <br />
 Last name: Sulaeman <br />
-e-mail: (first name).(middle name).(first letter of last name)@gmail.com <br />
-The e-mail does not use ()
+e-mail: adika DOT bintang DOT s AT gmail DOT com  (replace " DOT " with "." and " AT " with "@")<br /> 
 
 ### Current Place of Work
 Aalto University <br />
