@@ -1,0 +1,32 @@
+<h1 id="part-1">Part 1</h1>
+<ul>
+  <li>Create a HTTP2 server and client</li>
+  <li>GET, POST, PUT</li>
+  <li>upload image</li>
+  <li>get json</li>
+  <li>receive notification with server push</li>
+</ul>
+
+<h1 id="part-2">part 2</h1>
+<p>select 2 of 4 features: flow control, stream priority, multiplexing, and server push.
+analyze its:</p>
+<ul>
+  <li>the day of data transmissions</li>
+  <li>amount of traffic</li>
+  <li>throughput</li>
+  <li>latency</li>
+</ul>
+
+<p>Use wireshark and other tools needed. Repeat the experiment &gt; 3 times.
+Instructions of how to compare in the experiment:</p>
+<ul>
+  <li>HTTP1.1 vs HTTP2
+or</li>
+  <li>HTTP2 with features enabled/disabled (for example, disabling/enabling multiplexing)</li>
+</ul>
+
+<h1 id="notes">Notes</h1>
+<p>https://jimshaver.net/2015/02/11/decrypting-tls-browser-traffic-with-wireshark-the-easy-way/
+how to get the sslkeylog
+export SSLKEYLOGFILE=$HOME/sslkeylog.log
+then open firefox/google-chrome from the same terminal</p>

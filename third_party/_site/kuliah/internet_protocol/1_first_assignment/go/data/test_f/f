@@ -1,0 +1,11 @@
+Wireshark SSL debug log 
+
+Wireshark version: 2.6.6 (v2.6.6)
+GnuTLS version:    3.6.5
+Libgcrypt version: 1.8.4
+
+KeyID[20]:
+| a7 7f 79 ea 3e 74 a3 b9 aa 3e 78 36 32 ac 48 ab |..y.>t...>x62.H.|
+| 80 04 1f 69                                     |...i            |
+ssl_init private key file /home/bintang/github_personal/kuliah/internet_protocol/1_first_assignment/go/plain/server.key successfully loaded.
+invalid ssl_init_port: 

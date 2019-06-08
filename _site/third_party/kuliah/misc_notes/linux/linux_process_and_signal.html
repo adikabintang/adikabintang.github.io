@@ -1,0 +1,98 @@
+<p>main tutorial: https://www.bogotobogo.com/Linux/linux_process_and_signals.php</p>
+
+<h1 id="process">Process</h1>
+<p><code class="highlighter-rouge">init</code> has PID 1 and it manages other processes in Linux. It starts when booting and stops when shutting down.</p>
+
+<h2 id="process-table">Process Table</h2>
+<p>Process table describes all the processes that are currently loaded. How to see: <code class="highlighter-rouge">ps</code>.</p>
+
+<h2 id="system-call">System Call</h2>
+<p>A system call is a controlled entry point into the kernel, allowing a process to request that the kernel performs some action for the process.</p>
+
+<h2 id="daemon-processes">Daemon Processes</h2>
+<p>A daemon a special-purpose process that is <em>long-lived</em> and <em>runs in background</em>.</p>
+
+<h2 id="c-program-make-a-new-process-with-system">C Program: make a new process with system()</h2>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">system</span><span class="p">(</span><span class="s">"ps aux"</span><span class="p">);</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"oi!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p>A call to <code class="highlighter-rouge">system()</code> is not so flexible.</p>
+
+<h2 id="c-program-make-a-new-process-with-exec">C Program: make a new process with exec()</h2>
+<p><code class="highlighter-rouge">exec</code> hands off execution of the running program to another. <em>The original program will no longer running after the new one is started</em>.</p>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">execlp</span><span class="p">(</span><span class="s">"ps"</span><span class="p">,</span> <span class="s">"ps"</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+    <span class="n">print</span><span class="p">(</span><span class="s">"oi"</span><span class="p">);</span> <span class="c1">// this will never be called
+</span><span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="c-program-make-a-new-process-with-fork-and-execv">C Program: make a new process with fork and execv</h2>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">pid_t</span> <span class="n">pid</span> <span class="o">=</span> <span class="n">fork</span><span class="p">();</span>
+    <span class="kt">int</span> <span class="n">pid_child</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">status</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">pid</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">"child</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+        <span class="n">execv</span><span class="p">(</span><span class="s">"ls"</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">else</span>
+    <span class="p">{</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">"parent %d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">pid</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"parent prints this line</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+    <span class="n">pid_child</span> <span class="o">=</span> <span class="n">wait</span><span class="p">(</span><span class="o">&amp;</span><span class="n">status</span><span class="p">);</span> <span class="c1">// it blocks the parent, wait for child process to finish
+</span><span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="zombie-process">Zombie Process</h2>
+<p>Zombie process happens when child has finished its execution, but the parent has not or does not call <code class="highlighter-rouge">wait</code> or send <code class="highlighter-rouge">SIGCHLD</code> signal to the child.</p>
+
+<p>As the child process has died, it does not consume much resource. However, it’s still on the process table. How to see:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ps aux | <span class="nb">grep </span>Z
+</code></pre></div></div>
+
+<p>The number of PID is limited. If zombie process takes all of the available unique PID, the system cannot launch new process.</p>
+
+<p>How to remove zombie process:</p>
+<ol>
+  <li><code class="highlighter-rouge">parent</code> must call <code class="highlighter-rouge">wait</code></li>
+  <li>Send SIGCHLD signal: <code class="highlighter-rouge">kill -s SIGCHLD child_pid</code></li>
+</ol>
+
+<h2 id="orphan-process">Orphan Process</h2>
+<p>Orphan process is a child process which is still running but the parent has died. When orphan process died, it will not become zombie since <code class="highlighter-rouge">init</code> process <code class="highlighter-rouge">wait</code> for it.</p>
+
+<h1 id="signals">Signals</h1>
+<p>Signal is a notification sent from the kernel to a process, a process to another process, or a process to itself.</p>
+
+<p>To stop a process, there are some signals that can be used. Reference: https://unix.stackexchange.com/questions/251195/difference-between-less-violent-kill-signal-hup-1-int-2-and-term-15</p>
+
+<p>They are SIGKILL, SIGINT, SIGTERM, SIGQUIT, SIGHUP. SIGKILL never fails to kill a running process, it <em>cannot be ignored or handled</em>. The process killed by SIGKILL does not have chance to react or dodge. The other signal can be catch and the process can be written to do something upon receiving these signals.</p>
+
+<h2 id="sigint">SIGINT</h2>
+<p><code class="highlighter-rouge">Ctrl + c</code> is one way to send this <code class="highlighter-rouge">kill -s SIGINT pid</code>. It says: “stop what this process is doing now and wait for further user input”.</p>
+
+<p>It’s the weakest signal to kill a process.</p>
+
+<h2 id="sigterm">SIGTERM</h2>
+<p>It tells the application to exit cleanly. The application might take time to save its state, free resources such as temporary files, etc. SIGTERM might be ignored for a while.</p>
+
+<p>It’s the normal kill signal.</p>
+
+<h2 id="sighup">SIGHUP</h2>
+<p>Hang up meaning: “end a telephone conversation by cutting the connection.” (source: just google “hang up meaning”)</p>
+
+<p>SIGHUP is automatically sent to applications running in a terminal when the user disconnects from that terminal.</p>
+
+<p>Example: run something foreground on terminal of a remote machine. We have disconnected to the network and thus so have the SSH. SIGHUP is sent.</p>
+
+<p>Harshness level: like SIGTERM.</p>
+
+<h2 id="sigquit">SIGQUIT</h2>
+<p>Kill the process now and left a core dump. It is used when something is <em>seriously wrong</em>.</p>

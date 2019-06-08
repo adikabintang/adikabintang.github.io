@@ -1,0 +1,49 @@
+<h1 id="notes-from-the-exercise-1">Notes from the exercise 1</h1>
+<h2 id="part-a">Part A</h2>
+<p>ssh cloud-user@infosec1.vikaa.fi -p 32957</p>
+
+<h2 id="part-b">Part B</h2>
+<p>For example:</p>
+
+<p>groupname: project2018</p>
+
+<p>name: alice, bob, carol</p>
+
+<h3 id="create-a-group-requires-sudo">Create a group (requires sudo)</h3>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>groupadd project2018
+</code></pre></div></div>
+<h3 id="delete-a-group-requires-sudo">Delete a group (requires sudo)</h3>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>groupdel project2018
+</code></pre></div></div>
+<h3 id="create-a-user-and-add-to-group-project2018-requires-sudo">Create a user and add to group project2018 (requires sudo)</h3>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>useradd -m alice -G project2018
+useradd -m bob -G project2018
+useradd -m carol -G project2018
+</code></pre></div></div>
+<h3 id="set-password-for-user-alice-bob-and-carol-requires-sudo">Set password for user alice, bob, and carol (requires sudo)</h3>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>passwd alice
+passwd bob
+passwd carol
+</code></pre></div></div>
+<h3 id="set-folder-ownership-of-homeproject-to-alice-and-group-project2018">Set folder ownership of $HOME/project to alice and group project2018</h3>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo chown -R alice:project2018 project/
+</code></pre></div></div>
+<h3 id="move-the-folder-project-from-homeproject-to-homealiceproject">Move the folder project from $HOME/project to /home/alice/project</h3>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo mv $HOME/project/ /home/alice/
+</code></pre></div></div>
+<h3 id="in-order-to-ls-to-be-able-to-execute-to-alice-from-another-user-set-this">In order to <code class="highlighter-rouge">ls</code> to be able to execute to alice from another user, set this</h3>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo chmod 701 /home/alice
+</code></pre></div></div>
+<h3 id="switch-user-to-alice">Switch user to <code class="highlighter-rouge">alice</code></h3>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>su - alice
+</code></pre></div></div>
+<h3 id="from-now-on-execute-these-as-alice">From now on, execute these as <code class="highlighter-rouge">alice</code></h3>
+<h4 id="only-the-members-of-project2018-can-view-and-write-the-projectcode-subdirectory-and-its-files">Only the members of project2018 can view and write the <code class="highlighter-rouge">project/code</code> subdirectory and its files</h4>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>chmod -R 771 project/code
+</code></pre></div></div>
+<h4 id="any-logged-in-user-can-run-the-project-demo-the-executable-file-is-called-projectcodepoc">Any logged-in user can run the project demo. The executable file is called <code class="highlighter-rouge">project/code/poc</code></h4>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>chmod 711 project/code/poc
+</code></pre></div></div>
+<h4 id="only-alice-who-is-the-project-manager-has-access-to-the-confidential-directory-and-its-contents">Only alice, who is the project manager, has access to the confidential directory and its contents</h4>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>chmod -R 700 confidential/
+</code></pre></div></div>

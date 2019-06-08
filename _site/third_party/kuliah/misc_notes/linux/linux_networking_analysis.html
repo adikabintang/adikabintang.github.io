@@ -1,0 +1,63 @@
+<p>Reading materials:
+https://medium.com/@oscar.eriks/case-study-network-bottlenecks-on-linux-part-1-the-nic-c24d62826a64
+https://medium.com/@oscar.eriks/case-study-network-bottlenecks-on-a-linux-server-part-2-the-kernel-88cf614aae70
+https://opensourceforu.com/2016/10/network-performance-monitoring/</p>
+
+<h1 id="introduction">Introduction</h1>
+<p>Packets start to drop. What happens?</p>
+
+<p>Problems could be in:</p>
+<ul>
+  <li>NIC</li>
+  <li>Soft interrupt issued by device driver</li>
+  <li>Kernel</li>
+  <li>Network/transport layer (IP, TCP, UDP, etc)</li>
+</ul>
+
+<h2 id="syn-recv-state">SYN-RECV state</h2>
+<p>TCP connection handshake:</p>
+<ul>
+  <li>Client sends SYN</li>
+  <li>Server sends SYNACK</li>
+  <li>Client sends ACK
+Then, TCP connection is established.</li>
+</ul>
+
+<p>SYN-RECV is a state when server does not receive ACK in TCP connection handshake.</p>
+
+<p>In Linux, to know the number of SYN-RECV is to:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>netstat <span class="nt">-an</span> | <span class="nb">grep</span> <span class="nt">-c</span> SYN_RECV
+</code></pre></div></div>
+<p>If the result is 0, then all good.</p>
+
+<h2 id="nic-ring-buffer">NIC Ring Buffer</h2>
+<p>NIC Ring Buffer is the temporary storage to receive packets.</p>
+
+<p>To check ring buffer size:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ethtool <span class="nt">-g</span> nameofdevicering
+</code></pre></div></div>
+
+<p>A very rough idea of how the system receive packets:</p>
+<ul>
+  <li>Packets fill the NIC ring buffer</li>
+  <li>NIC driver then give interrupts to the kernel</li>
+  <li>After receiving the interrupt, the data from the ring buffer will be moved to RAM in socket receive buffer</li>
+</ul>
+
+<h2 id="socket-receive-buffer">Socket Receive Buffer</h2>
+<h3 id="collapsing">Collapsing</h3>
+<p>Collaping: when the kernel socket buffer is nearing its’ max size, the kernel tries to identify segment in the buffer that has identical metadata, and tries to combin them, so as to not have identical metadata filling up the buffer.</p>
+
+<h3 id="pruning">Pruning</h3>
+<p>Pruning: when no more collaping can happen, the kernel drops new packets since they cannot fit in the buffer.</p>
+
+<p>To monitor collapsing and pruning:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>netstat <span class="nt">-s</span> | <span class="nb">grep</span> <span class="nt">-P</span> <span class="s2">"(collapse|prune)"</span>
+
+<span class="c"># example output:</span>
+<span class="c"># 26 packets pruned from receive queue because of socket buffer overrun</span>
+</code></pre></div></div>
+
+<p>To check the size of read/write buffer:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sysctl <span class="nt">-a</span> | <span class="nb">grep</span> <span class="nt">-P</span> <span class="s2">"tcp_(r|w)mem"</span>
+</code></pre></div></div>
