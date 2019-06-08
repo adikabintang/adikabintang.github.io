@@ -1,857 +1,195 @@
-
-<p>&lt;!DOCTYPE html&gt;</p>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-  <link rel="dns-prefetch" href="https://github.githubassets.com" />
-  <link rel="dns-prefetch" href="https://avatars0.githubusercontent.com" />
-  <link rel="dns-prefetch" href="https://avatars1.githubusercontent.com" />
-  <link rel="dns-prefetch" href="https://avatars2.githubusercontent.com" />
-  <link rel="dns-prefetch" href="https://avatars3.githubusercontent.com" />
-  <link rel="dns-prefetch" href="https://github-cloud.s3.amazonaws.com" />
-  <link rel="dns-prefetch" href="https://user-images.githubusercontent.com/" />
-
-
-
-  <link crossorigin="anonymous" media="all" integrity="sha512-dsqgdBtnWun6oxDg9q1xezEyITXQ8QsMdFm+JDoDk6Tzx9AEE1XcUEhWff/M2Jv85ucTVJCjp/2fGbh6Omtrgg==" rel="stylesheet" href="https://github.githubassets.com/assets/frameworks-41c2037bf12f1e46d8f08b88a04a8d8f.css" />
-  <link crossorigin="anonymous" media="all" integrity="sha512-MRlTIqIyb8caK5+o8llXVntXovciHyAM4qE3kWU2S7SIjAPDxYp4mE0jQp4kP5UYegy+lG9y1I6VlsdzEjb5Qw==" rel="stylesheet" href="https://github.githubassets.com/assets/site-294181adec18ed639e160b96b45d17ac.css" />
-    <link crossorigin="anonymous" media="all" integrity="sha512-N0NZLkSd21eXjfu+zpDlQOCbmS3w9u5AreUtPHhwW+kF1yD/8r6SDo5aIoCjRrXfkTZ2QoX55ImI/70nZ0+UVg==" rel="stylesheet" href="https://github.githubassets.com/assets/github-e3bff23d54e12a76d66b61023f1c8796.css" />
-    
-    
-    
-    
-
-  <meta name="viewport" content="width=device-width" />
-  
-  <title>kuliah/linux_command.md at master · adikabintang/kuliah · GitHub</title>
-    <meta name="description" content="ncrooot. Contribute to adikabintang/kuliah development by creating an account on GitHub." />
-    <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub" />
-  <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub" />
-  <meta property="fb:app_id" content="1401488693436528" />
-
-    <meta name="twitter:image:src" content="https://avatars0.githubusercontent.com/u/5829707?s=400&amp;v=4" /><meta name="twitter:site" content="@github" /><meta name="twitter:card" content="summary" /><meta name="twitter:title" content="adikabintang/kuliah" /><meta name="twitter:description" content="ncrooot. Contribute to adikabintang/kuliah development by creating an account on GitHub." />
-    <meta property="og:image" content="https://avatars0.githubusercontent.com/u/5829707?s=400&amp;v=4" /><meta property="og:site_name" content="GitHub" /><meta property="og:type" content="object" /><meta property="og:title" content="adikabintang/kuliah" /><meta property="og:url" content="https://github.com/adikabintang/kuliah" /><meta property="og:description" content="ncrooot. Contribute to adikabintang/kuliah development by creating an account on GitHub." />
-
-  <link rel="assets" href="https://github.githubassets.com/" />
-  
-  <meta name="pjax-timeout" content="1000" />
-  
-  <meta name="request-id" content="9E80:89C1:1F93FBB:300A6AA:5CFC39BB" data-pjax-transient="" />
-
-
-  
-
-  <meta name="selected-link" value="repo_source" data-pjax-transient="" />
-
-      <meta name="google-site-verification" content="KT5gs8h0wvaagLKAVWq8bbeNwnZZK1r1XQysX3xurLU" />
-    <meta name="google-site-verification" content="ZzhVyEFwb7w3e0-uOTltm8Jsck2F5StVihD0exw2fsA" />
-    <meta name="google-site-verification" content="GXs5KoUUkNCoaAZn7wPN-t01Pywp9M3sEjnt_3_ZWPc" />
-
-  <meta name="octolytics-host" content="collector.githubapp.com" /><meta name="octolytics-app-id" content="github" /><meta name="octolytics-event-url" content="https://collector.githubapp.com/github-external/browser_event" /><meta name="octolytics-dimension-request_id" content="9E80:89C1:1F93FBB:300A6AA:5CFC39BB" /><meta name="octolytics-dimension-region_edge" content="ams" /><meta name="octolytics-dimension-region_render" content="iad" />
-<meta name="analytics-location" content="/&lt;user-name&gt;/&lt;repo-name&gt;/blob/show" data-pjax-transient="true" />
-
-
-
-    <meta name="google-analytics" content="UA-3769691-2" />
-
-
-<meta class="js-ga-set" name="dimension1" content="Logged Out" />
-
-
-
-  
-
-      <meta name="hostname" content="github.com" />
-    <meta name="user-login" content="" />
-
-      <meta name="expected-hostname" content="github.com" />
-    <meta name="js-proxy-site-detection-payload" content="MWRkMDYxNDhkZTBjZDE2ZWIyZjBiY2FhYjFkNzkxNzQyZDI2ZjE5ZjUyZjMyNmRlY2VlMWUxMDZkZTc2OTcxNnx7InJlbW90ZV9hZGRyZXNzIjoiODQuMjQ4LjIxMy45MyIsInJlcXVlc3RfaWQiOiI5RTgwOjg5QzE6MUY5M0ZCQjozMDBBNkFBOjVDRkMzOUJCIiwidGltZXN0YW1wIjoxNTYwMDMzNzI0LCJob3N0IjoiZ2l0aHViLmNvbSJ9" />
-
-    <meta name="enabled-features" content="UNIVERSE_BANNER,MARKETPLACE_INVOICED_BILLING,MARKETPLACE_SOCIAL_PROOF_CUSTOMERS,MARKETPLACE_TRENDING_SOCIAL_PROOF,MARKETPLACE_RECOMMENDATIONS" />
-
-  <meta name="html-safe-nonce" content="e73260e4be53aa8764010a17eec0ebcfb7b5f6d9" />
-
-  <meta http-equiv="x-pjax-version" content="a4ec07076dcc2aec3fb6dbf0a15c362c" />
-  
-
-      <link href="https://github.com/adikabintang/kuliah/commits/master.atom" rel="alternate" title="Recent Commits to kuliah:master" type="application/atom+xml" />
-
-  <meta name="go-import" content="github.com/adikabintang/kuliah git https://github.com/adikabintang/kuliah.git" />
-
-  <meta name="octolytics-dimension-user_id" content="5829707" /><meta name="octolytics-dimension-user_login" content="adikabintang" /><meta name="octolytics-dimension-repository_id" content="148903180" /><meta name="octolytics-dimension-repository_nwo" content="adikabintang/kuliah" /><meta name="octolytics-dimension-repository_public" content="true" /><meta name="octolytics-dimension-repository_is_fork" content="false" /><meta name="octolytics-dimension-repository_network_root_id" content="148903180" /><meta name="octolytics-dimension-repository_network_root_nwo" content="adikabintang/kuliah" /><meta name="octolytics-dimension-repository_explore_github_marketplace_ci_cta_shown" content="false" />
-
-
-    <link rel="canonical" href="https://github.com/adikabintang/kuliah/blob/master/misc_notes/linux/linux_command.md" data-pjax-transient="" />
-
-
-  <meta name="browser-stats-url" content="https://api.github.com/_private/browser/stats" />
-
-  <meta name="browser-errors-url" content="https://api.github.com/_private/browser/errors" />
-
-  <link rel="mask-icon" href="https://github.githubassets.com/pinned-octocat.svg" color="#000000" />
-  <link rel="icon" type="image/x-icon" class="js-site-favicon" href="https://github.githubassets.com/favicon.ico" />
-
-<meta name="theme-color" content="#1e2327" />
-
-
-
-
-
-  <link rel="manifest" href="/manifest.json" crossorigin="use-credentials" />
-
-  </head>
-
-  <body class="logged-out env-production page-responsive page-blob">
-    
-
-  <div class="position-relative js-header-wrapper ">
-    <a href="#start-of-content" tabindex="1" class="px-2 py-4 bg-blue text-white show-on-focus js-skip-to-content">Skip to content</a>
-    <div id="js-pjax-loader-bar" class="pjax-loader-bar"><div class="progress"></div></div>
-
-    
-    
-    
-
-
-        <header class="Header-old header-logged-out js-details-container Details position-relative f4 py-2" role="banner">
-  <div class="container-lg d-lg-flex flex-items-center p-responsive">
-    <div class="d-flex flex-justify-between flex-items-center">
-        <a class="mr-4" href="https://github.com/" aria-label="Homepage" data-ga-click="(Logged out) Header, go to homepage, icon:logo-wordmark">
-          <svg height="32" class="octicon octicon-mark-github text-white" viewBox="0 0 16 16" version="1.1" width="32" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z" /></svg>
-        </a>
-
-          <div class="d-lg-none css-truncate css-truncate-target width-fit p-2">
-            
-              <svg class="octicon octicon-repo" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z" /></svg>
-    <a class="Header-link" href="/adikabintang">adikabintang</a>
-    /
-    <a class="Header-link" href="/adikabintang/kuliah">kuliah</a>
-
-
-          </div>
-
-        <div class="d-flex flex-items-center">
-            <a href="/join?source=header-repo" class="d-inline-block d-lg-none f5 text-white no-underline border border-gray-dark rounded-2 px-2 py-1 mr-3 mr-sm-5" data-hydro-click="{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;site header&quot;,&quot;repository_id&quot;:null,&quot;auth_type&quot;:&quot;SIGN_UP&quot;,&quot;client_id&quot;:null,&quot;originating_request_id&quot;:&quot;9E80:89C1:1F93FBB:300A6AA:5CFC39BB&quot;,&quot;originating_url&quot;:&quot;https://github.com/adikabintang/kuliah/blob/master/misc_notes/linux/linux_command.md&quot;,&quot;referrer&quot;:null,&quot;user_id&quot;:null}}" data-hydro-click-hmac="62c8aca7361c5c66bc6b027a5916a86e2dc50b0461302eb339a768b9c1c2a3e1" data-ga-click="(Logged out) Header, clicked Sign up, text:sign-up">
-              Sign&nbsp;up
-            </a>
-
-          <button class="btn-link d-lg-none mt-1 js-details-target" type="button" aria-label="Toggle navigation" aria-expanded="false">
-            <svg height="24" class="octicon octicon-three-bars text-white" viewBox="0 0 12 16" version="1.1" width="18" aria-hidden="true"><path fill-rule="evenodd" d="M11.41 9H.59C0 9 0 8.59 0 8c0-.59 0-1 .59-1H11.4c.59 0 .59.41.59 1 0 .59 0 1-.59 1h.01zm0-4H.59C0 5 0 4.59 0 4c0-.59 0-1 .59-1H11.4c.59 0 .59.41.59 1 0 .59 0 1-.59 1h.01zM.59 11H11.4c.59 0 .59.41.59 1 0 .59 0 1-.59 1H.59C0 13 0 12.59 0 12c0-.59 0-1 .59-1z" /></svg>
-          </button>
-        </div>
-    </div>
-
-    <div class="HeaderMenu HeaderMenu--logged-out position-fixed top-0 right-0 bottom-0 height-fit position-lg-relative d-lg-flex flex-justify-between flex-items-center flex-auto">
-      <div class="d-flex d-lg-none flex-justify-end border-bottom bg-gray-light p-3">
-        <button class="btn-link js-details-target" type="button" aria-label="Toggle navigation" aria-expanded="false">
-          <svg height="24" class="octicon octicon-x text-gray" viewBox="0 0 12 16" version="1.1" width="18" aria-hidden="true"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z" /></svg>
-        </button>
-      </div>
-
-        <nav class="mt-0 px-3 px-lg-0 mb-5 mb-lg-0" aria-label="Global">
-          <ul class="d-lg-flex list-style-none">
-              <li class="d-block d-lg-flex flex-lg-nowrap flex-lg-items-center border-bottom border-lg-bottom-0 mr-0 mr-lg-3 edge-item-fix position-relative flex-wrap flex-justify-between d-flex flex-items-center ">
-                <details class="HeaderMenu-details details-overlay details-reset width-full">
-                  <summary class="HeaderMenu-summary HeaderMenu-link px-0 py-3 border-0 no-wrap d-block d-lg-inline-block">
-                    Why GitHub?
-                    <svg x="0px" y="0px" viewBox="0 0 14 8" xml:space="preserve" fill="none" class="icon-chevon-down-mktg position-absolute position-lg-relative">
-                      <path d="M1,1l6.2,6L13,1"></path>
-                    </svg>
-                  </summary>
-                  <div class="dropdown-menu flex-auto rounded-1 bg-white px-0 mt-0 pb-4 p-lg-4 position-relative position-lg-absolute left-0 left-lg-n4">
-                    <a href="/features" class="py-2 lh-condensed-ultra d-block link-gray-dark no-underline h5 Bump-link--hover" data-ga-click="(Logged out) Header, go to Features">Features <span class="Bump-link-symbol float-right text-normal text-gray-light">&rarr;</span></a>
-                    <ul class="list-style-none f5 pb-3">
-                      <li class="edge-item-fix"><a href="/features/code-review/" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Code review">Code review</a></li>
-                      <li class="edge-item-fix"><a href="/features/project-management/" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Project management">Project management</a></li>
-                      <li class="edge-item-fix"><a href="/features/integrations" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Integrations">Integrations</a></li>
-                      <li class="edge-item-fix"><a href="/features/actions" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Actions">Actions</a>
-                          <li class="edge-item-fix"><a href="/features/package-registry" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Package Registry">Package registry</a>
-                      <li class="edge-item-fix"><a href="/features#team-management" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Team management">Team management</a></li>
-                      <li class="edge-item-fix"><a href="/features#social-coding" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Social coding">Social coding</a></li>
-                      <li class="edge-item-fix"><a href="/features#documentation" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Documentation">Documentation</a></li>
-                      <li class="edge-item-fix"><a href="/features#code-hosting" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Code hosting">Code hosting</a></li>
-                    &lt;/ul&gt;
-
-                    <ul class="list-style-none mb-0 border-lg-top pt-lg-3">
-                      <li class="edge-item-fix"><a href="/customer-stories" class="py-2 lh-condensed-ultra d-block no-underline link-gray-dark no-underline h5 Bump-link--hover" data-ga-click="(Logged out) Header, go to Customer stories">Customer stories <span class="Bump-link-symbol float-right text-normal text-gray-light">&rarr;</span></a></li>
-                      <li class="edge-item-fix"><a href="/security" class="py-2 lh-condensed-ultra d-block no-underline link-gray-dark no-underline h5 Bump-link--hover" data-ga-click="(Logged out) Header, go to Security">Security <span class="Bump-link-symbol float-right text-normal text-gray-light">&rarr;</span></a></li>
-                    </ul>
-                  &lt;/div&gt;
-                &lt;/details&gt;
-              </li>
-              <li class="border-bottom border-lg-bottom-0 mr-0 mr-lg-3">
-                <a href="/enterprise" class="HeaderMenu-link no-underline py-3 d-block d-lg-inline-block" data-ga-click="(Logged out) Header, go to Enterprise">Enterprise</a>
-              </li>
-
-              <li class="d-block d-lg-flex flex-lg-nowrap flex-lg-items-center border-bottom border-lg-bottom-0 mr-0 mr-lg-3 edge-item-fix position-relative flex-wrap flex-justify-between d-flex flex-items-center ">
-                <details class="HeaderMenu-details details-overlay details-reset width-full">
-                  <summary class="HeaderMenu-summary HeaderMenu-link px-0 py-3 border-0 no-wrap d-block d-lg-inline-block">
-                    Explore
-                    <svg x="0px" y="0px" viewBox="0 0 14 8" xml:space="preserve" fill="none" class="icon-chevon-down-mktg position-absolute position-lg-relative">
-                      <path d="M1,1l6.2,6L13,1"></path>
-                    </svg>
-                  </summary>
-
-                  <div class="dropdown-menu flex-auto rounded-1 bg-white px-0 pt-2 pb-0 mt-0 pb-4 p-lg-4 position-relative position-lg-absolute left-0 left-lg-n4">
-                    <ul class="list-style-none mb-3">
-                      <li class="edge-item-fix"><a href="/explore" class="py-2 lh-condensed-ultra d-block link-gray-dark no-underline h5 Bump-link--hover" data-ga-click="(Logged out) Header, go to Explore">Explore GitHub <span class="Bump-link-symbol float-right text-normal text-gray-light">&rarr;</span></a></li>
-                    </ul>
-
-                    <h4 class="text-gray-light text-normal text-mono f5 mb-2 border-lg-top pt-lg-3">Learn &amp; contribute</h4>
-                    <ul class="list-style-none mb-3">
-                      <li class="edge-item-fix"><a href="/topics" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Topics">Topics</a></li>
-                        <li class="edge-item-fix"><a href="/collections" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Collections">Collections</a></li>
-                      <li class="edge-item-fix"><a href="/trending" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Trending">Trending</a></li>
-                      <li class="edge-item-fix"><a href="https://lab.github.com/" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Learning lab">Learning Lab</a></li>
-                      <li class="edge-item-fix"><a href="https://opensource.guide" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Open source guides">Open source guides</a></li>
-                    </ul>
-
-                    <h4 class="text-gray-light text-normal text-mono f5 mb-2 border-lg-top pt-lg-3">Connect with others</h4>
-                    <ul class="list-style-none mb-0">
-                      <li class="edge-item-fix"><a href="https://github.com/events" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Events">Events</a></li>
-                      <li class="edge-item-fix"><a href="https://github.community" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Community forum">Community forum</a></li>
-                      <li class="edge-item-fix"><a href="https://education.github.com" class="py-2 pb-0 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to GitHub Education">GitHub Education</a></li>
-                    </ul>
-                  </div>
-                </details>
-              </li>
-
-              <li class="border-bottom border-lg-bottom-0 mr-0 mr-lg-3">
-                <a href="/marketplace" class="HeaderMenu-link no-underline py-3 d-block d-lg-inline-block" data-ga-click="(Logged out) Header, go to Marketplace">Marketplace</a>
-              </li>
-
-              <li class="d-block d-lg-flex flex-lg-nowrap flex-lg-items-center border-bottom border-lg-bottom-0 mr-0 mr-lg-3 edge-item-fix position-relative flex-wrap flex-justify-between d-flex flex-items-center ">
-                <details class="HeaderMenu-details details-overlay details-reset width-full">
-                  <summary class="HeaderMenu-summary HeaderMenu-link px-0 py-3 border-0 no-wrap d-block d-lg-inline-block">
-                    Pricing
-                    <svg x="0px" y="0px" viewBox="0 0 14 8" xml:space="preserve" fill="none" class="icon-chevon-down-mktg position-absolute position-lg-relative">
-                       <path d="M1,1l6.2,6L13,1"></path>
-                    </svg>
-                  </summary>
-
-                  <div class="dropdown-menu flex-auto rounded-1 bg-white px-0 pt-2 pb-4 mt-0 p-lg-4 position-relative position-lg-absolute left-0 left-lg-n4">
-                    <a href="/pricing" class="pb-2 lh-condensed-ultra d-block link-gray-dark no-underline h5 Bump-link--hover" data-ga-click="(Logged out) Header, go to Pricing">Plans <span class="Bump-link-symbol float-right text-normal text-gray-light">&rarr;</span></a>
-
-                    <ul class="list-style-none mb-3">
-                      <li class="edge-item-fix"><a href="/pricing#feature-comparison" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Compare plans">Compare plans</a></li>
-                      <li class="edge-item-fix"><a href="https://enterprise.github.com/contact" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Contact Sales">Contact Sales</a></li>
-                    </ul>
-
-                    <ul class="list-style-none mb-0 border-lg-top pt-lg-3">
-                      <li class="edge-item-fix"><a href="/nonprofit" class="py-2 lh-condensed-ultra d-block no-underline link-gray-dark no-underline h5 Bump-link--hover" data-ga-click="(Logged out) Header, go to Nonprofits">Nonprofit <span class="Bump-link-symbol float-right text-normal text-gray-light">&rarr;</span></a></li>
-                      <li class="edge-item-fix"><a href="https://education.github.com" class="py-2 pb-0 lh-condensed-ultra d-block no-underline link-gray-dark no-underline h5 Bump-link--hover" data-ga-click="(Logged out) Header, go to Education">Education <span class="Bump-link-symbol float-right text-normal text-gray-light">&rarr;</span></a></li>
-                    </ul>
-                  </div>
-                </details>
-              </li>
-          &lt;/ul&gt;
-        &lt;/nav&gt;
-
-      <div class="d-lg-flex flex-items-center px-3 px-lg-0 text-center text-lg-left">
-          <div class="d-lg-flex mb-3 mb-lg-0">
-            <div class="header-search flex-self-stretch flex-lg-self-auto mr-0 mr-lg-3 mb-3 mb-lg-0 scoped-search site-scoped-search js-site-search position-relative js-jump-to" role="combobox" aria-owns="jump-to-results" aria-label="Search or jump to" aria-haspopup="listbox" aria-expanded="false">
-  <div class="position-relative">
-    <!-- '"` --><!-- </textarea></xmp> -->&lt;/option&gt;&lt;/form&gt;<form class="js-site-search-form" role="search" aria-label="Site" data-scope-type="Repository" data-scope-id="148903180" data-scoped-search-url="/adikabintang/kuliah/search" data-unscoped-search-url="/search" action="/adikabintang/kuliah/search" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
-      <label class="form-control input-sm header-search-wrapper p-0 header-search-wrapper-jump-to position-relative d-flex flex-justify-between flex-items-center js-chromeless-input-container">
-        <input type="text" class="form-control input-sm header-search-input jump-to-field js-jump-to-field js-site-search-focus js-site-search-field is-clearable" data-hotkey="s,/" name="q" value="" placeholder="Search" data-unscoped-placeholder="Search GitHub" data-scoped-placeholder="Search" autocapitalize="off" aria-autocomplete="list" aria-controls="jump-to-results" aria-label="Search" data-jump-to-suggestions-path="/_graphql/GetSuggestedNavigationDestinations#csrf-token=n4W9TYXGTZkGKcx48qYbyCWylsHthvxlCBSKe+zCxesu7HO472fToU9tuTkyG0zJzhC+MKqrb9rxtLMKpkrBhQ==" spellcheck="false" autocomplete="off" />
-          <input type="hidden" class="js-site-search-type-field" name="type" />
-            <img src="https://github.githubassets.com/images/search-key-slash.svg" alt="" class="mr-2 header-search-key-slash" />
-
-            <div class="Box position-absolute overflow-hidden d-none jump-to-suggestions js-jump-to-suggestions-container">
-              
-<ul class="d-none js-jump-to-suggestions-template-container">
-  
-
-<li class="d-flex flex-justify-start flex-items-center p-0 f5 navigation-item js-navigation-item js-jump-to-suggestion" role="option">
-  <a tabindex="-1" class="no-underline d-flex flex-auto flex-items-center jump-to-suggestions-path js-jump-to-suggestion-path js-navigation-open p-2" href="">
-    <div class="jump-to-octicon js-jump-to-octicon flex-shrink-0 mr-2 text-center d-none">
-      <svg height="16" width="16" class="octicon octicon-repo flex-shrink-0 js-jump-to-octicon-repo d-none" title="Repository" aria-label="Repository" viewBox="0 0 12 16" version="1.1" role="img"><path fill-rule="evenodd" d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z" /></svg>
-      <svg height="16" width="16" class="octicon octicon-project flex-shrink-0 js-jump-to-octicon-project d-none" title="Project" aria-label="Project" viewBox="0 0 15 16" version="1.1" role="img"><path fill-rule="evenodd" d="M10 12h3V2h-3v10zm-4-2h3V2H6v8zm-4 4h3V2H2v12zm-1 1h13V1H1v14zM14 0H1a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h13a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1z" /></svg>
-      <svg height="16" width="16" class="octicon octicon-search flex-shrink-0 js-jump-to-octicon-search d-none" title="Search" aria-label="Search" viewBox="0 0 16 16" version="1.1" role="img"><path fill-rule="evenodd" d="M15.7 13.3l-3.81-3.83A5.93 5.93 0 0 0 13 6c0-3.31-2.69-6-6-6S1 2.69 1 6s2.69 6 6 6c1.3 0 2.48-.41 3.47-1.11l3.83 3.81c.19.2.45.3.7.3.25 0 .52-.09.7-.3a.996.996 0 0 0 0-1.41v.01zM7 10.7c-2.59 0-4.7-2.11-4.7-4.7 0-2.59 2.11-4.7 4.7-4.7 2.59 0 4.7 2.11 4.7 4.7 0 2.59-2.11 4.7-4.7 4.7z" /></svg>
-    </div>
-
-    <img class="avatar mr-2 flex-shrink-0 js-jump-to-suggestion-avatar d-none" alt="" aria-label="Team" src="" width="28" height="28" />
-
-    <div class="jump-to-suggestion-name js-jump-to-suggestion-name flex-auto overflow-hidden text-left no-wrap css-truncate css-truncate-target">
-    </div>
-
-    <div class="border rounded-1 flex-shrink-0 bg-gray px-1 text-gray-light ml-1 f6 d-none js-jump-to-badge-search">
-      <span class="js-jump-to-badge-search-text-default d-none" aria-label="in this repository">
-        In this repository
-      </span>
-      <span class="js-jump-to-badge-search-text-global d-none" aria-label="in all of GitHub">
-        All GitHub
-      </span>
-      <span aria-hidden="true" class="d-inline-block ml-1 v-align-middle">↵</span>
-    </div>
-
-    <div aria-hidden="true" class="border rounded-1 flex-shrink-0 bg-gray px-1 text-gray-light ml-1 f6 d-none d-on-nav-focus js-jump-to-badge-jump">
-      Jump to
-      <span class="d-inline-block ml-1 v-align-middle">↵</span>
-    </div>
-  </a>
-</li>
-
-</ul>
-
-<ul class="d-none js-jump-to-no-results-template-container">
-  <li class="d-flex flex-justify-center flex-items-center f5 d-none js-jump-to-suggestion p-2">
-    <span class="text-gray">No suggested jump to results</span>
-  </li>
-</ul>
-
-<ul id="jump-to-results" role="listbox" class="p-0 m-0 js-navigation-container jump-to-suggestions-results-container js-jump-to-suggestions-results-container">
-  
-
-<li class="d-flex flex-justify-start flex-items-center p-0 f5 navigation-item js-navigation-item js-jump-to-scoped-search d-none" role="option">
-  <a tabindex="-1" class="no-underline d-flex flex-auto flex-items-center jump-to-suggestions-path js-jump-to-suggestion-path js-navigation-open p-2" href="">
-    <div class="jump-to-octicon js-jump-to-octicon flex-shrink-0 mr-2 text-center d-none">
-      <svg height="16" width="16" class="octicon octicon-repo flex-shrink-0 js-jump-to-octicon-repo d-none" title="Repository" aria-label="Repository" viewBox="0 0 12 16" version="1.1" role="img"><path fill-rule="evenodd" d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z" /></svg>
-      <svg height="16" width="16" class="octicon octicon-project flex-shrink-0 js-jump-to-octicon-project d-none" title="Project" aria-label="Project" viewBox="0 0 15 16" version="1.1" role="img"><path fill-rule="evenodd" d="M10 12h3V2h-3v10zm-4-2h3V2H6v8zm-4 4h3V2H2v12zm-1 1h13V1H1v14zM14 0H1a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h13a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1z" /></svg>
-      <svg height="16" width="16" class="octicon octicon-search flex-shrink-0 js-jump-to-octicon-search d-none" title="Search" aria-label="Search" viewBox="0 0 16 16" version="1.1" role="img"><path fill-rule="evenodd" d="M15.7 13.3l-3.81-3.83A5.93 5.93 0 0 0 13 6c0-3.31-2.69-6-6-6S1 2.69 1 6s2.69 6 6 6c1.3 0 2.48-.41 3.47-1.11l3.83 3.81c.19.2.45.3.7.3.25 0 .52-.09.7-.3a.996.996 0 0 0 0-1.41v.01zM7 10.7c-2.59 0-4.7-2.11-4.7-4.7 0-2.59 2.11-4.7 4.7-4.7 2.59 0 4.7 2.11 4.7 4.7 0 2.59-2.11 4.7-4.7 4.7z" /></svg>
-    </div>
-
-    <img class="avatar mr-2 flex-shrink-0 js-jump-to-suggestion-avatar d-none" alt="" aria-label="Team" src="" width="28" height="28" />
-
-    <div class="jump-to-suggestion-name js-jump-to-suggestion-name flex-auto overflow-hidden text-left no-wrap css-truncate css-truncate-target">
-    </div>
-
-    <div class="border rounded-1 flex-shrink-0 bg-gray px-1 text-gray-light ml-1 f6 d-none js-jump-to-badge-search">
-      <span class="js-jump-to-badge-search-text-default d-none" aria-label="in this repository">
-        In this repository
-      </span>
-      <span class="js-jump-to-badge-search-text-global d-none" aria-label="in all of GitHub">
-        All GitHub
-      </span>
-      <span aria-hidden="true" class="d-inline-block ml-1 v-align-middle">↵</span>
-    </div>
-
-    <div aria-hidden="true" class="border rounded-1 flex-shrink-0 bg-gray px-1 text-gray-light ml-1 f6 d-none d-on-nav-focus js-jump-to-badge-jump">
-      Jump to
-      <span class="d-inline-block ml-1 v-align-middle">↵</span>
-    </div>
-  </a>
-</li>
-
-  
-
-<li class="d-flex flex-justify-start flex-items-center p-0 f5 navigation-item js-navigation-item js-jump-to-global-search d-none" role="option">
-  <a tabindex="-1" class="no-underline d-flex flex-auto flex-items-center jump-to-suggestions-path js-jump-to-suggestion-path js-navigation-open p-2" href="">
-    <div class="jump-to-octicon js-jump-to-octicon flex-shrink-0 mr-2 text-center d-none">
-      <svg height="16" width="16" class="octicon octicon-repo flex-shrink-0 js-jump-to-octicon-repo d-none" title="Repository" aria-label="Repository" viewBox="0 0 12 16" version="1.1" role="img"><path fill-rule="evenodd" d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z" /></svg>
-      <svg height="16" width="16" class="octicon octicon-project flex-shrink-0 js-jump-to-octicon-project d-none" title="Project" aria-label="Project" viewBox="0 0 15 16" version="1.1" role="img"><path fill-rule="evenodd" d="M10 12h3V2h-3v10zm-4-2h3V2H6v8zm-4 4h3V2H2v12zm-1 1h13V1H1v14zM14 0H1a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h13a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1z" /></svg>
-      <svg height="16" width="16" class="octicon octicon-search flex-shrink-0 js-jump-to-octicon-search d-none" title="Search" aria-label="Search" viewBox="0 0 16 16" version="1.1" role="img"><path fill-rule="evenodd" d="M15.7 13.3l-3.81-3.83A5.93 5.93 0 0 0 13 6c0-3.31-2.69-6-6-6S1 2.69 1 6s2.69 6 6 6c1.3 0 2.48-.41 3.47-1.11l3.83 3.81c.19.2.45.3.7.3.25 0 .52-.09.7-.3a.996.996 0 0 0 0-1.41v.01zM7 10.7c-2.59 0-4.7-2.11-4.7-4.7 0-2.59 2.11-4.7 4.7-4.7 2.59 0 4.7 2.11 4.7 4.7 0 2.59-2.11 4.7-4.7 4.7z" /></svg>
-    </div>
-
-    <img class="avatar mr-2 flex-shrink-0 js-jump-to-suggestion-avatar d-none" alt="" aria-label="Team" src="" width="28" height="28" />
-
-    <div class="jump-to-suggestion-name js-jump-to-suggestion-name flex-auto overflow-hidden text-left no-wrap css-truncate css-truncate-target">
-    </div>
-
-    <div class="border rounded-1 flex-shrink-0 bg-gray px-1 text-gray-light ml-1 f6 d-none js-jump-to-badge-search">
-      <span class="js-jump-to-badge-search-text-default d-none" aria-label="in this repository">
-        In this repository
-      </span>
-      <span class="js-jump-to-badge-search-text-global d-none" aria-label="in all of GitHub">
-        All GitHub
-      </span>
-      <span aria-hidden="true" class="d-inline-block ml-1 v-align-middle">↵</span>
-    </div>
-
-    <div aria-hidden="true" class="border rounded-1 flex-shrink-0 bg-gray px-1 text-gray-light ml-1 f6 d-none d-on-nav-focus js-jump-to-badge-jump">
-      Jump to
-      <span class="d-inline-block ml-1 v-align-middle">↵</span>
-    </div>
-  </a>
-</li>
-
-
-</ul>
-
-            </div>
-      </label>
-</form>  </div>
-</div>
-
-          </div>
-
-        <a href="/login?return_to=%2Fadikabintang%2Fkuliah%2Fblob%2Fmaster%2Fmisc_notes%2Flinux%2Flinux_command.md" class="HeaderMenu-link no-underline mr-3" data-hydro-click="{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;site header menu&quot;,&quot;repository_id&quot;:null,&quot;auth_type&quot;:&quot;SIGN_UP&quot;,&quot;client_id&quot;:null,&quot;originating_request_id&quot;:&quot;9E80:89C1:1F93FBB:300A6AA:5CFC39BB&quot;,&quot;originating_url&quot;:&quot;https://github.com/adikabintang/kuliah/blob/master/misc_notes/linux/linux_command.md&quot;,&quot;referrer&quot;:null,&quot;user_id&quot;:null}}" data-hydro-click-hmac="fa6abb5dccfe7302fdf4a2e4e381098e50f4408e5f93fca1f867cb4afe87d5bb" data-ga-click="(Logged out) Header, clicked Sign in, text:sign-in">
-          Sign&nbsp;in
-        </a>
-          <a href="/join?source=header-repo" class="HeaderMenu-link d-inline-block no-underline border border-gray-dark rounded-1 px-2 py-1" data-hydro-click="{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;site header menu&quot;,&quot;repository_id&quot;:null,&quot;auth_type&quot;:&quot;SIGN_UP&quot;,&quot;client_id&quot;:null,&quot;originating_request_id&quot;:&quot;9E80:89C1:1F93FBB:300A6AA:5CFC39BB&quot;,&quot;originating_url&quot;:&quot;https://github.com/adikabintang/kuliah/blob/master/misc_notes/linux/linux_command.md&quot;,&quot;referrer&quot;:null,&quot;user_id&quot;:null}}" data-hydro-click-hmac="fa6abb5dccfe7302fdf4a2e4e381098e50f4408e5f93fca1f867cb4afe87d5bb" data-ga-click="(Logged out) Header, clicked Sign up, text:sign-up">
-            Sign&nbsp;up
-          </a>
-      </div>
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/header&gt;
-
-  &lt;/div&gt;
-
-  <div id="start-of-content" class="show-on-focus"></div>
-
-
-    <div id="js-flash-container">
-
-</div>
-
-
-
-  <div class="application-main " data-commit-hovercards-enabled="">
-        <div itemscope="" itemtype="http://schema.org/SoftwareSourceCode" class="">
-    <main>
-      
-
-
-  
-
-
-
-
-
-
-  <div class="pagehead repohead instapaper_ignore readability-menu experiment-repo-nav pt-0 pt-lg-4 ">
-    <div class="repohead-details-container clearfix container-lg p-responsive d-none d-lg-block">
-
-      <ul class="pagehead-actions">
-
-
-
-
-  <li>
-    
-  <a class="tooltipped tooltipped-s btn btn-sm btn-with-count" aria-label="You must be signed in to watch a repository" rel="nofollow" data-hydro-click="{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;notification subscription menu watch&quot;,&quot;repository_id&quot;:null,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;client_id&quot;:null,&quot;originating_request_id&quot;:&quot;9E80:89C1:1F93FBB:300A6AA:5CFC39BB&quot;,&quot;originating_url&quot;:&quot;https://github.com/adikabintang/kuliah/blob/master/misc_notes/linux/linux_command.md&quot;,&quot;referrer&quot;:null,&quot;user_id&quot;:null}}" data-hydro-click-hmac="2dd2d5bd74725517f087b7048af5216114b3579f474d42978de8dd1cd7e3a9bb" href="/login?return_to=%2Fadikabintang%2Fkuliah">
-    <svg class="octicon octicon-eye v-align-text-bottom" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8.06 2C3 2 0 8 0 8s3 6 8.06 6C13 14 16 8 16 8s-3-6-7.94-6zM8 12c-2.2 0-4-1.78-4-4 0-2.2 1.8-4 4-4 2.22 0 4 1.8 4 4 0 2.22-1.78 4-4 4zm2-4c0 1.11-.89 2-2 2-1.11 0-2-.89-2-2 0-1.11.89-2 2-2 1.11 0 2 .89 2 2z" /></svg>
-    Watch
-</a>    <a class="social-count" href="/adikabintang/kuliah/watchers" aria-label="1 user is watching this repository">
-      1
-    </a>
-
-  </li>
-
-  <li>
-        <a class="btn btn-sm btn-with-count tooltipped tooltipped-s" aria-label="You must be signed in to star a repository" rel="nofollow" data-hydro-click="{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:148903180,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;client_id&quot;:null,&quot;originating_request_id&quot;:&quot;9E80:89C1:1F93FBB:300A6AA:5CFC39BB&quot;,&quot;originating_url&quot;:&quot;https://github.com/adikabintang/kuliah/blob/master/misc_notes/linux/linux_command.md&quot;,&quot;referrer&quot;:null,&quot;user_id&quot;:null}}" data-hydro-click-hmac="15d49e3c94008b9747c4a0876f338ceb3a121ae8eb044a8515a48546c25ddf31" href="/login?return_to=%2Fadikabintang%2Fkuliah">
-      <svg class="octicon octicon-star v-align-text-bottom" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z" /></svg>
-      Star
-</a>
-    <a class="social-count js-social-count" href="/adikabintang/kuliah/stargazers" aria-label="0 users starred this repository">
-      0
-    </a>
-
-  </li>
-
-  <li>
-      <a class="btn btn-sm btn-with-count tooltipped tooltipped-s" aria-label="You must be signed in to fork a repository" rel="nofollow" data-hydro-click="{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;repo details fork button&quot;,&quot;repository_id&quot;:148903180,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;client_id&quot;:null,&quot;originating_request_id&quot;:&quot;9E80:89C1:1F93FBB:300A6AA:5CFC39BB&quot;,&quot;originating_url&quot;:&quot;https://github.com/adikabintang/kuliah/blob/master/misc_notes/linux/linux_command.md&quot;,&quot;referrer&quot;:null,&quot;user_id&quot;:null}}" data-hydro-click-hmac="49cfc9d38d70ad4893d38f8cb2f8b15d4d21ef2d4b570b3c1746217bd11e8439" href="/login?return_to=%2Fadikabintang%2Fkuliah">
-        <svg class="octicon octicon-repo-forked v-align-text-bottom" viewBox="0 0 10 16" version="1.1" width="10" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1a1.993 1.993 0 0 0-1 3.72V6L5 8 3 6V4.72A1.993 1.993 0 0 0 2 1a1.993 1.993 0 0 0-1 3.72V6.5l3 3v1.78A1.993 1.993 0 0 0 5 15a1.993 1.993 0 0 0 1-3.72V9.5l3-3V4.72A1.993 1.993 0 0 0 8 1zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3 10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3-10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z" /></svg>
-        Fork
-</a>
-    <a href="/adikabintang/kuliah/network/members" class="social-count" aria-label="0 users forked this repository">
-      0
-    </a>
-  </li>
-</ul>
-
-      <h1 class="public ">
-    <svg class="octicon octicon-repo" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z" /></svg>
-  <span class="author" itemprop="author"><a class="url fn" rel="author" data-hovercard-type="user" data-hovercard-url="/hovercards?user_id=5829707" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="/adikabintang">adikabintang</a></span><!--
---><span class="path-divider">/</span><!--
---><strong itemprop="name"><a data-pjax="#js-repo-pjax-container" href="/adikabintang/kuliah">kuliah</a></strong>
-  
-
-</h1>
-
-    </div>
-    
-<nav class="hx_reponav reponav js-repo-nav js-sidenav-container-pjax container-lg p-responsive d-none d-lg-block" itemscope="" itemtype="http://schema.org/BreadcrumbList" aria-label="Repository" data-pjax="#js-repo-pjax-container">
-
-  <span itemscope="" itemtype="http://schema.org/ListItem" itemprop="itemListElement">
-    <a class="js-selected-navigation-item selected reponav-item" itemprop="url" data-hotkey="g c" aria-current="page" data-selected-links="repo_source repo_downloads repo_commits repo_releases repo_tags repo_branches repo_packages /adikabintang/kuliah" href="/adikabintang/kuliah">
-      <svg class="octicon octicon-code" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M9.5 3L8 4.5 11.5 8 8 11.5 9.5 13 14 8 9.5 3zm-5 0L0 8l4.5 5L6 11.5 2.5 8 6 4.5 4.5 3z" /></svg>
-      <span itemprop="name">Code</span>
-      <meta itemprop="position" content="1" />
-</a>  </span>
-
-    <span itemscope="" itemtype="http://schema.org/ListItem" itemprop="itemListElement">
-      <a itemprop="url" data-hotkey="g i" class="js-selected-navigation-item reponav-item" data-selected-links="repo_issues repo_labels repo_milestones /adikabintang/kuliah/issues" href="/adikabintang/kuliah/issues">
-        <svg class="octicon octicon-issue-opened" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z" /></svg>
-        <span itemprop="name">Issues</span>
-        <span class="Counter">0</span>
-        <meta itemprop="position" content="2" />
-</a>    </span>
-
-  <span itemscope="" itemtype="http://schema.org/ListItem" itemprop="itemListElement">
-    <a data-hotkey="g p" itemprop="url" class="js-selected-navigation-item reponav-item" data-selected-links="repo_pulls checks /adikabintang/kuliah/pulls" href="/adikabintang/kuliah/pulls">
-      <svg class="octicon octicon-git-pull-request" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M11 11.28V5c-.03-.78-.34-1.47-.94-2.06C9.46 2.35 8.78 2.03 8 2H7V0L4 3l3 3V4h1c.27.02.48.11.69.31.21.2.3.42.31.69v6.28A1.993 1.993 0 0 0 10 15a1.993 1.993 0 0 0 1-3.72zm-1 2.92c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zM4 3c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v6.56A1.993 1.993 0 0 0 2 15a1.993 1.993 0 0 0 1-3.72V4.72c.59-.34 1-.98 1-1.72zm-.8 10c0 .66-.55 1.2-1.2 1.2-.65 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z" /></svg>
-      <span itemprop="name">Pull requests</span>
-      <span class="Counter">0</span>
-      <meta itemprop="position" content="3" />
-</a>  </span>
-
-
-    <a data-hotkey="g b" class="js-selected-navigation-item reponav-item" data-selected-links="repo_projects new_repo_project repo_project /adikabintang/kuliah/projects" href="/adikabintang/kuliah/projects">
-      <svg class="octicon octicon-project" viewBox="0 0 15 16" version="1.1" width="15" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10 12h3V2h-3v10zm-4-2h3V2H6v8zm-4 4h3V2H2v12zm-1 1h13V1H1v14zM14 0H1a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h13a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1z" /></svg>
-      Projects
-      <span class="Counter">0</span>
-</a>
-
-
-    <a data-skip-pjax="true" class="js-selected-navigation-item reponav-item" data-selected-links="security alerts policy /adikabintang/kuliah/security/advisories" href="/adikabintang/kuliah/security/advisories">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" class="octicon" height="16px" width="16px">
-    <path fill-rule="evenodd" clip-rule="evenodd" d="M1 2l7-2 7 2v6.02C15 12.69 9.69 16 8 16c-1.69 0-7-3.31-7-7.98V2zm1 .75L8 1l6 1.75v5.268C14 12.104 9.45 15 8 15c-1.45 0-6-2.896-6-6.982V2.75z"></path>
-    <path d="M3 3.5L8 2v12c-1.207 0-5-2.482-5-5.985V3.5z"></path>
-</svg>
-
-      Security
-</a>
-    <a class="js-selected-navigation-item reponav-item" data-selected-links="repo_graphs repo_contributors dependency_graph pulse people /adikabintang/kuliah/pulse" href="/adikabintang/kuliah/pulse">
-      <svg class="octicon octicon-graph" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M16 14v1H0V0h1v14h15zM5 13H3V8h2v5zm4 0H7V3h2v10zm4 0h-2V6h2v7z" /></svg>
-      Insights
-</a>
-
-</nav>
-
-  <div class="reponav-wrapper reponav-small d-lg-none">
-  <nav class="reponav js-reponav text-center no-wrap" itemscope="" itemtype="http://schema.org/BreadcrumbList">
-
-    <span itemscope="" itemtype="http://schema.org/ListItem" itemprop="itemListElement">
-      <a class="js-selected-navigation-item selected reponav-item" itemprop="url" aria-current="page" data-selected-links="repo_source repo_downloads repo_commits repo_releases repo_tags repo_branches repo_packages /adikabintang/kuliah" href="/adikabintang/kuliah">
-        <span itemprop="name">Code</span>
-        <meta itemprop="position" content="1" />
-</a>    </span>
-
-      <span itemscope="" itemtype="http://schema.org/ListItem" itemprop="itemListElement">
-        <a itemprop="url" class="js-selected-navigation-item reponav-item" data-selected-links="repo_issues repo_labels repo_milestones /adikabintang/kuliah/issues" href="/adikabintang/kuliah/issues">
-          <span itemprop="name">Issues</span>
-          <span class="Counter">0</span>
-          <meta itemprop="position" content="2" />
-</a>      </span>
-
-    <span itemscope="" itemtype="http://schema.org/ListItem" itemprop="itemListElement">
-      <a itemprop="url" class="js-selected-navigation-item reponav-item" data-selected-links="repo_pulls checks /adikabintang/kuliah/pulls" href="/adikabintang/kuliah/pulls">
-        <span itemprop="name">Pull requests</span>
-        <span class="Counter">0</span>
-        <meta itemprop="position" content="3" />
-</a>    </span>
-
-      <span itemscope="" itemtype="http://schema.org/ListItem" itemprop="itemListElement">
-        <a itemprop="url" class="js-selected-navigation-item reponav-item" data-selected-links="repo_projects new_repo_project repo_project /adikabintang/kuliah/projects" href="/adikabintang/kuliah/projects">
-          <span itemprop="name">Projects</span>
-          <span class="Counter">0</span>
-          <meta itemprop="position" content="4" />
-</a>      </span>
-
-
-      <a itemprop="url" class="js-selected-navigation-item reponav-item" data-selected-links="security alerts policy /adikabintang/kuliah/security/advisories" href="/adikabintang/kuliah/security/advisories">
-        <span itemprop="name">Security</span>
-        <meta itemprop="position" content="6" />
-</a>
-      <a class="js-selected-navigation-item reponav-item" data-selected-links="pulse /adikabintang/kuliah/pulse" href="/adikabintang/kuliah/pulse">
-        Pulse
-</a>
-
-  </nav>
-</div>
-
-
-  </div>
-<div class="container-lg new-discussion-timeline experiment-repo-nav  p-responsive">
-  <div class="repository-content ">
-
-    
-    
-
-
-  
-    <a class="d-none js-permalink-shortcut" data-hotkey="y" href="/adikabintang/kuliah/blob/d123ef5f7fca2f793b87cf8bbcc0f71c1106302a/misc_notes/linux/linux_command.md">Permalink</a>
-
-    <!-- blob contrib key: blob_contributors:v21:b63f77feff0d4353038ab288c7fd0700 -->
-          <div class="signup-prompt-bg rounded-1">
-      <div class="signup-prompt p-4 text-center mb-4 rounded-1">
-        <div class="position-relative">
-          <!-- '"` --><!-- </textarea></xmp> -->&lt;/option&gt;&lt;/form&gt;<form action="/prompt_dismissals/signup" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="_method" value="put" /><input type="hidden" name="authenticity_token" value="YPu5wQK/rjopYdOP7a9tYXh3PYRZ9Y6PE5q5G4Mew4oHnzdYXsOUuMbh0OcOBwJyOCR/zL/VQ5PFfkHRn3aZyQ==" />
-            <button type="submit" class="position-absolute top-0 right-0 btn-link link-gray" data-ga-click="(Logged out) Sign up prompt, clicked Dismiss, text:dismiss">
-              Dismiss
-            </button>
-</form>          <h3 class="pt-2">Join GitHub today</h3>
-          <p class="col-6 mx-auto">GitHub is home to over 36 million developers working together to host and review code, manage projects, and build software together.</p>
-          <a class="btn btn-primary" data-hydro-click="{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;files signup prompt&quot;,&quot;repository_id&quot;:null,&quot;auth_type&quot;:&quot;SIGN_UP&quot;,&quot;client_id&quot;:null,&quot;originating_request_id&quot;:&quot;9E80:89C1:1F93FBB:300A6AA:5CFC39BB&quot;,&quot;originating_url&quot;:&quot;https://github.com/adikabintang/kuliah/blob/master/misc_notes/linux/linux_command.md&quot;,&quot;referrer&quot;:null,&quot;user_id&quot;:null}}" data-hydro-click-hmac="ba3dd3f364d21ab894e3e9e99af734e8dcde0182d0db0d8892cdc67813ad2e13" data-ga-click="(Logged out) Sign up prompt, clicked Sign up, text:sign-up" href="/join?source=prompt-blob-show">Sign up</a>
-        </div>
-      </div>
-    </div>
-
-
-    <div class="d-flex flex-items-start flex-shrink-0 mb-2 flex-column flex-md-row">
-      <span class="d-flex flex-justify-between width-full width-md-auto">
-        
-<details class="details-reset details-overlay select-menu branch-select-menu  hx_rsm" id="branch-select-menu">
-  <summary class="btn btn-sm select-menu-button css-truncate" data-hotkey="w" title="Switch branches or tags">
-    <i>Branch:</i>
-    <span class="css-truncate-target">master</span>
-  </summary>
-
-  <details-menu class="select-menu-modal hx_rsm-modal position-absolute" style="z-index: 99;" src="/adikabintang/kuliah/ref-list/master/misc_notes/linux/linux_command.md?source_action=show&amp;source_controller=blob" preload="">
-    <include-fragment class="select-menu-loading-overlay anim-pulse">
-      <svg height="32" class="octicon octicon-octoface" viewBox="0 0 16 16" version="1.1" width="32" aria-hidden="true"><path fill-rule="evenodd" d="M14.7 5.34c.13-.32.55-1.59-.13-3.31 0 0-1.05-.33-3.44 1.3-1-.28-2.07-.32-3.13-.32s-2.13.04-3.13.32c-2.39-1.64-3.44-1.3-3.44-1.3-.68 1.72-.26 2.99-.13 3.31C.49 6.21 0 7.33 0 8.69 0 13.84 3.33 15 7.98 15S16 13.84 16 8.69c0-1.36-.49-2.48-1.3-3.35zM8 14.02c-3.3 0-5.98-.15-5.98-3.35 0-.76.38-1.48 1.02-2.07 1.07-.98 2.9-.46 4.96-.46 2.07 0 3.88-.52 4.96.46.65.59 1.02 1.3 1.02 2.07 0 3.19-2.68 3.35-5.98 3.35zM5.49 9.01c-.66 0-1.2.8-1.2 1.78s.54 1.79 1.2 1.79c.66 0 1.2-.8 1.2-1.79s-.54-1.78-1.2-1.78zm5.02 0c-.66 0-1.2.79-1.2 1.78s.54 1.79 1.2 1.79c.66 0 1.2-.8 1.2-1.79s-.53-1.78-1.2-1.78z" /></svg>
-    </include-fragment>
-  </details-menu>
-</details>
-
-        <div class="BtnGroup flex-shrink-0 d-md-none">
-          <a href="/adikabintang/kuliah/find/master" class="js-pjax-capture-input btn btn-sm BtnGroup-item" data-pjax="" data-hotkey="t">
-            Find file
-          </a>
-          <clipboard-copy value="misc_notes/linux/linux_command.md" class="btn btn-sm BtnGroup-item">
-            Copy path
-          </clipboard-copy>
-        </div>
-      </span>
-      <h2 id="blob-path" class="breadcrumb flex-auto min-width-0 text-normal flex-md-self-center ml-md-2 mr-md-3 my-2 my-md-0">
-        <span class="js-repo-root text-bold"><span class="js-path-segment"><a data-pjax="true" href="/adikabintang/kuliah"><span>kuliah</span></a></span></span><span class="separator">/</span><span class="js-path-segment"><a data-pjax="true" href="/adikabintang/kuliah/tree/master/misc_notes"><span>misc_notes</span></a></span><span class="separator">/</span><span class="js-path-segment"><a data-pjax="true" href="/adikabintang/kuliah/tree/master/misc_notes/linux"><span>linux</span></a></span><span class="separator">/</span><strong class="final-path">linux_command.md</strong>
-      </h2>
-
-      <div class="BtnGroup flex-shrink-0 d-none d-md-inline-block">
-        <a href="/adikabintang/kuliah/find/master" class="js-pjax-capture-input btn btn-sm BtnGroup-item" data-pjax="" data-hotkey="t">
-          Find file
-        </a>
-        <clipboard-copy value="misc_notes/linux/linux_command.md" class="btn btn-sm BtnGroup-item">
-          Copy path
-        </clipboard-copy>
-      </div>
-    </div>
-
-
-
-    
-  <div class="Box Box--condensed d-flex flex-column flex-shrink-0">
-      <div class="Box-body d-flex flex-justify-between bg-blue-light flex-column flex-md-row flex-items-start flex-md-items-center">
-        <span class="pr-md-4 f6">
-          <a rel="author" data-skip-pjax="true" data-hovercard-type="user" data-hovercard-url="/hovercards?user_id=5829707" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="/adikabintang"><img class="avatar" src="https://avatars2.githubusercontent.com/u/5829707?s=40&amp;v=4" width="20" height="20" alt="@adikabintang" /></a>
-          <a class="text-bold link-gray-dark lh-default v-align-middle" rel="author" data-hovercard-type="user" data-hovercard-url="/hovercards?user_id=5829707" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="/adikabintang">adikabintang</a>
-            <span class="lh-default v-align-middle">
-              <a data-pjax="true" title="add c++ threads" class="link-gray" href="/adikabintang/kuliah/commit/33c4d4751774cc6a97e9f3a29076efc536a59e9b">add c++ threads</a>
-            </span>
-        </span>
-        <span class="d-inline-block flex-shrink-0 v-align-bottom f6 mt-2 mt-md-0">
-          <a class="pr-2 text-mono link-gray" href="/adikabintang/kuliah/commit/33c4d4751774cc6a97e9f3a29076efc536a59e9b" data-pjax="">33c4d47</a>
-          <relative-time datetime="2019-03-03T14:13:11Z">Mar 3, 2019</relative-time>
-        </span>
-      </div>
-
-    <div class="Box-body d-flex flex-items-center flex-auto f6 border-bottom-0 flex-wrap">
-      <details class="details-reset details-overlay details-overlay-dark lh-default text-gray-dark float-left mr-2" id="blob_contributors_box">
-        <summary class="btn-link" aria-haspopup="dialog">
-          <span><strong>1</strong> contributor</span>
-        </summary>
-        <details-dialog class="Box Box--overlay d-flex flex-column anim-fade-in fast" aria-label="Users who have contributed to this file" src="/adikabintang/kuliah/contributors/master/misc_notes/linux/linux_command.md/list" preload="">
-          <div class="Box-header">
-            <button class="Box-btn-octicon btn-octicon float-right" type="button" aria-label="Close dialog" data-close-dialog="">
-              <svg class="octicon octicon-x" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z" /></svg>
-            </button>
-            <h3 class="Box-title">
-              Users who have contributed to this file
-            </h3>
-          </div>
-          <include-fragment class="octocat-spinner my-3" aria-label="Loading..."></include-fragment>
-        </details-dialog>
-      </details>
-    </div>
-  </div>
-
-
-
-
-
-    <div class="Box mt-3 position-relative">
-      
-<div class="Box-header py-2 d-flex flex-column flex-shrink-0 flex-md-row flex-md-items-center">
-
-  <div class="text-mono f6 flex-auto pr-3 flex-order-2 flex-md-order-1 mt-2 mt-md-0">
-      570 lines (459 sloc)
-      <span class="file-info-divider"></span>
-    10.8 KB
-  </div>
-
-  <div class="d-flex py-1 py-md-0 flex-auto flex-order-1 flex-md-order-2 flex-sm-grow-0 flex-justify-between">
-
-    <div class="BtnGroup">
-      <a id="raw-url" class="btn btn-sm BtnGroup-item" href="/adikabintang/kuliah/raw/master/misc_notes/linux/linux_command.md">Raw</a>
-        <a class="btn btn-sm js-update-url-with-hash BtnGroup-item" data-hotkey="b" href="/adikabintang/kuliah/blame/master/misc_notes/linux/linux_command.md">Blame</a>
-      <a rel="nofollow" class="btn btn-sm BtnGroup-item" href="/adikabintang/kuliah/commits/master/misc_notes/linux/linux_command.md">History</a>
-    </div>
-
-
-    <div>
-
-          <button type="button" class="btn-octicon disabled tooltipped tooltipped-nw" aria-label="You must be signed in to make or propose changes">
-            <svg class="octicon octicon-pencil" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M0 12v3h3l8-8-3-3-8 8zm3 2H1v-2h1v1h1v1zm10.3-9.3L12 6 9 3l1.3-1.3a.996.996 0 0 1 1.41 0l1.59 1.59c.39.39.39 1.02 0 1.41z" /></svg>
-          </button>
-          <button type="button" class="btn-octicon btn-octicon-danger disabled tooltipped tooltipped-nw" aria-label="You must be signed in to make or propose changes">
-            <svg class="octicon octicon-trashcan" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M11 2H9c0-.55-.45-1-1-1H5c-.55 0-1 .45-1 1H2c-.55 0-1 .45-1 1v1c0 .55.45 1 1 1v9c0 .55.45 1 1 1h7c.55 0 1-.45 1-1V5c.55 0 1-.45 1-1V3c0-.55-.45-1-1-1zm-1 12H3V5h1v8h1V5h1v8h1V5h1v8h1V5h1v9zm1-10H2V3h9v1z" /></svg>
-          </button>
-    </div>
-  </div>
-</div>
-
-
-
-
-      
-  <div id="readme" class="Box-body readme blob instapaper_body js-code-block-container">
-    <article class="markdown-body entry-content p-3 p-md-6" itemprop="text"><h1><a id="user-content-contents" class="anchor" aria-hidden="true" href="#contents"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Contents</h1>
+<h1 id="contents">Contents</h1>
 <ul>
-<li><a href="#file">file</a></li>
-<li><a href="#find">find</a></li>
-<li><a href="#locate">locate</a></li>
-<li><a href="#grep">grep</a></li>
-<li><a href="#du">du</a></li>
-<li><a href="#df">df</a></li>
-<li><a href="#sort">sort</a></li>
-<li><a href="#wc">wc</a></li>
-<li><a href="#uptime">uptime</a></li>
-<li><a href="#whatis">whatis</a></li>
-<li><a href="#tee">tee</a></li>
-<li><a href="#sed">sed</a></li>
-<li><a href="#awk">awk</a></li>
-<li><a href="#read">read</a></li>
-<li><a href="#cut">cut</a></li>
-<li><a href="#tr">tr</a></li>
-<li><a href="#uniq">uniq</a></li>
-<li><a href="#xargs">xargs</a></li>
-<li><a href="#traceroute">traceroute</a></li>
-<li><a href="#dig">dig</a></li>
-<li><a href="#telnet">telnet</a></li>
-<li><a href="#netstat">netstat</a></li>
-<li><a href="#nmap">nmap</a></li>
-<li><a href="#Loops">Loops</a></li>
-<li><a href="#Conditional">Conditional</a></li>
-<li><a href="#Arithmethic">Arithmethic</a></li>
-<li><a href="#Array">Array</a></li>
-<li><a href="#Get">Get</a></li>
-<li><a href="#to">to</a></li>
+  <li><a href="#file">file</a></li>
+  <li><a href="#find">find</a></li>
+  <li><a href="#locate">locate</a></li>
+  <li><a href="#grep">grep</a></li>
+  <li><a href="#du">du</a></li>
+  <li><a href="#df">df</a></li>
+  <li><a href="#sort">sort</a></li>
+  <li><a href="#wc">wc</a></li>
+  <li><a href="#uptime">uptime</a></li>
+  <li><a href="#whatis">whatis</a></li>
+  <li><a href="#tee">tee</a></li>
+  <li><a href="#sed">sed</a></li>
+  <li><a href="#awk">awk</a></li>
+  <li><a href="#read">read</a></li>
+  <li><a href="#cut">cut</a></li>
+  <li><a href="#tr">tr</a></li>
+  <li><a href="#uniq">uniq</a></li>
+  <li><a href="#xargs">xargs</a></li>
+  <li><a href="#traceroute">traceroute</a></li>
+  <li><a href="#dig">dig</a></li>
+  <li><a href="#telnet">telnet</a></li>
+  <li><a href="#netstat">netstat</a></li>
+  <li><a href="#nmap">nmap</a></li>
+  <li><a href="#Loops">Loops</a></li>
+  <li><a href="#Conditional">Conditional</a></li>
+  <li><a href="#Arithmethic">Arithmethic</a></li>
+  <li><a href="#Array">Array</a></li>
+  <li><a href="#Get">Get</a></li>
+  <li><a href="#to">to</a></li>
 </ul>
-<h1><a id="user-content-really-basics" class="anchor" aria-hidden="true" href="#really-basics"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Really Basics</h1>
-<h2><a id="user-content-file" class="anchor" aria-hidden="true" href="#file"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>file</h2>
-<p><code>file</code> find out type of files.
+
+<h1 id="really-basics">Really Basics</h1>
+<h2 id="file">file</h2>
+<p><code class="highlighter-rouge">file</code> find out type of files.
 example</p>
-<div class="highlight highlight-source-shell"><pre>$ file test.xt
-<span class="pl-k">&gt;</span> test.txt: ASCII text</pre></div>
-<h2><a id="user-content-find" class="anchor" aria-hidden="true" href="#find"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>find</h2>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>file test.xt
+<span class="o">&gt;</span> test.txt: ASCII text
+</code></pre></div></div>
+
+<h2 id="find">find</h2>
 <p>find files. Example:</p>
-<pre><code>find -type f -name main.c      ( f for files, d for dir )
-</code></pre>
-<h2><a id="user-content-locate" class="anchor" aria-hidden="true" href="#locate"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>locate</h2>
-<p>like files, but not search in the filesystem. it looks to updatedb. pros: faster than <code>find</code>. cons: not as consistent as <code>find</code>, especially when there is a change in the filesystem.
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>find -type f -name main.c      ( f for files, d for dir )
+</code></pre></div></div>
+
+<h2 id="locate">locate</h2>
+<p>like files, but not search in the filesystem. it looks to updatedb. pros: faster than <code class="highlighter-rouge">find</code>. cons: not as consistent as <code class="highlighter-rouge">find</code>, especially when there is a change in the filesystem.
 example:</p>
-<pre><code>locate main.c (will look every file containing main.c, like `grep main.c`)
-</code></pre>
-<h2><a id="user-content-grep" class="anchor" aria-hidden="true" href="#grep"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>grep</h2>
-<p><a href="https://www.thegeekstuff.com/2009/03/15-practical-unix-grep-command-examples/" rel="nofollow">https://www.thegeekstuff.com/2009/03/15-practical-unix-grep-command-examples/</a></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>locate main.c (will look every file containing main.c, like `grep main.c`)
+</code></pre></div></div>
+
+<h2 id="grep">grep</h2>
+<p>https://www.thegeekstuff.com/2009/03/15-practical-unix-grep-command-examples/</p>
+
 <p>Examples:</p>
-<div class="highlight highlight-source-shell"><pre>$ cat demo_file
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">cat </span>demo_file
 THIS LINE IS THE 1ST UPPER CASE LINE IN THIS FILE.
-this line is the 1st lower <span class="pl-k">case</span> line <span class="pl-k">in</span> this file.
+this line is the 1st lower <span class="k">case</span> line <span class="k">in </span>this file.
 This Line Has All Its First Character Of The Word With Upper Case.
 
 Two lines above this line is empty.
-And this is the last line.</pre></div>
-<div class="highlight highlight-source-shell"><pre>$ grep <span class="pl-s"><span class="pl-pds">"</span>this<span class="pl-pds">"</span></span> demo_file
-this line is the 1st lower <span class="pl-k">case</span> line <span class="pl-k">in</span> this file.
+And this is the last line.
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">grep</span> <span class="s2">"this"</span> demo_file
+this line is the 1st lower <span class="k">case</span> line <span class="k">in </span>this file.
 Two lines above this line is empty.
-And this is the last line.</pre></div>
-<div class="highlight highlight-source-shell"><pre><span class="pl-c"><span class="pl-c">#</span> we make two files first</span>
-$ cp demo_file demo_file1
-$ grep <span class="pl-s"><span class="pl-pds">"</span>this<span class="pl-pds">"</span></span> demo_<span class="pl-k">*</span>
-demo_file:this line is the 1st lower <span class="pl-k">case</span> line <span class="pl-k">in</span> this file.
+And this is the last line.
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># we make two files first</span>
+<span class="nv">$ </span>cp demo_file demo_file1
+<span class="nv">$ </span><span class="nb">grep</span> <span class="s2">"this"</span> demo_<span class="k">*</span>
+demo_file:this line is the 1st lower <span class="k">case</span> line <span class="k">in </span>this file.
 demo_file:Two lines above this line is empty.
 demo_file:And this is the last line.
-demo_file1:this line is the 1st lower case line in this file.
+demo_file1:this line is the 1st lower <span class="k">case</span> line <span class="k">in </span>this file.
 demo_file1:Two lines above this line is empty.
-demo_file1:And this is the last line.</pre></div>
-<div class="highlight highlight-source-shell"><pre><span class="pl-c"><span class="pl-c">#</span> case insensitive search, using -i</span>
-$ grep -i <span class="pl-s"><span class="pl-pds">"</span>the<span class="pl-pds">"</span></span> defmo_file</pre></div>
-<div class="highlight highlight-source-shell"><pre><span class="pl-c"><span class="pl-c">#</span> match regex</span>
-$ grep <span class="pl-s"><span class="pl-pds">"</span>lines.*empty<span class="pl-pds">"</span></span> demo_file
-Two lines above this line is empty.</pre></div>
-<div class="highlight highlight-source-shell"><pre><span class="pl-c"><span class="pl-c">#</span> match exact string, not substring using -w (like ^word$)</span>
-$ grep -w <span class="pl-s"><span class="pl-pds">"</span>word<span class="pl-pds">"</span></span> file</pre></div>
-<h2><a id="user-content-id" class="anchor" aria-hidden="true" href="#id"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>id</h2>
+demo_file1:And this is the last line.
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># case insensitive search, using -i</span>
+<span class="nv">$ </span><span class="nb">grep</span> <span class="nt">-i</span> <span class="s2">"the"</span> defmo_file
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># match regex</span>
+<span class="nv">$ </span><span class="nb">grep</span> <span class="s2">"lines.*empty"</span> demo_file
+Two lines above this line is empty.
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># match exact string, not substring using -w (like ^word$)</span>
+<span class="nv">$ </span><span class="nb">grep</span> <span class="nt">-w</span> <span class="s2">"word"</span> file
+</code></pre></div></div>
+
+<h2 id="id">id</h2>
 <p>Checks users and group. Example:</p>
-<div class="highlight highlight-source-shell"><pre>$ id
-uid=1000(bintang) gid=1000(bintang) groups=1000(bintang),10(wheel),971(docker),974(wireshark) context=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023</pre></div>
-<h2><a id="user-content-chmod" class="anchor" aria-hidden="true" href="#chmod"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>chmod</h2>
-<p>Usual mode, refer here: <a href="http://permissions-calculator.org/info/" rel="nofollow">http://permissions-calculator.org/info/</a></p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>id
+<span class="nv">uid</span><span class="o">=</span>1000<span class="o">(</span>bintang<span class="o">)</span> <span class="nv">gid</span><span class="o">=</span>1000<span class="o">(</span>bintang<span class="o">)</span> <span class="nv">groups</span><span class="o">=</span>1000<span class="o">(</span>bintang<span class="o">)</span>,10<span class="o">(</span>wheel<span class="o">)</span>,971<span class="o">(</span>docker<span class="o">)</span>,974<span class="o">(</span>wireshark<span class="o">)</span> <span class="nv">context</span><span class="o">=</span>unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023
+</code></pre></div></div>
+
+<h2 id="chmod">chmod</h2>
+<p>Usual mode, refer here: http://permissions-calculator.org/info/</p>
+
 <p>Special mode:
-<strong>setuid</strong>: executable file with the setuid bit can be executed with the privileges of the file's owner. <code>chmod 4xxx file</code> or <code>chmod u+s</code>.</p>
-<p><strong>setgid</strong>: executable file with the setgid can be executed with the privileges of the file's group. <code>chmod 2xxx file</code> or <code>chmod g+s file</code>.</p>
-<p><strong>sticky bit</strong>: when a directory's sticky bit is set, the filesystem treats the files in such directories in a special way so that <em>only the file owner's, dir owner's, or root can rename/delet the file</em>. Example: <code>/tmp</code> folder. <code>chmod 1xxx file</code>.</p>
-<h2><a id="user-content-du" class="anchor" aria-hidden="true" href="#du"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>du</h2>
+<strong>setuid</strong>: executable file with the setuid bit can be executed with the privileges of the file’s owner. <code class="highlighter-rouge">chmod 4xxx file</code> or <code class="highlighter-rouge">chmod u+s</code>.</p>
+
+<p><strong>setgid</strong>: executable file with the setgid can be executed with the privileges of the file’s group. <code class="highlighter-rouge">chmod 2xxx file</code> or <code class="highlighter-rouge">chmod g+s file</code>.</p>
+
+<p><strong>sticky bit</strong>: when a directory’s sticky bit is set, the filesystem treats the files in such directories in a special way so that <em>only the file owner’s, dir owner’s, or root can rename/delet the file</em>. Example: <code class="highlighter-rouge">/tmp</code> folder. <code class="highlighter-rouge">chmod 1xxx file</code>.</p>
+
+<h2 id="du">du</h2>
 <p>check file/dir size.
 example:</p>
-<pre><code>$ du -h file.txt (-h to make it readable like 4.0K, 46M, etc)
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ du -h file.txt (-h to make it readable like 4.0K, 46M, etc)
 $ du -h foldername (will print the size recursively)
 $ du -h foldername -d 0 (-d for depth, 0 will print the size of foldername only)
 $ du -h foldername -d 1 (will print -d 0 and the recursive of depth 1)
-</code></pre>
-<h2><a id="user-content-df" class="anchor" aria-hidden="true" href="#df"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>df</h2>
+</code></pre></div></div>
+<h2 id="df">df</h2>
 <ul>
-<li>show disk usage</li>
-<li>find out which partition a directory is on. Command: <code>df -h /path/to/dir</code></li>
+  <li>show disk usage</li>
+  <li>find out which partition a directory is on. Command: <code class="highlighter-rouge">df -h /path/to/dir</code>
+    <h2 id="sort">sort</h2>
+    <p>example
+```bash
+$ cat file.txt
+b
+c
+a</p>
+  </li>
 </ul>
-<h2><a id="user-content-sort" class="anchor" aria-hidden="true" href="#sort"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>sort</h2>
-<p>example</p>
-<div class="highlight highlight-source-shell"><pre>$ cat file.txt
-b
-c
-a
 
-$ sort file.txt
+<p>$ sort file.txt
 a
 b
-c
+c</p>
 
-$ sort -r file.txt
+<p>$ sort -r file.txt
 c
 b
-a</pre></div>
-<p>For sorting numbers:</p>
-<div class="highlight highlight-source-shell"><pre>$ sort -n file.txt
+a</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+For sorting numbers:
+```bash
+$ sort -n file.txt
 1
 1.5
 2
-5</pre></div>
-<h2><a id="user-content-wc" class="anchor" aria-hidden="true" href="#wc"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>wc</h2>
+5
+</code></pre></div></div>
+
+<h2 id="wc">wc</h2>
 <p>word count
 line counting
 byte counting</p>
-<h2><a id="user-content-uptime" class="anchor" aria-hidden="true" href="#uptime"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>uptime</h2>
+
+<h2 id="uptime">uptime</h2>
 <p>tells how long the system has been running.</p>
-<h2><a id="user-content-whatis" class="anchor" aria-hidden="true" href="#whatis"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>whatis</h2>
+
+<h2 id="whatis">whatis</h2>
 <p>display one-line manual page description of a command. example</p>
-<pre><code>$ whatis whatis
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ whatis whatis
 whatis (1)           - display one-line manual page descriptions
 
 $ whatis tee
 tee (1)              - read from standard input and write to standard output and files
 tee (1p)             - duplicate standard input
 tee (2)              - duplicating pipe content
-</code></pre>
-<h2><a id="user-content-tee" class="anchor" aria-hidden="true" href="#tee"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>tee</h2>
-<p>Read from standard input and write to standard output and files. For example, if we use <code>ping google.com &gt; file.txt</code>,  the output will be in file.txt but not in stdout. But with tee, we can get both to stdout and file.txt. Example:</p>
-<pre><code>$ ping google.com | tee file.txt
+</code></pre></div></div>
+
+<h2 id="tee">tee</h2>
+<p>Read from standard input and write to standard output and files. For example, if we use <code class="highlighter-rouge">ping google.com &gt; file.txt</code>,  the output will be in file.txt but not in stdout. But with tee, we can get both to stdout and file.txt. Example:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ping google.com | tee file.txt
 
 or we can even output to multiple files
 
 $ ping google.com | tee file.txt another.txt
-</code></pre>
-<h2><a id="user-content-sed" class="anchor" aria-hidden="true" href="#sed"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>sed</h2>
+</code></pre></div></div>
+
+<h2 id="sed">sed</h2>
 <p>sed: stream editor for filtering and transforming text.</p>
-<p>Example 1 replacing string, <a href="https://unix.stackexchange.com/questions/159367/using-sed-to-find-and-replace" rel="nofollow">link</a>:</p>
-<pre><code>sed -i -e 's/before/after/g' hello.txt
-</code></pre>
-<h2><a id="user-content-awk" class="anchor" aria-hidden="true" href="#awk"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>awk</h2>
+
+<p>Example 1 replacing string, <a href="https://unix.stackexchange.com/questions/159367/using-sed-to-find-and-replace">link</a>:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sed -i -e 's/before/after/g' hello.txt
+</code></pre></div></div>
+
+<h2 id="awk">awk</h2>
 <p>pattern scanning and processing language. huh?</p>
-<p>Example 1, printing column of a text <a href="https://www.tutorialspoint.com/awk/awk_basic_examples.htm" rel="nofollow">link</a>:</p>
-<pre><code>$ cat file.txt
+
+<p>Example 1, printing column of a text <a href="https://www.tutorialspoint.com/awk/awk_basic_examples.htm">link</a>:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cat file.txt
 1) Amit     Physics   80
 2) Rahul    Maths     90
 
@@ -865,361 +203,330 @@ Rahul 90
 
 # print line which has more than 18 chars
 $ awk 'length($0) &gt; 18' file.txt
-</code></pre>
-<h2><a id="user-content-read" class="anchor" aria-hidden="true" href="#read"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>read</h2>
+</code></pre></div></div>
+
+<h2 id="read">read</h2>
 <p>read input.</p>
+
 <p>Example:</p>
-<div class="highlight highlight-source-shell"><pre><span class="pl-c1">read</span> varname
-<span class="pl-c1">echo</span> <span class="pl-s"><span class="pl-pds">"</span>Hello <span class="pl-smi">$varname</span><span class="pl-pds">"</span></span></pre></div>
-<h2><a id="user-content-cut" class="anchor" aria-hidden="true" href="#cut"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>cut</h2>
-<p><a href="https://www.thegeekstuff.com/2013/06/cut-command-examples/" rel="nofollow">https://www.thegeekstuff.com/2013/06/cut-command-examples/</a></p>
-<p><code>cut -c2 test.txt</code>  print (like <code>cat</code>) but only the 2nd character from each line of the test.txt.</p>
-<p><code>cut -c1-3 test.txt</code> print character 1 to 3 (like <code>asu</code>, 3 character from the first character) from each line of the test.txt.</p>
-<p><code>cut -c3- test.txt</code> print from the 3rd character.</p>
-<p><code>cut -c-8 test.txt</code> print from the first to the 8th character from each line of the test.txt.</p>
-<p><code>cut -c2,7 test.txt</code>  print the 2nd and 7th characters from each line of the test.txt.</p>
-<p><code>cut -c- test.txt</code> same as <code>cat test.txt</code>.</p>
-<p><code>cut -d':' -f1 /etc/passwd</code>   -d is delimiter, -f is the field. in this case, the output would be something like:</p>
-<pre><code>root
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">read </span>varname
+<span class="nb">echo</span> <span class="s2">"Hello </span><span class="nv">$varname</span><span class="s2">"</span>
+</code></pre></div></div>
+
+<h2 id="cut">cut</h2>
+<p>https://www.thegeekstuff.com/2013/06/cut-command-examples/</p>
+
+<p><code class="highlighter-rouge">cut -c2 test.txt</code>  print (like <code class="highlighter-rouge">cat</code>) but only the 2nd character from each line of the test.txt.</p>
+
+<p><code class="highlighter-rouge">cut -c1-3 test.txt</code> print character 1 to 3 (like <code class="highlighter-rouge">asu</code>, 3 character from the first character) from each line of the test.txt.</p>
+
+<p><code class="highlighter-rouge">cut -c3- test.txt</code> print from the 3rd character.</p>
+
+<p><code class="highlighter-rouge">cut -c-8 test.txt</code> print from the first to the 8th character from each line of the test.txt.</p>
+
+<p><code class="highlighter-rouge">cut -c2,7 test.txt</code>  print the 2nd and 7th characters from each line of the test.txt.</p>
+
+<p><code class="highlighter-rouge">cut -c- test.txt</code> same as <code class="highlighter-rouge">cat test.txt</code>.</p>
+
+<p><code class="highlighter-rouge">cut -d':' -f1 /etc/passwd</code>   -d is delimiter, -f is the field. in this case, the output would be something like:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>root
 bin
 sync
 nginx
-</code></pre>
-<h2><a id="user-content-tr" class="anchor" aria-hidden="true" href="#tr"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>tr</h2>
-<p><a href="https://www.geeksforgeeks.org/tr-command-in-unix-linux-with-examples/" rel="nofollow">https://www.geeksforgeeks.org/tr-command-in-unix-linux-with-examples/</a></p>
+</code></pre></div></div>
+
+<h2 id="tr">tr</h2>
+<p>https://www.geeksforgeeks.org/tr-command-in-unix-linux-with-examples/</p>
+
 <p>tr stands for translage. tr is for translating and deleting characters.</p>
+
 <p>Syntax:</p>
-<pre><code>tr [OPTION] SET1 [SET2]
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>tr [OPTION] SET1 [SET2]
 
 OPTION:
 -c: complements the set of characters in string
 -d: delete characters in the first set from the output
 -s: replaces repeated characters listed in the SET1 with single occurence
 -t: truncates SET1
-</code></pre>
+</code></pre></div></div>
+
 <p>Example 1: how to convert lower case to upper case</p>
-<div class="highlight highlight-source-shell"><pre><span class="pl-c1">echo</span> <span class="pl-s"><span class="pl-pds">"</span>Budj<span class="pl-pds">"</span></span> <span class="pl-k">|</span> tr <span class="pl-s"><span class="pl-pds">"</span>[a-z]<span class="pl-pds">"</span></span> <span class="pl-s"><span class="pl-pds">"</span>[A-Z]<span class="pl-pds">"</span></span></pre></div>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">echo</span> <span class="s2">"Budj"</span> | tr <span class="s2">"[a-z]"</span> <span class="s2">"[A-Z]"</span>
+</code></pre></div></div>
+
 <p>Example 2: translate white-space to tabs</p>
-<div class="highlight highlight-source-shell"><pre><span class="pl-c1">echo</span> <span class="pl-s"><span class="pl-pds">"</span>dewa budjana<span class="pl-pds">"</span></span> <span class="pl-k">|</span> tr <span class="pl-s"><span class="pl-pds">"</span>[:space:]<span class="pl-pds">"</span></span> <span class="pl-s"><span class="pl-pds">'</span>\t<span class="pl-pds">'</span></span></pre></div>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">echo</span> <span class="s2">"dewa budjana"</span> | tr <span class="s2">"[:space:]"</span> <span class="s1">'\t'</span>
+</code></pre></div></div>
+
 <p>Example 3: tranlate braces to parenthesis</p>
-<div class="highlight highlight-source-shell"><pre><span class="pl-c1">echo</span> <span class="pl-s"><span class="pl-pds">"</span>{dewa} budjana<span class="pl-pds">"</span></span> <span class="pl-k">|</span> tr <span class="pl-s"><span class="pl-pds">'</span>{}<span class="pl-pds">'</span></span> <span class="pl-s"><span class="pl-pds">'</span>()<span class="pl-pds">'</span></span>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">echo</span> <span class="s2">"{dewa} budjana"</span> | tr <span class="s1">'{}'</span> <span class="s1">'()'</span>
 or
-tr <span class="pl-s"><span class="pl-pds">'</span>{}<span class="pl-pds">'</span></span> <span class="pl-s"><span class="pl-pds">'</span>()<span class="pl-pds">'</span></span> file.txt</pre></div>
+tr <span class="s1">'{}'</span> <span class="s1">'()'</span> file.txt
+</code></pre></div></div>
+
 <p>Example 4: delete specified char using -d</p>
-<div class="highlight highlight-source-shell"><pre><span class="pl-c1">echo</span> <span class="pl-s"><span class="pl-pds">"</span>hyang giri<span class="pl-pds">"</span></span> <span class="pl-k">|</span> tr -d <span class="pl-s"><span class="pl-pds">'</span>g<span class="pl-pds">'</span></span> <span class="pl-c"><span class="pl-c">#</span> otuput: hyan iri</span>
-<span class="pl-c1">echo</span> <span class="pl-s"><span class="pl-pds">"</span>dafuq 123<span class="pl-pds">"</span></span> <span class="pl-k">|</span> tr -d <span class="pl-s"><span class="pl-pds">"</span>[:digit:]<span class="pl-pds">"</span></span> <span class="pl-c"><span class="pl-c">#</span> output: dafuq</span></pre></div>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">echo</span> <span class="s2">"hyang giri"</span> | tr <span class="nt">-d</span> <span class="s1">'g'</span> <span class="c"># otuput: hyan iri</span>
+<span class="nb">echo</span> <span class="s2">"dafuq 123"</span> | tr <span class="nt">-d</span> <span class="s2">"[:digit:]"</span> <span class="c"># output: dafuq</span>
+</code></pre></div></div>
+
 <p>Example 5: complement the sets using -c options</p>
-<div class="highlight highlight-source-shell"><pre><span class="pl-c1">echo</span> <span class="pl-s"><span class="pl-pds">"</span>dafuq 123<span class="pl-pds">"</span></span> <span class="pl-k">|</span> tr -cd <span class="pl-s"><span class="pl-pds">"</span>[:digit:]<span class="pl-pds">"</span></span> <span class="pl-c"><span class="pl-c">#</span> output: 123</span></pre></div>
-<h2><a id="user-content-uniq" class="anchor" aria-hidden="true" href="#uniq"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>uniq</h2>
-<p><code>uniq</code> = unique.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">echo</span> <span class="s2">"dafuq 123"</span> | tr <span class="nt">-cd</span> <span class="s2">"[:digit:]"</span> <span class="c"># output: 123</span>
+</code></pre></div></div>
+
+<h2 id="uniq">uniq</h2>
+<p><code class="highlighter-rouge">uniq</code> = unique.</p>
+
 <p>Examples:</p>
-<div class="highlight highlight-source-shell"><pre>$ cat file.txt
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">cat </span>file.txt
 wanjir
 wanjir
 kancut men
 kancut
 
-$ uniq file.txt
+<span class="nv">$ </span>uniq file.txt
 wanjir
 kancut men
 kancut
 
-$ uniq -c file.txt <span class="pl-c"><span class="pl-c">#</span> it counts the number of repetitions</span>
+<span class="nv">$ </span>uniq <span class="nt">-c</span> file.txt <span class="c"># it counts the number of repetitions</span>
 2 wanjir
 1 kancut men
 1 kancut
 
-$ uniq -D file.txt <span class="pl-c"><span class="pl-c">#</span> print only duplicate lines</span>
+<span class="nv">$ </span>uniq <span class="nt">-D</span> file.txt <span class="c"># print only duplicate lines</span>
 wanjir
-wanjir</pre></div>
-<h2><a id="user-content-xargs" class="anchor" aria-hidden="true" href="#xargs"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>xargs</h2>
-<p>...</p>
-<h1><a id="user-content-basic-networking" class="anchor" aria-hidden="true" href="#basic-networking"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Basic Networking</h1>
-<h2><a id="user-content-traceroute" class="anchor" aria-hidden="true" href="#traceroute"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>traceroute</h2>
+wanjir
+</code></pre></div></div>
+
+<h2 id="xargs">xargs</h2>
+<p>…</p>
+
+<h1 id="basic-networking">Basic Networking</h1>
+<h2 id="traceroute">traceroute</h2>
 <p>print the route packets trace to network host.
 Example:</p>
-<pre><code>$ traceroute google.com
-</code></pre>
-<h2><a id="user-content-dig" class="anchor" aria-hidden="true" href="#dig"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>dig</h2>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ traceroute google.com
+</code></pre></div></div>
+
+<h2 id="dig">dig</h2>
 <p>DNS lookup utility. Example:</p>
-<pre><code>$ dig geekflare.com
-</code></pre>
-<h2><a id="user-content-telnet" class="anchor" aria-hidden="true" href="#telnet"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>telnet</h2>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ dig geekflare.com
+</code></pre></div></div>
+
+<h2 id="telnet">telnet</h2>
 <p>user interface to the TELNET protocol. used to check if the connection is ok. example:</p>
-<pre><code>telnet geekflare 443
-</code></pre>
-<h2><a id="user-content-netstat" class="anchor" aria-hidden="true" href="#netstat"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>netstat</h2>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>telnet geekflare 443
+</code></pre></div></div>
+
+<h2 id="netstat">netstat</h2>
 <p>Print network connections, routing tables, interface statistics, masquerade connections, and multicast memberships.</p>
+
 <p>Review network connection and open sockets.</p>
+
 <p>Examples:</p>
-<div class="highlight highlight-source-shell"><pre><span class="pl-c"><span class="pl-c">#</span> display routing table</span>
-netstate -r
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># display routing table</span>
+netstate <span class="nt">-r</span>
 
-<span class="pl-c"><span class="pl-c">#</span> display network services</span>
-netstate -i
+<span class="c"># display network services</span>
+netstate <span class="nt">-i</span>
 
-<span class="pl-c"><span class="pl-c">#</span> continuous monitorign</span>
-netstat -c
+<span class="c"># continuous monitorign</span>
+netstat <span class="nt">-c</span>
 
-<span class="pl-c"><span class="pl-c">#</span> see tcp connections</span>
-netstat -t
+<span class="c"># see tcp connections</span>
+netstat <span class="nt">-t</span>
 
-<span class="pl-c"><span class="pl-c">#</span> see udp conn</span>
-netstate -u
+<span class="c"># see udp conn</span>
+netstate <span class="nt">-u</span>
 
-<span class="pl-c"><span class="pl-c">#</span> see state LISTENING</span>
-netstate -L
+<span class="c"># see state LISTENING</span>
+netstate <span class="nt">-L</span>
 
-<span class="pl-c"><span class="pl-c">#</span> practical use</span>
-netstate -tulpn <span class="pl-c"><span class="pl-c">#</span> p: display programe name, n: numeric</span></pre></div>
-<h2><a id="user-content-lsof" class="anchor" aria-hidden="true" href="#lsof"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>lsof</h2>
+<span class="c"># practical use</span>
+netstate <span class="nt">-tulpn</span> <span class="c"># p: display programe name, n: numeric</span>
+</code></pre></div></div>
+
+<h2 id="lsof">lsof</h2>
 <p>lsof lists the open files associated with an application. Example:</p>
-<div class="highlight highlight-source-shell"><pre>lsof -i tcp:80</pre></div>
-<h2><a id="user-content-nmap" class="anchor" aria-hidden="true" href="#nmap"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>nmap</h2>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>lsof <span class="nt">-i</span> tcp:80
+</code></pre></div></div>
+
+<h2 id="nmap">nmap</h2>
 <p>check opened ports. port scanner.</p>
-<h1><a id="user-content-loop-conditional-etc" class="anchor" aria-hidden="true" href="#loop-conditional-etc"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Loop, Conditional, etc</h1>
-<h2><a id="user-content-loops" class="anchor" aria-hidden="true" href="#loops"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Loops</h2>
+
+<h1 id="loop-conditional-etc">Loop, Conditional, etc</h1>
+<h2 id="loops">Loops</h2>
 <p>Example 1:</p>
-<div class="highlight highlight-source-shell"><pre><span class="pl-k">for</span> <span class="pl-smi">i</span> <span class="pl-k">in</span> {1..4}
-<span class="pl-k">do</span>
-    <span class="pl-c1">echo</span> <span class="pl-s"><span class="pl-pds">"</span><span class="pl-smi">$i</span><span class="pl-pds">"</span></span>
-<span class="pl-k">done</span>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for </span>i <span class="k">in</span> <span class="o">{</span>1..4<span class="o">}</span>
+<span class="k">do
+    </span><span class="nb">echo</span> <span class="s2">"</span><span class="nv">$i</span><span class="s2">"</span>
+<span class="k">done</span>
 
-<span class="pl-c"><span class="pl-c">#</span> output:</span>
-<span class="pl-c"><span class="pl-c">#</span> 1</span>
-<span class="pl-c"><span class="pl-c">#</span> 2</span>
-<span class="pl-c"><span class="pl-c">#</span> 3</span>
-<span class="pl-c"><span class="pl-c">#</span> 4</span></pre></div>
+<span class="c"># output:</span>
+<span class="c"># 1</span>
+<span class="c"># 2</span>
+<span class="c"># 3</span>
+<span class="c"># 4</span>
+</code></pre></div></div>
+
 <p>Example 2:</p>
-<div class="highlight highlight-source-shell"><pre><span class="pl-k">for</span> <span class="pl-smi">i</span> <span class="pl-k">in</span> {0..4..2}
-<span class="pl-k">do</span> 
-    <span class="pl-c1">echo</span> <span class="pl-s"><span class="pl-pds">"</span><span class="pl-smi">$i</span><span class="pl-pds">"</span></span>
-<span class="pl-k">done</span>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for </span>i <span class="k">in</span> <span class="o">{</span>0..4..2<span class="o">}</span>
+<span class="k">do 
+    </span><span class="nb">echo</span> <span class="s2">"</span><span class="nv">$i</span><span class="s2">"</span>
+<span class="k">done</span>
 
-<span class="pl-c"><span class="pl-c">#</span> output</span>
-<span class="pl-c"><span class="pl-c">#</span> 0</span>
-<span class="pl-c"><span class="pl-c">#</span> 2</span>
-<span class="pl-c"><span class="pl-c">#</span> 4</span></pre></div>
+<span class="c"># output</span>
+<span class="c"># 0</span>
+<span class="c"># 2</span>
+<span class="c"># 4</span>
+</code></pre></div></div>
+
 <p>Example 3:</p>
-<div class="highlight highlight-source-shell"><pre><span class="pl-k">for</span> <span class="pl-smi">file</span> <span class="pl-k">in</span> server.cpp plain.zip
-<span class="pl-k">do</span>
-	wc <span class="pl-smi">$file</span>
-<span class="pl-k">done</span>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for </span>file <span class="k">in </span>server.cpp plain.zip
+<span class="k">do
+	</span>wc <span class="nv">$file</span>
+<span class="k">done</span>
 
-<span class="pl-c"><span class="pl-c">#</span> output:</span>
-<span class="pl-c"><span class="pl-c">#</span> 19  49 484 server.cpp</span>
-<span class="pl-c"><span class="pl-c">#</span> 143900   815790 44879792 plain.zip</span></pre></div>
-<h2><a id="user-content-conditional" class="anchor" aria-hidden="true" href="#conditional"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Conditional</h2>
+<span class="c"># output:</span>
+<span class="c"># 19  49 484 server.cpp</span>
+<span class="c"># 143900   815790 44879792 plain.zip</span>
+</code></pre></div></div>
+
+<h2 id="conditional">Conditional</h2>
 <p>Example 1:</p>
-<div class="highlight highlight-source-shell"><pre>var=<span class="pl-s"><span class="pl-pds">"</span>kancut<span class="pl-pds">"</span></span>
-<span class="pl-k">if</span> [ <span class="pl-s"><span class="pl-pds">"</span><span class="pl-smi">$var</span><span class="pl-pds">"</span></span> <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">"</span>abc<span class="pl-pds">"</span></span> ]<span class="pl-k">;</span> <span class="pl-k">then</span>
-    <span class="pl-c1">echo</span> <span class="pl-s"><span class="pl-pds">"</span>true<span class="pl-pds">"</span></span>
-<span class="pl-k">else</span>
-    <span class="pl-c1">echo</span> <span class="pl-s"><span class="pl-pds">"</span>false<span class="pl-pds">"</span></span>
-<span class="pl-k">fi</span></pre></div>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">var</span><span class="o">=</span><span class="s2">"kancut"</span>
+<span class="k">if</span> <span class="o">[</span> <span class="s2">"</span><span class="nv">$var</span><span class="s2">"</span> <span class="o">=</span> <span class="s2">"abc"</span> <span class="o">]</span><span class="p">;</span> <span class="k">then
+    </span><span class="nb">echo</span> <span class="s2">"true"</span>
+<span class="k">else
+    </span><span class="nb">echo</span> <span class="s2">"false"</span>
+<span class="k">fi</span>
+</code></pre></div></div>
+
 <p>Example 2:</p>
-<div class="highlight highlight-source-shell"><pre>x=0
-y=1
-<span class="pl-k">if</span> [ <span class="pl-s"><span class="pl-pds">"</span><span class="pl-smi">$x</span><span class="pl-pds">"</span></span> <span class="pl-k">-eq</span> <span class="pl-s"><span class="pl-pds">"</span><span class="pl-smi">$y</span><span class="pl-pds">"</span></span> ]<span class="pl-k">;</span> <span class="pl-k">then</span>
-    <span class="pl-c1">echo</span> <span class="pl-s"><span class="pl-pds">"</span>x is equal to y<span class="pl-pds">"</span></span>
-<span class="pl-k">elif</span> [ <span class="pl-s"><span class="pl-pds">"</span><span class="pl-smi">$x</span><span class="pl-pds">"</span></span> <span class="pl-k">-gt</span> <span class="pl-s"><span class="pl-pds">"</span><span class="pl-smi">$y</span><span class="pl-pds">"</span></span> ]<span class="pl-k">;</span> <span class="pl-k">then</span>
-    <span class="pl-c1">echo</span> <span class="pl-s"><span class="pl-pds">"</span>x is greater than y<span class="pl-pds">"</span></span>
-<span class="pl-k">elif</span> [ <span class="pl-s"><span class="pl-pds">"</span><span class="pl-smi">$x</span><span class="pl-pds">"</span></span> <span class="pl-k">-lt</span> <span class="pl-s"><span class="pl-pds">"</span><span class="pl-smi">$y</span><span class="pl-pds">"</span></span> ]<span class="pl-k">;</span> <span class="pl-k">then</span>
-    <span class="pl-c1">echo</span> <span class="pl-s"><span class="pl-pds">"</span>x is less than y<span class="pl-pds">"</span></span>
-<span class="pl-k">fi</span>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">x</span><span class="o">=</span>0
+<span class="nv">y</span><span class="o">=</span>1
+<span class="k">if</span> <span class="o">[</span> <span class="s2">"</span><span class="nv">$x</span><span class="s2">"</span> <span class="nt">-eq</span> <span class="s2">"</span><span class="nv">$y</span><span class="s2">"</span> <span class="o">]</span><span class="p">;</span> <span class="k">then
+    </span><span class="nb">echo</span> <span class="s2">"x is equal to y"</span>
+<span class="k">elif</span> <span class="o">[</span> <span class="s2">"</span><span class="nv">$x</span><span class="s2">"</span> <span class="nt">-gt</span> <span class="s2">"</span><span class="nv">$y</span><span class="s2">"</span> <span class="o">]</span><span class="p">;</span> <span class="k">then
+    </span><span class="nb">echo</span> <span class="s2">"x is greater than y"</span>
+<span class="k">elif</span> <span class="o">[</span> <span class="s2">"</span><span class="nv">$x</span><span class="s2">"</span> <span class="nt">-lt</span> <span class="s2">"</span><span class="nv">$y</span><span class="s2">"</span> <span class="o">]</span><span class="p">;</span> <span class="k">then
+    </span><span class="nb">echo</span> <span class="s2">"x is less than y"</span>
+<span class="k">fi
 
-<span class="pl-k">if</span> [ <span class="pl-s"><span class="pl-pds">"</span><span class="pl-smi">$x</span><span class="pl-pds">"</span></span> <span class="pl-k">-ne</span> <span class="pl-s"><span class="pl-pds">"</span><span class="pl-smi">$y</span><span class="pl-pds">"</span></span> ]<span class="pl-k">;</span> <span class="pl-k">then</span>
-    <span class="pl-c1">echo</span> <span class="pl-s"><span class="pl-pds">"</span>x is not equal to y<span class="pl-pds">"</span></span>
-<span class="pl-k">fi</span></pre></div>
+if</span> <span class="o">[</span> <span class="s2">"</span><span class="nv">$x</span><span class="s2">"</span> <span class="nt">-ne</span> <span class="s2">"</span><span class="nv">$y</span><span class="s2">"</span> <span class="o">]</span><span class="p">;</span> <span class="k">then
+    </span><span class="nb">echo</span> <span class="s2">"x is not equal to y"</span>
+<span class="k">fi</span>
+</code></pre></div></div>
+
 <p>Example 3:</p>
-<div class="highlight highlight-source-shell"><pre>name=<span class="pl-s"><span class="pl-pds">"</span>jeff beck<span class="pl-pds">"</span></span>
-<span class="pl-c"><span class="pl-c">#</span> check if it's an empty string</span>
-<span class="pl-k">if</span> [ <span class="pl-k">-z</span> <span class="pl-s"><span class="pl-pds">"</span><span class="pl-smi">$name</span><span class="pl-pds">"</span></span> ]<span class="pl-k">;</span> <span class="pl-k">then</span>
-    <span class="pl-c1">echo</span> <span class="pl-s"><span class="pl-pds">"</span>name is an empty string<span class="pl-pds">"</span></span>
-<span class="pl-k">fi</span>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">name</span><span class="o">=</span><span class="s2">"jeff beck"</span>
+<span class="c"># check if it's an empty string</span>
+<span class="k">if</span> <span class="o">[</span> <span class="nt">-z</span> <span class="s2">"</span><span class="nv">$name</span><span class="s2">"</span> <span class="o">]</span><span class="p">;</span> <span class="k">then
+    </span><span class="nb">echo</span> <span class="s2">"name is an empty string"</span>
+<span class="k">fi</span>
 
-<span class="pl-c"><span class="pl-c">#</span> check if the length is not zero</span>
-<span class="pl-k">if</span> [ <span class="pl-s"><span class="pl-pds">"</span><span class="pl-smi">$name</span><span class="pl-pds">"</span></span> ]<span class="pl-k">;</span> <span class="pl-k">then</span>
-    <span class="pl-c1">echo</span> <span class="pl-s"><span class="pl-pds">"</span>name's length is NOT zero<span class="pl-pds">"</span></span>
-<span class="pl-k">fi</span></pre></div>
+<span class="c"># check if the length is not zero</span>
+<span class="k">if</span> <span class="o">[</span> <span class="s2">"</span><span class="nv">$name</span><span class="s2">"</span> <span class="o">]</span><span class="p">;</span> <span class="k">then
+    </span><span class="nb">echo</span> <span class="s2">"name's length is NOT zero"</span>
+<span class="k">fi</span>
+</code></pre></div></div>
+
 <p>Example 4:</p>
-<div class="highlight highlight-source-shell"><pre>file_1=<span class="pl-s"><span class="pl-pds">"</span>server.cpp<span class="pl-pds">"</span></span>
-file_2=<span class="pl-s"><span class="pl-pds">"</span>one.cpp<span class="pl-pds">"</span></span>
-dir_1=<span class="pl-s"><span class="pl-pds">"</span>cpp<span class="pl-pds">"</span></span>
-dir_2=<span class="pl-s"><span class="pl-pds">"</span>catch2<span class="pl-pds">"</span></span>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">file_1</span><span class="o">=</span><span class="s2">"server.cpp"</span>
+<span class="nv">file_2</span><span class="o">=</span><span class="s2">"one.cpp"</span>
+<span class="nv">dir_1</span><span class="o">=</span><span class="s2">"cpp"</span>
+<span class="nv">dir_2</span><span class="o">=</span><span class="s2">"catch2"</span>
 
-<span class="pl-k">if</span> [ <span class="pl-k">-f</span> <span class="pl-s"><span class="pl-pds">"</span><span class="pl-smi">$file_1</span><span class="pl-pds">"</span></span> ]<span class="pl-k">;</span> <span class="pl-k">then</span>
-	<span class="pl-c1">echo</span> <span class="pl-s"><span class="pl-pds">"</span><span class="pl-smi">$file_1</span> exists<span class="pl-pds">"</span></span>
-<span class="pl-k">fi</span>
+<span class="k">if</span> <span class="o">[</span> <span class="nt">-f</span> <span class="s2">"</span><span class="nv">$file_1</span><span class="s2">"</span> <span class="o">]</span><span class="p">;</span> <span class="k">then
+	</span><span class="nb">echo</span> <span class="s2">"</span><span class="nv">$file_1</span><span class="s2"> exists"</span>
+<span class="k">fi
 
-<span class="pl-k">if</span> [ <span class="pl-k">-f</span> <span class="pl-s"><span class="pl-pds">"</span><span class="pl-smi">$file_2</span><span class="pl-pds">"</span></span> ]<span class="pl-k">;</span> <span class="pl-k">then</span>
-    <span class="pl-c1">echo</span> <span class="pl-s"><span class="pl-pds">"</span><span class="pl-smi">$file_2</span> exists<span class="pl-pds">"</span></span>
-<span class="pl-k">fi</span>
+if</span> <span class="o">[</span> <span class="nt">-f</span> <span class="s2">"</span><span class="nv">$file_2</span><span class="s2">"</span> <span class="o">]</span><span class="p">;</span> <span class="k">then
+    </span><span class="nb">echo</span> <span class="s2">"</span><span class="nv">$file_2</span><span class="s2"> exists"</span>
+<span class="k">fi
 
-<span class="pl-k">if</span> [ <span class="pl-k">-d</span> <span class="pl-s"><span class="pl-pds">"</span><span class="pl-smi">$dir_1</span><span class="pl-pds">"</span></span> ]<span class="pl-k">;</span> <span class="pl-k">then</span>
-    <span class="pl-c1">echo</span> <span class="pl-s"><span class="pl-pds">"</span><span class="pl-smi">$dir_1</span> exists<span class="pl-pds">"</span></span>
-<span class="pl-k">fi</span>
+if</span> <span class="o">[</span> <span class="nt">-d</span> <span class="s2">"</span><span class="nv">$dir_1</span><span class="s2">"</span> <span class="o">]</span><span class="p">;</span> <span class="k">then
+    </span><span class="nb">echo</span> <span class="s2">"</span><span class="nv">$dir_1</span><span class="s2"> exists"</span>
+<span class="k">fi
 
-<span class="pl-k">if</span> [ <span class="pl-k">-d</span> <span class="pl-s"><span class="pl-pds">"</span><span class="pl-smi">$dir_2</span><span class="pl-pds">"</span></span> ]<span class="pl-k">;</span> <span class="pl-k">then</span>
-    <span class="pl-c1">echo</span> <span class="pl-s"><span class="pl-pds">"</span><span class="pl-smi">$dir_2</span> exists<span class="pl-pds">"</span></span>
-<span class="pl-k">fi</span></pre></div>
-<p><code>-f</code> and <code>-d</code> do not work recursively (i.e. they do not look inside other directories).</p>
-<p>For other than <code>-f</code> and <code>-d</code>,  see: <a href="http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_07_01.html" rel="nofollow">http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_07_01.html</a></p>
-<h2><a id="user-content-arithmethic-operations" class="anchor" aria-hidden="true" href="#arithmethic-operations"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Arithmethic Operations</h2>
+if</span> <span class="o">[</span> <span class="nt">-d</span> <span class="s2">"</span><span class="nv">$dir_2</span><span class="s2">"</span> <span class="o">]</span><span class="p">;</span> <span class="k">then
+    </span><span class="nb">echo</span> <span class="s2">"</span><span class="nv">$dir_2</span><span class="s2"> exists"</span>
+<span class="k">fi</span>
+</code></pre></div></div>
+
+<p><code class="highlighter-rouge">-f</code> and <code class="highlighter-rouge">-d</code> do not work recursively (i.e. they do not look inside other directories).</p>
+
+<p>For other than <code class="highlighter-rouge">-f</code> and <code class="highlighter-rouge">-d</code>,  see: http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_07_01.html</p>
+
+<h2 id="arithmethic-operations">Arithmethic Operations</h2>
 <p>Example:</p>
-<div class="highlight highlight-source-shell"><pre>x=2
-y=9
-<span class="pl-c1">echo</span> <span class="pl-s"><span class="pl-pds">`</span>expr <span class="pl-s"><span class="pl-pds">"</span><span class="pl-smi">$x</span><span class="pl-pds">"</span></span> + <span class="pl-s"><span class="pl-pds">"</span><span class="pl-smi">$y</span><span class="pl-pds">"</span></span><span class="pl-pds">`</span></span>
-<span class="pl-c1">echo</span> <span class="pl-s"><span class="pl-pds">`</span>expr <span class="pl-s"><span class="pl-pds">"</span><span class="pl-smi">$x</span><span class="pl-pds">"</span></span> - <span class="pl-s"><span class="pl-pds">"</span><span class="pl-smi">$y</span><span class="pl-pds">"</span></span><span class="pl-pds">`</span></span>
-<span class="pl-c1">echo</span> <span class="pl-s"><span class="pl-pds">`</span>expr <span class="pl-s"><span class="pl-pds">"</span><span class="pl-smi">$x</span><span class="pl-pds">"</span></span> <span class="pl-cce">\*</span> <span class="pl-s"><span class="pl-pds">"</span><span class="pl-smi">$y</span><span class="pl-pds">"</span></span><span class="pl-pds">`</span></span>
-<span class="pl-c1">echo</span> <span class="pl-s"><span class="pl-pds">`</span>expr <span class="pl-s"><span class="pl-pds">"</span><span class="pl-smi">$x</span><span class="pl-pds">"</span></span> / <span class="pl-s"><span class="pl-pds">"</span><span class="pl-smi">$y</span><span class="pl-pds">"</span></span><span class="pl-pds">`</span></span>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">x</span><span class="o">=</span>2
+<span class="nv">y</span><span class="o">=</span>9
+<span class="nb">echo</span> <span class="sb">`</span>expr <span class="s2">"</span><span class="nv">$x</span><span class="s2">"</span> + <span class="s2">"</span><span class="nv">$y</span><span class="s2">"</span><span class="sb">`</span>
+<span class="nb">echo</span> <span class="sb">`</span>expr <span class="s2">"</span><span class="nv">$x</span><span class="s2">"</span> - <span class="s2">"</span><span class="nv">$y</span><span class="s2">"</span><span class="sb">`</span>
+<span class="nb">echo</span> <span class="sb">`</span>expr <span class="s2">"</span><span class="nv">$x</span><span class="s2">"</span> <span class="se">\*</span> <span class="s2">"</span><span class="nv">$y</span><span class="s2">"</span><span class="sb">`</span>
+<span class="nb">echo</span> <span class="sb">`</span>expr <span class="s2">"</span><span class="nv">$x</span><span class="s2">"</span> / <span class="s2">"</span><span class="nv">$y</span><span class="s2">"</span><span class="sb">`</span>
 
-i=0
-<span class="pl-c"><span class="pl-c">#</span>increment</span>
-<span class="pl-s"><span class="pl-pds">((</span>i<span class="pl-k">=</span>i<span class="pl-k">+</span><span class="pl-c1">1</span><span class="pl-pds">))</span></span></pre></div>
-<h2><a id="user-content-array" class="anchor" aria-hidden="true" href="#array"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Array</h2>
-<p>Examples: <a href="https://www.thegeekstuff.com/2010/06/bash-array-tutorial/" rel="nofollow">https://www.thegeekstuff.com/2010/06/bash-array-tutorial/</a></p>
+<span class="nv">i</span><span class="o">=</span>0
+<span class="c">#increment</span>
+<span class="o">((</span><span class="nv">i</span><span class="o">=</span>i+1<span class="o">))</span>
+</code></pre></div></div>
+
+<h2 id="array">Array</h2>
+<p>Examples: https://www.thegeekstuff.com/2010/06/bash-array-tutorial/</p>
+
 <p>Example 1:</p>
-<div class="highlight highlight-source-shell"><pre>unix[0]=<span class="pl-s"><span class="pl-pds">'</span>Debian<span class="pl-pds">'</span></span>
-unix[1]=<span class="pl-s"><span class="pl-pds">'</span>Fedora<span class="pl-pds">'</span></span>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>unix[0]<span class="o">=</span><span class="s1">'Debian'</span>
+unix[1]<span class="o">=</span><span class="s1">'Fedora'</span>
 
-<span class="pl-c1">echo</span> <span class="pl-smi">${unix[1]}</span> <span class="pl-c"><span class="pl-c">#</span> output: Fedora</span></pre></div>
-<p>Example 2: <code>declare -a</code> declares an array</p>
-<div class="highlight highlight-source-shell"><pre><span class="pl-k">declare</span> -a unix=(<span class="pl-s"><span class="pl-pds">'</span>Debian<span class="pl-pds">'</span></span> <span class="pl-s"><span class="pl-pds">'</span>Fedora<span class="pl-pds">'</span></span>)
+<span class="nb">echo</span> <span class="k">${</span><span class="nv">unix</span><span class="p">[1]</span><span class="k">}</span> <span class="c"># output: Fedora</span>
+</code></pre></div></div>
 
-<span class="pl-c"><span class="pl-c">#</span> print all elements</span>
-<span class="pl-c1">echo</span> <span class="pl-smi">${unix[*]}</span>
+<p>Example 2: <code class="highlighter-rouge">declare -a</code> declares an array</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">declare</span> <span class="nt">-a</span> <span class="nv">unix</span><span class="o">=(</span><span class="s1">'Debian'</span> <span class="s1">'Fedora'</span><span class="o">)</span>
 
-<span class="pl-c"><span class="pl-c">#</span> print the length of the array</span>
-<span class="pl-c1">echo</span> <span class="pl-smi">${<span class="pl-k">#</span>unix[*]}</span>
+<span class="c"># print all elements</span>
+<span class="nb">echo</span> <span class="k">${</span><span class="nv">unix</span><span class="p">[*]</span><span class="k">}</span>
 
-<span class="pl-c"><span class="pl-c">#</span> print the length of the element located at index 1</span>
-<span class="pl-c1">echo</span> <span class="pl-smi">${<span class="pl-k">#</span>unix[1]}</span>
+<span class="c"># print the length of the array</span>
+<span class="nb">echo</span> <span class="k">${#</span><span class="nv">unix</span><span class="p">[*]</span><span class="k">}</span>
 
-<span class="pl-c"><span class="pl-c">#</span> print subset</span>
-Unix=(<span class="pl-s"><span class="pl-pds">'</span>Debian<span class="pl-pds">'</span></span> <span class="pl-s"><span class="pl-pds">'</span>Red hat<span class="pl-pds">'</span></span> <span class="pl-s"><span class="pl-pds">'</span>Ubuntu<span class="pl-pds">'</span></span> <span class="pl-s"><span class="pl-pds">'</span>Suse<span class="pl-pds">'</span></span> <span class="pl-s"><span class="pl-pds">'</span>Fedora<span class="pl-pds">'</span></span> <span class="pl-s"><span class="pl-pds">'</span>UTS<span class="pl-pds">'</span></span> <span class="pl-s"><span class="pl-pds">'</span>OpenLinux<span class="pl-pds">'</span></span>)<span class="pl-k">;</span>
-<span class="pl-c1">echo</span> <span class="pl-smi">${Unix[@]<span class="pl-k">:</span>3<span class="pl-k">:</span>2}</span> <span class="pl-c"><span class="pl-c">#</span> output: Suse Fedora</span></pre></div>
-<h2><a id="user-content-get-return-status-of-last-executed-command" class="anchor" aria-hidden="true" href="#get-return-status-of-last-executed-command"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Get return status of last executed command</h2>
-<p>Syntax: <code>?</code></p>
+<span class="c"># print the length of the element located at index 1</span>
+<span class="nb">echo</span> <span class="k">${#</span><span class="nv">unix</span><span class="p">[1]</span><span class="k">}</span>
+
+<span class="c"># print subset</span>
+<span class="nv">Unix</span><span class="o">=(</span><span class="s1">'Debian'</span> <span class="s1">'Red hat'</span> <span class="s1">'Ubuntu'</span> <span class="s1">'Suse'</span> <span class="s1">'Fedora'</span> <span class="s1">'UTS'</span> <span class="s1">'OpenLinux'</span><span class="o">)</span><span class="p">;</span>
+<span class="nb">echo</span> <span class="k">${</span><span class="nv">Unix</span><span class="p">[@]</span>:3:2<span class="k">}</span> <span class="c"># output: Suse Fedora</span>
+</code></pre></div></div>
+
+<h2 id="get-return-status-of-last-executed-command">Get return status of last executed command</h2>
+<p>Syntax: <code class="highlighter-rouge">?</code></p>
+
 <p>Example:</p>
-<div class="highlight highlight-source-shell"><pre>ls <span class="pl-c"><span class="pl-c">#</span> assume ls runs successfully </span>
-<span class="pl-c1">echo</span> <span class="pl-smi">$?</span> <span class="pl-c"><span class="pl-c">#</span> print 0 (return value of success status)</span></pre></div>
-<h2><a id="user-content-to-uppercase-and-to-lowercase" class="anchor" aria-hidden="true" href="#to-uppercase-and-to-lowercase"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>to uppercase and to lowercase</h2>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">ls</span> <span class="c"># assume ls runs successfully </span>
+<span class="nb">echo</span> <span class="nv">$?</span> <span class="c"># print 0 (return value of success status)</span>
+</code></pre></div></div>
+
+<h2 id="to-uppercase-and-to-lowercase">to uppercase and to lowercase</h2>
 <p>Example:</p>
-<div class="highlight highlight-source-shell"><pre>var=<span class="pl-s"><span class="pl-pds">"</span>aLaY<span class="pl-pds">"</span></span>
-<span class="pl-c1">echo</span> <span class="pl-smi">${var,,}</span> <span class="pl-c"><span class="pl-c">#</span> to lowercase</span>
-<span class="pl-c1">echo</span> <span class="pl-smi">${var^^}</span> <span class="pl-c"><span class="pl-c">#</span> to uppercase</span></pre></div>
-<h2><a id="user-content-21" class="anchor" aria-hidden="true" href="#21"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>2&gt;&amp;1</h2>
-<p><a href="https://stackoverflow.com/questions/818255/in-the-shell-what-does-21-mean" rel="nofollow">https://stackoverflow.com/questions/818255/in-the-shell-what-does-21-mean</a></p>
-<p><a href="https://www.brianstorti.com/understanding-shell-script-idiom-redirect/" rel="nofollow">https://www.brianstorti.com/understanding-shell-script-idiom-redirect/</a></p>
-<p>File descriptor 1 is the <code>stdout</code>.</p>
-<p>File descriptor 2 is the <code>stderr</code>.</p>
-<p><code>2&gt;&amp;1</code> means "redirect the <code>stderr</code> to the same place we are redirectering the <code>stdout</code>".</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">var</span><span class="o">=</span><span class="s2">"aLaY"</span>
+<span class="nb">echo</span> <span class="k">${</span><span class="nv">var</span><span class="p">,,</span><span class="k">}</span> <span class="c"># to lowercase</span>
+<span class="nb">echo</span> <span class="k">${</span><span class="nv">var</span><span class="p">^^</span><span class="k">}</span> <span class="c"># to uppercase</span>
+</code></pre></div></div>
+
+<h2 id="21">2&gt;&amp;1</h2>
+<p>https://stackoverflow.com/questions/818255/in-the-shell-what-does-21-mean</p>
+
+<p>https://www.brianstorti.com/understanding-shell-script-idiom-redirect/</p>
+
+<p>File descriptor 1 is the <code class="highlighter-rouge">stdout</code>.</p>
+
+<p>File descriptor 2 is the <code class="highlighter-rouge">stderr</code>.</p>
+
+<p><code class="highlighter-rouge">2&gt;&amp;1</code> means “redirect the <code class="highlighter-rouge">stderr</code> to the same place we are redirectering the <code class="highlighter-rouge">stdout</code>”.</p>
+
 <p>Example:</p>
-<div class="highlight highlight-source-shell"><pre>$ ./main.out <span class="pl-k">&gt;</span> output.txt <span class="pl-k">2&gt;&amp;1</span> <span class="pl-c"><span class="pl-c">#</span> this will save stderr and stdout output to output.txt, but nothing appears on screen</span>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>./main.out <span class="o">&gt;</span> output.txt 2&gt;&amp;1 <span class="c"># this will save stderr and stdout output to output.txt, but nothing appears on screen</span>
 
-$ ./main.out <span class="pl-k">2&gt;&amp;1</span> <span class="pl-k">|</span> tee output.txt <span class="pl-c"><span class="pl-c">#</span> this will save stderr and stdout to output.txt, they also appear on screen</span></pre></div>
-</article>
-  </div>
-
-    </div>
-
-  
-
-  <details class="details-reset details-overlay details-overlay-dark">
-    <summary data-hotkey="l" aria-label="Jump to line"></summary>
-    <details-dialog class="Box Box--overlay d-flex flex-column anim-fade-in fast linejump" aria-label="Jump to line">
-      <!-- '"` --><!-- </textarea></xmp> -->&lt;/option&gt;&lt;/form&gt;<form class="js-jump-to-line-form Box-body d-flex" action="" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
-        <input class="form-control flex-auto mr-3 linejump-input js-jump-to-line-field" type="text" placeholder="Jump to line&hellip;" aria-label="Jump to line" autofocus="" />
-        <button type="submit" class="btn" data-close-dialog="">Go</button>
-</form>    </details-dialog>
-  </details>
-
-
-
-  </div>
-  <div class="modal-backdrop js-touch-events"></div>
-</div>
-
-    </main>
-  </div>
-  
-
-  </div>
-
-        
-<div class="footer container-lg width-full p-responsive" role="contentinfo">
-  <div class="position-relative d-flex flex-row-reverse flex-lg-row flex-wrap flex-lg-nowrap flex-justify-center flex-lg-justify-between pt-6 pb-2 mt-6 f6 text-gray border-top border-gray-light ">
-    <ul class="list-style-none d-flex flex-wrap col-12 col-lg-5 flex-justify-center flex-lg-justify-between mb-2 mb-lg-0">
-      <li class="mr-3 mr-lg-0">&copy; 2019 <span title="0.20937s from unicorn-8cdddd4f7-djfhp">GitHub</span>, Inc.</li>
-        <li class="mr-3 mr-lg-0"><a data-ga-click="Footer, go to terms, text:terms" href="https://github.com/site/terms">Terms</a></li>
-        <li class="mr-3 mr-lg-0"><a data-ga-click="Footer, go to privacy, text:privacy" href="https://github.com/site/privacy">Privacy</a></li>
-        <li class="mr-3 mr-lg-0"><a data-ga-click="Footer, go to security, text:security" href="https://github.com/security">Security</a></li>
-        <li class="mr-3 mr-lg-0"><a href="https://githubstatus.com/" data-ga-click="Footer, go to status, text:status">Status</a></li>
-        <li><a data-ga-click="Footer, go to help, text:help" href="https://help.github.com">Help</a></li>
-    </ul>
-
-    <a aria-label="Homepage" title="GitHub" class="footer-octicon d-none d-lg-block mx-lg-4" href="https://github.com">
-      <svg height="24" class="octicon octicon-mark-github" viewBox="0 0 16 16" version="1.1" width="24" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z" /></svg>
-</a>
-   <ul class="list-style-none d-flex flex-wrap col-12 col-lg-5 flex-justify-center flex-lg-justify-between mb-2 mb-lg-0">
-        <li class="mr-3 mr-lg-0"><a data-ga-click="Footer, go to contact, text:contact" href="https://github.com/contact">Contact GitHub</a></li>
-        <li class="mr-3 mr-lg-0"><a href="https://github.com/pricing" data-ga-click="Footer, go to Pricing, text:Pricing">Pricing</a></li>
-      <li class="mr-3 mr-lg-0"><a href="https://developer.github.com" data-ga-click="Footer, go to api, text:api">API</a></li>
-      <li class="mr-3 mr-lg-0"><a href="https://training.github.com" data-ga-click="Footer, go to training, text:training">Training</a></li>
-        <li class="mr-3 mr-lg-0"><a href="https://github.blog" data-ga-click="Footer, go to blog, text:blog">Blog</a></li>
-        <li><a data-ga-click="Footer, go to about, text:about" href="https://github.com/about">About</a></li>
-
-    </ul>
-  </div>
-  <div class="d-flex flex-justify-center pb-6">
-    <span class="f6 text-gray-light"></span>
-  </div>
-</div>
-
-
-
-  <div id="ajax-error-message" class="ajax-error-message flash flash-error">
-    <svg class="octicon octicon-alert" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z" /></svg>
-    <button type="button" class="flash-close js-ajax-error-dismiss" aria-label="Dismiss error">
-      <svg class="octicon octicon-x" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z" /></svg>
-    </button>
-    You can’t perform that action at this time.
-  </div>
-
-
-    <script crossorigin="anonymous" integrity="sha512-BlCvumXWTvpASEdhCGiahDUDf7Bwb8QXA2XnnSnqJ9QafxcNcrNYUNYS2wXmd3nEpO//+zlZa9DSV9zmu5MqRg==" type="application/javascript" src="https://github.githubassets.com/assets/compat-bootstrap-90c0ace0.js"></script>
-    <script crossorigin="anonymous" integrity="sha512-4D7Df3f6tUQVsNwSbo1CVWjxUiIq07cMaWVIO2M0aYkbh9093/yzfdK0DaIfxEALJKLROLlAsYjwOjBldHEY2Q==" type="application/javascript" src="https://github.githubassets.com/assets/frameworks-877255c7.js"></script>
-    
-    <script crossorigin="anonymous" async="async" integrity="sha512-+9q+1bvQexH3m22/KCwX3zeJkYE0FQu081kpS4TQd+tY2az3nt/8d2jfx4ysqJg0za15PSM9qho9/sjPsnUgAA==" type="application/javascript" src="https://github.githubassets.com/assets/github-bootstrap-17d10582.js"></script>
-    
-    
-    
-  <div class="js-stale-session-flash stale-session-flash flash flash-warn flash-banner" hidden="">
-    <svg class="octicon octicon-alert" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z" /></svg>
-    <span class="signed-in-tab-flash">You signed in with another tab or window. <a href="">Reload</a> to refresh your session.</span>
-    <span class="signed-out-tab-flash">You signed out in another tab or window. <a href="">Reload</a> to refresh your session.</span>
-  </div>
-  <template id="site-details-dialog">
-  <details class="details-reset details-overlay details-overlay-dark lh-default text-gray-dark hx_rsm" open="">
-    <summary role="button" aria-label="Close dialog"></summary>
-    <details-dialog class="Box Box--overlay d-flex flex-column anim-fade-in fast hx_rsm-dialog hx_rsm-modal">
-      <button class="Box-btn-octicon m-0 btn-octicon position-absolute right-0 top-0" type="button" aria-label="Close dialog" data-close-dialog="">
-        <svg class="octicon octicon-x" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z" /></svg>
-      </button>
-      <div class="octocat-spinner my-6 js-details-dialog-spinner"></div>
-    </details-dialog>
-  </details>
-</template>
-
-  <div class="Popover js-hovercard-content position-absolute" style="display: none; outline: none;" tabindex="0">
-  <div class="Popover-message Popover-message--bottom-left Popover-message--large Box box-shadow-large" style="width:360px;">
-  </div>
-</div>
-
-  <div aria-live="polite" class="js-global-screen-reader-notice sr-only"></div>
-
-  &lt;/body&gt;
-&lt;/html&gt;
-
-</li></ul></div></details></li></ul></nav></div></div></header></div></body></html>
+<span class="nv">$ </span>./main.out 2&gt;&amp;1 | tee output.txt <span class="c"># this will save stderr and stdout to output.txt, they also appear on screen</span>
+</code></pre></div></div>

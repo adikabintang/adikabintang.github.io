@@ -1,3 +1,4 @@
 #!/bin/bash
 
-wget https://github.com/adikabintang/kuliah/blob/master/misc_notes/linux/linux_command.md -P ./pages/linux/
+rm ./pages/linux/linux_command.md
+wget https://raw.githubusercontent.com/adikabintang/kuliah/master/misc_notes/linux/linux_command.md -P ./pages/linux/
