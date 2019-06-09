@@ -23,7 +23,7 @@ Research Trainee, working on QUIC protocol
 - Distributed systems
 - Did I say "guitars"?
 
-Sad truth: I have more interests than my knowledge and skills.<br />
+Sad truth: I have much less knowledge and skills than my interests. So, if I am interested in something, it does not mean I am good at it.<br />
 The notes I gathered for my own interests: [here](./pages/interests.html).
 
 ### Conference
