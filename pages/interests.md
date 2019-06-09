@@ -14,6 +14,7 @@ layout: default
 - Beej's guide to GDB: [ref](http://beej.us/guide/bggdb/)
 
 ### Linux
-- My notes on learning Linux commands: [ref](./linux/lix_command.html)
+- Personal learning notes on learning Linux commands: [ref](./linux/lix_command.html)
+- Personal learning notes on learning Linux IO: [ref](./linux/linux_io.html)
 
 [back](../)

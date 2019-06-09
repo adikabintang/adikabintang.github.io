@@ -529,4 +529,1064 @@ unix[1]<span class="o">=</span><span class="s1">'Fedora'</span>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>./main.out <span class="o">&gt;</span> output.txt 2&gt;&amp;1 <span class="c"># this will save stderr and stdout output to output.txt, but nothing appears on screen</span>
 
 <span class="nv">$ </span>./main.out 2&gt;&amp;1 | tee output.txt <span class="c"># this will save stderr and stdout to output.txt, they also appear on screen</span>
+<span class="sb">```</span><span class="c"># Contents</span>
+- <span class="o">[</span>file]<span class="o">(</span><span class="c">#file)</span>
+- <span class="o">[</span>find]<span class="o">(</span><span class="c">#find)</span>
+- <span class="o">[</span>locate]<span class="o">(</span><span class="c">#locate)</span>
+- <span class="o">[</span><span class="nb">grep</span><span class="o">](</span><span class="c">#grep)</span>
+- <span class="o">[</span>du]<span class="o">(</span><span class="c">#du)</span>
+- <span class="o">[</span>df]<span class="o">(</span><span class="c">#df)</span>
+- <span class="o">[</span>sort]<span class="o">(</span><span class="c">#sort)</span>
+- <span class="o">[</span>wc]<span class="o">(</span><span class="c">#wc)</span>
+- <span class="o">[</span>uptime]<span class="o">(</span><span class="c">#uptime)</span>
+- <span class="o">[</span>whatis]<span class="o">(</span><span class="c">#whatis)</span>
+- <span class="o">[</span>tee]<span class="o">(</span><span class="c">#tee)</span>
+- <span class="o">[</span>sed]<span class="o">(</span><span class="c">#sed)</span>
+- <span class="o">[</span>awk]<span class="o">(</span><span class="c">#awk)</span>
+- <span class="o">[</span><span class="nb">read</span><span class="o">](</span><span class="c">#read)</span>
+- <span class="o">[</span>cut]<span class="o">(</span><span class="c">#cut)</span>
+- <span class="o">[</span>tr]<span class="o">(</span><span class="c">#tr)</span>
+- <span class="o">[</span>uniq]<span class="o">(</span><span class="c">#uniq)</span>
+- <span class="o">[</span>xargs]<span class="o">(</span><span class="c">#xargs)</span>
+- <span class="o">[</span>traceroute]<span class="o">(</span><span class="c">#traceroute)</span>
+- <span class="o">[</span>dig]<span class="o">(</span><span class="c">#dig)</span>
+- <span class="o">[</span>telnet]<span class="o">(</span><span class="c">#telnet)</span>
+- <span class="o">[</span>netstat]<span class="o">(</span><span class="c">#netstat)</span>
+- <span class="o">[</span>nmap]<span class="o">(</span><span class="c">#nmap)</span>
+- <span class="o">[</span>Loops]<span class="o">(</span><span class="c">#Loops)</span>
+- <span class="o">[</span>Conditional]<span class="o">(</span><span class="c">#Conditional)</span>
+- <span class="o">[</span>Arithmethic]<span class="o">(</span><span class="c">#Arithmethic)</span>
+- <span class="o">[</span>Array]<span class="o">(</span><span class="c">#Array)</span>
+- <span class="o">[</span>Get]<span class="o">(</span><span class="c">#Get)</span>
+- <span class="o">[</span>to]<span class="o">(</span><span class="c">#to)</span>
+
+<span class="c"># Really Basics</span>
+<span class="c">## file</span>
+<span class="sb">`</span>file<span class="sb">`</span> find out <span class="nb">type </span>of files.
+example
+<span class="sb">```</span>bash
+<span class="nv">$ </span>file test.xt
+<span class="o">&gt;</span> test.txt: ASCII text
+</code></pre></div></div>
+
+<h2 id="find-1">find</h2>
+<p>find files. Example:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>find -type f -name main.c      ( f for files, d for dir )
+</code></pre></div></div>
+
+<h2 id="locate-1">locate</h2>
+<p>like files, but not search in the filesystem. it looks to updatedb. pros: faster than <code class="highlighter-rouge">find</code>. cons: not as consistent as <code class="highlighter-rouge">find</code>, especially when there is a change in the filesystem.
+example:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>locate main.c (will look every file containing main.c, like `grep main.c`)
+</code></pre></div></div>
+
+<h2 id="grep-1">grep</h2>
+<p>https://www.thegeekstuff.com/2009/03/15-practical-unix-grep-command-examples/</p>
+
+<p>Examples:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">cat </span>demo_file
+THIS LINE IS THE 1ST UPPER CASE LINE IN THIS FILE.
+this line is the 1st lower <span class="k">case</span> line <span class="k">in </span>this file.
+This Line Has All Its First Character Of The Word With Upper Case.
+
+Two lines above this line is empty.
+And this is the last line.
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">grep</span> <span class="s2">"this"</span> demo_file
+this line is the 1st lower <span class="k">case</span> line <span class="k">in </span>this file.
+Two lines above this line is empty.
+And this is the last line.
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># we make two files first</span>
+<span class="nv">$ </span>cp demo_file demo_file1
+<span class="nv">$ </span><span class="nb">grep</span> <span class="s2">"this"</span> demo_<span class="k">*</span>
+demo_file:this line is the 1st lower <span class="k">case</span> line <span class="k">in </span>this file.
+demo_file:Two lines above this line is empty.
+demo_file:And this is the last line.
+demo_file1:this line is the 1st lower <span class="k">case</span> line <span class="k">in </span>this file.
+demo_file1:Two lines above this line is empty.
+demo_file1:And this is the last line.
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># case insensitive search, using -i</span>
+<span class="nv">$ </span><span class="nb">grep</span> <span class="nt">-i</span> <span class="s2">"the"</span> defmo_file
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># match regex</span>
+<span class="nv">$ </span><span class="nb">grep</span> <span class="s2">"lines.*empty"</span> demo_file
+Two lines above this line is empty.
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># match exact string, not substring using -w (like ^word$)</span>
+<span class="nv">$ </span><span class="nb">grep</span> <span class="nt">-w</span> <span class="s2">"word"</span> file
+</code></pre></div></div>
+
+<h2 id="id-1">id</h2>
+<p>Checks users and group. Example:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>id
+<span class="nv">uid</span><span class="o">=</span>1000<span class="o">(</span>bintang<span class="o">)</span> <span class="nv">gid</span><span class="o">=</span>1000<span class="o">(</span>bintang<span class="o">)</span> <span class="nv">groups</span><span class="o">=</span>1000<span class="o">(</span>bintang<span class="o">)</span>,10<span class="o">(</span>wheel<span class="o">)</span>,971<span class="o">(</span>docker<span class="o">)</span>,974<span class="o">(</span>wireshark<span class="o">)</span> <span class="nv">context</span><span class="o">=</span>unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023
+</code></pre></div></div>
+
+<h2 id="chmod-1">chmod</h2>
+<p>Usual mode, refer here: http://permissions-calculator.org/info/</p>
+
+<p>Special mode:
+<strong>setuid</strong>: executable file with the setuid bit can be executed with the privileges of the file’s owner. <code class="highlighter-rouge">chmod 4xxx file</code> or <code class="highlighter-rouge">chmod u+s</code>.</p>
+
+<p><strong>setgid</strong>: executable file with the setgid can be executed with the privileges of the file’s group. <code class="highlighter-rouge">chmod 2xxx file</code> or <code class="highlighter-rouge">chmod g+s file</code>.</p>
+
+<p><strong>sticky bit</strong>: when a directory’s sticky bit is set, the filesystem treats the files in such directories in a special way so that <em>only the file owner’s, dir owner’s, or root can rename/delet the file</em>. Example: <code class="highlighter-rouge">/tmp</code> folder. <code class="highlighter-rouge">chmod 1xxx file</code>.</p>
+
+<h2 id="du-1">du</h2>
+<p>check file/dir size.
+example:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ du -h file.txt (-h to make it readable like 4.0K, 46M, etc)
+$ du -h foldername (will print the size recursively)
+$ du -h foldername -d 0 (-d for depth, 0 will print the size of foldername only)
+$ du -h foldername -d 1 (will print -d 0 and the recursive of depth 1)
+</code></pre></div></div>
+<h2 id="df-1">df</h2>
+<ul>
+  <li>show disk usage</li>
+  <li>find out which partition a directory is on. Command: <code class="highlighter-rouge">df -h /path/to/dir</code>
+    <h2 id="sort-1">sort</h2>
+    <p>example
+```bash
+$ cat file.txt
+b
+c
+a</p>
+  </li>
+</ul>
+
+<p>$ sort file.txt
+a
+b
+c</p>
+
+<p>$ sort -r file.txt
+c
+b
+a</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+For sorting numbers:
+```bash
+$ sort -n file.txt
+1
+1.5
+2
+5
+</code></pre></div></div>
+
+<h2 id="wc-1">wc</h2>
+<p>word count
+line counting
+byte counting</p>
+
+<h2 id="uptime-1">uptime</h2>
+<p>tells how long the system has been running.</p>
+
+<h2 id="whatis-1">whatis</h2>
+<p>display one-line manual page description of a command. example</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ whatis whatis
+whatis (1)           - display one-line manual page descriptions
+
+$ whatis tee
+tee (1)              - read from standard input and write to standard output and files
+tee (1p)             - duplicate standard input
+tee (2)              - duplicating pipe content
+</code></pre></div></div>
+
+<h2 id="tee-1">tee</h2>
+<p>Read from standard input and write to standard output and files. For example, if we use <code class="highlighter-rouge">ping google.com &gt; file.txt</code>,  the output will be in file.txt but not in stdout. But with tee, we can get both to stdout and file.txt. Example:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ping google.com | tee file.txt
+
+or we can even output to multiple files
+
+$ ping google.com | tee file.txt another.txt
+</code></pre></div></div>
+
+<h2 id="sed-1">sed</h2>
+<p>sed: stream editor for filtering and transforming text.</p>
+
+<p>Example 1 replacing string, <a href="https://unix.stackexchange.com/questions/159367/using-sed-to-find-and-replace">link</a>:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sed -i -e 's/before/after/g' hello.txt
+</code></pre></div></div>
+
+<h2 id="awk-1">awk</h2>
+<p>pattern scanning and processing language. huh?</p>
+
+<p>Example 1, printing column of a text <a href="https://www.tutorialspoint.com/awk/awk_basic_examples.htm">link</a>:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cat file.txt
+1) Amit     Physics   80
+2) Rahul    Maths     90
+
+$ awk '{print $1}' file.txt
+1)
+2)
+
+$ awk '{print $2 " " $4}' file.txt
+Amit 80
+Rahul 90
+
+# print line which has more than 18 chars
+$ awk 'length($0) &gt; 18' file.txt
+</code></pre></div></div>
+
+<h2 id="read-1">read</h2>
+<p>read input.</p>
+
+<p>Example:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">read </span>varname
+<span class="nb">echo</span> <span class="s2">"Hello </span><span class="nv">$varname</span><span class="s2">"</span>
+</code></pre></div></div>
+
+<h2 id="cut-1">cut</h2>
+<p>https://www.thegeekstuff.com/2013/06/cut-command-examples/</p>
+
+<p><code class="highlighter-rouge">cut -c2 test.txt</code>  print (like <code class="highlighter-rouge">cat</code>) but only the 2nd character from each line of the test.txt.</p>
+
+<p><code class="highlighter-rouge">cut -c1-3 test.txt</code> print character 1 to 3 (like <code class="highlighter-rouge">asu</code>, 3 character from the first character) from each line of the test.txt.</p>
+
+<p><code class="highlighter-rouge">cut -c3- test.txt</code> print from the 3rd character.</p>
+
+<p><code class="highlighter-rouge">cut -c-8 test.txt</code> print from the first to the 8th character from each line of the test.txt.</p>
+
+<p><code class="highlighter-rouge">cut -c2,7 test.txt</code>  print the 2nd and 7th characters from each line of the test.txt.</p>
+
+<p><code class="highlighter-rouge">cut -c- test.txt</code> same as <code class="highlighter-rouge">cat test.txt</code>.</p>
+
+<p><code class="highlighter-rouge">cut -d':' -f1 /etc/passwd</code>   -d is delimiter, -f is the field. in this case, the output would be something like:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>root
+bin
+sync
+nginx
+</code></pre></div></div>
+
+<h2 id="tr-1">tr</h2>
+<p>https://www.geeksforgeeks.org/tr-command-in-unix-linux-with-examples/</p>
+
+<p>tr stands for translage. tr is for translating and deleting characters.</p>
+
+<p>Syntax:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>tr [OPTION] SET1 [SET2]
+
+OPTION:
+-c: complements the set of characters in string
+-d: delete characters in the first set from the output
+-s: replaces repeated characters listed in the SET1 with single occurence
+-t: truncates SET1
+</code></pre></div></div>
+
+<p>Example 1: how to convert lower case to upper case</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">echo</span> <span class="s2">"Budj"</span> | tr <span class="s2">"[a-z]"</span> <span class="s2">"[A-Z]"</span>
+</code></pre></div></div>
+
+<p>Example 2: translate white-space to tabs</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">echo</span> <span class="s2">"dewa budjana"</span> | tr <span class="s2">"[:space:]"</span> <span class="s1">'\t'</span>
+</code></pre></div></div>
+
+<p>Example 3: tranlate braces to parenthesis</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">echo</span> <span class="s2">"{dewa} budjana"</span> | tr <span class="s1">'{}'</span> <span class="s1">'()'</span>
+or
+tr <span class="s1">'{}'</span> <span class="s1">'()'</span> file.txt
+</code></pre></div></div>
+
+<p>Example 4: delete specified char using -d</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">echo</span> <span class="s2">"hyang giri"</span> | tr <span class="nt">-d</span> <span class="s1">'g'</span> <span class="c"># otuput: hyan iri</span>
+<span class="nb">echo</span> <span class="s2">"dafuq 123"</span> | tr <span class="nt">-d</span> <span class="s2">"[:digit:]"</span> <span class="c"># output: dafuq</span>
+</code></pre></div></div>
+
+<p>Example 5: complement the sets using -c options</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">echo</span> <span class="s2">"dafuq 123"</span> | tr <span class="nt">-cd</span> <span class="s2">"[:digit:]"</span> <span class="c"># output: 123</span>
+</code></pre></div></div>
+
+<h2 id="uniq-1">uniq</h2>
+<p><code class="highlighter-rouge">uniq</code> = unique.</p>
+
+<p>Examples:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">cat </span>file.txt
+wanjir
+wanjir
+kancut men
+kancut
+
+<span class="nv">$ </span>uniq file.txt
+wanjir
+kancut men
+kancut
+
+<span class="nv">$ </span>uniq <span class="nt">-c</span> file.txt <span class="c"># it counts the number of repetitions</span>
+2 wanjir
+1 kancut men
+1 kancut
+
+<span class="nv">$ </span>uniq <span class="nt">-D</span> file.txt <span class="c"># print only duplicate lines</span>
+wanjir
+wanjir
+</code></pre></div></div>
+
+<h2 id="xargs-1">xargs</h2>
+<p>…</p>
+
+<h1 id="basic-networking-1">Basic Networking</h1>
+<h2 id="traceroute-1">traceroute</h2>
+<p>print the route packets trace to network host.
+Example:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ traceroute google.com
+</code></pre></div></div>
+
+<h2 id="dig-1">dig</h2>
+<p>DNS lookup utility. Example:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ dig geekflare.com
+</code></pre></div></div>
+
+<h2 id="telnet-1">telnet</h2>
+<p>user interface to the TELNET protocol. used to check if the connection is ok. example:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>telnet geekflare 443
+</code></pre></div></div>
+
+<h2 id="netstat-1">netstat</h2>
+<p>Print network connections, routing tables, interface statistics, masquerade connections, and multicast memberships.</p>
+
+<p>Review network connection and open sockets.</p>
+
+<p>Examples:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># display routing table</span>
+netstate <span class="nt">-r</span>
+
+<span class="c"># display network services</span>
+netstate <span class="nt">-i</span>
+
+<span class="c"># continuous monitorign</span>
+netstat <span class="nt">-c</span>
+
+<span class="c"># see tcp connections</span>
+netstat <span class="nt">-t</span>
+
+<span class="c"># see udp conn</span>
+netstate <span class="nt">-u</span>
+
+<span class="c"># see state LISTENING</span>
+netstate <span class="nt">-L</span>
+
+<span class="c"># practical use</span>
+netstate <span class="nt">-tulpn</span> <span class="c"># p: display programe name, n: numeric</span>
+</code></pre></div></div>
+
+<h2 id="lsof-1">lsof</h2>
+<p>lsof lists the open files associated with an application. Example:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>lsof <span class="nt">-i</span> tcp:80
+</code></pre></div></div>
+
+<h2 id="nmap-1">nmap</h2>
+<p>check opened ports. port scanner.</p>
+
+<h1 id="loop-conditional-etc-1">Loop, Conditional, etc</h1>
+<h2 id="loops-1">Loops</h2>
+<p>Example 1:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for </span>i <span class="k">in</span> <span class="o">{</span>1..4<span class="o">}</span>
+<span class="k">do
+    </span><span class="nb">echo</span> <span class="s2">"</span><span class="nv">$i</span><span class="s2">"</span>
+<span class="k">done</span>
+
+<span class="c"># output:</span>
+<span class="c"># 1</span>
+<span class="c"># 2</span>
+<span class="c"># 3</span>
+<span class="c"># 4</span>
+</code></pre></div></div>
+
+<p>Example 2:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for </span>i <span class="k">in</span> <span class="o">{</span>0..4..2<span class="o">}</span>
+<span class="k">do 
+    </span><span class="nb">echo</span> <span class="s2">"</span><span class="nv">$i</span><span class="s2">"</span>
+<span class="k">done</span>
+
+<span class="c"># output</span>
+<span class="c"># 0</span>
+<span class="c"># 2</span>
+<span class="c"># 4</span>
+</code></pre></div></div>
+
+<p>Example 3:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for </span>file <span class="k">in </span>server.cpp plain.zip
+<span class="k">do
+	</span>wc <span class="nv">$file</span>
+<span class="k">done</span>
+
+<span class="c"># output:</span>
+<span class="c"># 19  49 484 server.cpp</span>
+<span class="c"># 143900   815790 44879792 plain.zip</span>
+</code></pre></div></div>
+
+<h2 id="conditional-1">Conditional</h2>
+<p>Example 1:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">var</span><span class="o">=</span><span class="s2">"kancut"</span>
+<span class="k">if</span> <span class="o">[</span> <span class="s2">"</span><span class="nv">$var</span><span class="s2">"</span> <span class="o">=</span> <span class="s2">"abc"</span> <span class="o">]</span><span class="p">;</span> <span class="k">then
+    </span><span class="nb">echo</span> <span class="s2">"true"</span>
+<span class="k">else
+    </span><span class="nb">echo</span> <span class="s2">"false"</span>
+<span class="k">fi</span>
+</code></pre></div></div>
+
+<p>Example 2:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">x</span><span class="o">=</span>0
+<span class="nv">y</span><span class="o">=</span>1
+<span class="k">if</span> <span class="o">[</span> <span class="s2">"</span><span class="nv">$x</span><span class="s2">"</span> <span class="nt">-eq</span> <span class="s2">"</span><span class="nv">$y</span><span class="s2">"</span> <span class="o">]</span><span class="p">;</span> <span class="k">then
+    </span><span class="nb">echo</span> <span class="s2">"x is equal to y"</span>
+<span class="k">elif</span> <span class="o">[</span> <span class="s2">"</span><span class="nv">$x</span><span class="s2">"</span> <span class="nt">-gt</span> <span class="s2">"</span><span class="nv">$y</span><span class="s2">"</span> <span class="o">]</span><span class="p">;</span> <span class="k">then
+    </span><span class="nb">echo</span> <span class="s2">"x is greater than y"</span>
+<span class="k">elif</span> <span class="o">[</span> <span class="s2">"</span><span class="nv">$x</span><span class="s2">"</span> <span class="nt">-lt</span> <span class="s2">"</span><span class="nv">$y</span><span class="s2">"</span> <span class="o">]</span><span class="p">;</span> <span class="k">then
+    </span><span class="nb">echo</span> <span class="s2">"x is less than y"</span>
+<span class="k">fi
+
+if</span> <span class="o">[</span> <span class="s2">"</span><span class="nv">$x</span><span class="s2">"</span> <span class="nt">-ne</span> <span class="s2">"</span><span class="nv">$y</span><span class="s2">"</span> <span class="o">]</span><span class="p">;</span> <span class="k">then
+    </span><span class="nb">echo</span> <span class="s2">"x is not equal to y"</span>
+<span class="k">fi</span>
+</code></pre></div></div>
+
+<p>Example 3:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">name</span><span class="o">=</span><span class="s2">"jeff beck"</span>
+<span class="c"># check if it's an empty string</span>
+<span class="k">if</span> <span class="o">[</span> <span class="nt">-z</span> <span class="s2">"</span><span class="nv">$name</span><span class="s2">"</span> <span class="o">]</span><span class="p">;</span> <span class="k">then
+    </span><span class="nb">echo</span> <span class="s2">"name is an empty string"</span>
+<span class="k">fi</span>
+
+<span class="c"># check if the length is not zero</span>
+<span class="k">if</span> <span class="o">[</span> <span class="s2">"</span><span class="nv">$name</span><span class="s2">"</span> <span class="o">]</span><span class="p">;</span> <span class="k">then
+    </span><span class="nb">echo</span> <span class="s2">"name's length is NOT zero"</span>
+<span class="k">fi</span>
+</code></pre></div></div>
+
+<p>Example 4:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">file_1</span><span class="o">=</span><span class="s2">"server.cpp"</span>
+<span class="nv">file_2</span><span class="o">=</span><span class="s2">"one.cpp"</span>
+<span class="nv">dir_1</span><span class="o">=</span><span class="s2">"cpp"</span>
+<span class="nv">dir_2</span><span class="o">=</span><span class="s2">"catch2"</span>
+
+<span class="k">if</span> <span class="o">[</span> <span class="nt">-f</span> <span class="s2">"</span><span class="nv">$file_1</span><span class="s2">"</span> <span class="o">]</span><span class="p">;</span> <span class="k">then
+	</span><span class="nb">echo</span> <span class="s2">"</span><span class="nv">$file_1</span><span class="s2"> exists"</span>
+<span class="k">fi
+
+if</span> <span class="o">[</span> <span class="nt">-f</span> <span class="s2">"</span><span class="nv">$file_2</span><span class="s2">"</span> <span class="o">]</span><span class="p">;</span> <span class="k">then
+    </span><span class="nb">echo</span> <span class="s2">"</span><span class="nv">$file_2</span><span class="s2"> exists"</span>
+<span class="k">fi
+
+if</span> <span class="o">[</span> <span class="nt">-d</span> <span class="s2">"</span><span class="nv">$dir_1</span><span class="s2">"</span> <span class="o">]</span><span class="p">;</span> <span class="k">then
+    </span><span class="nb">echo</span> <span class="s2">"</span><span class="nv">$dir_1</span><span class="s2"> exists"</span>
+<span class="k">fi
+
+if</span> <span class="o">[</span> <span class="nt">-d</span> <span class="s2">"</span><span class="nv">$dir_2</span><span class="s2">"</span> <span class="o">]</span><span class="p">;</span> <span class="k">then
+    </span><span class="nb">echo</span> <span class="s2">"</span><span class="nv">$dir_2</span><span class="s2"> exists"</span>
+<span class="k">fi</span>
+</code></pre></div></div>
+
+<p><code class="highlighter-rouge">-f</code> and <code class="highlighter-rouge">-d</code> do not work recursively (i.e. they do not look inside other directories).</p>
+
+<p>For other than <code class="highlighter-rouge">-f</code> and <code class="highlighter-rouge">-d</code>,  see: http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_07_01.html</p>
+
+<h2 id="arithmethic-operations-1">Arithmethic Operations</h2>
+<p>Example:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">x</span><span class="o">=</span>2
+<span class="nv">y</span><span class="o">=</span>9
+<span class="nb">echo</span> <span class="sb">`</span>expr <span class="s2">"</span><span class="nv">$x</span><span class="s2">"</span> + <span class="s2">"</span><span class="nv">$y</span><span class="s2">"</span><span class="sb">`</span>
+<span class="nb">echo</span> <span class="sb">`</span>expr <span class="s2">"</span><span class="nv">$x</span><span class="s2">"</span> - <span class="s2">"</span><span class="nv">$y</span><span class="s2">"</span><span class="sb">`</span>
+<span class="nb">echo</span> <span class="sb">`</span>expr <span class="s2">"</span><span class="nv">$x</span><span class="s2">"</span> <span class="se">\*</span> <span class="s2">"</span><span class="nv">$y</span><span class="s2">"</span><span class="sb">`</span>
+<span class="nb">echo</span> <span class="sb">`</span>expr <span class="s2">"</span><span class="nv">$x</span><span class="s2">"</span> / <span class="s2">"</span><span class="nv">$y</span><span class="s2">"</span><span class="sb">`</span>
+
+<span class="nv">i</span><span class="o">=</span>0
+<span class="c">#increment</span>
+<span class="o">((</span><span class="nv">i</span><span class="o">=</span>i+1<span class="o">))</span>
+</code></pre></div></div>
+
+<h2 id="array-1">Array</h2>
+<p>Examples: https://www.thegeekstuff.com/2010/06/bash-array-tutorial/</p>
+
+<p>Example 1:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>unix[0]<span class="o">=</span><span class="s1">'Debian'</span>
+unix[1]<span class="o">=</span><span class="s1">'Fedora'</span>
+
+<span class="nb">echo</span> <span class="k">${</span><span class="nv">unix</span><span class="p">[1]</span><span class="k">}</span> <span class="c"># output: Fedora</span>
+</code></pre></div></div>
+
+<p>Example 2: <code class="highlighter-rouge">declare -a</code> declares an array</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">declare</span> <span class="nt">-a</span> <span class="nv">unix</span><span class="o">=(</span><span class="s1">'Debian'</span> <span class="s1">'Fedora'</span><span class="o">)</span>
+
+<span class="c"># print all elements</span>
+<span class="nb">echo</span> <span class="k">${</span><span class="nv">unix</span><span class="p">[*]</span><span class="k">}</span>
+
+<span class="c"># print the length of the array</span>
+<span class="nb">echo</span> <span class="k">${#</span><span class="nv">unix</span><span class="p">[*]</span><span class="k">}</span>
+
+<span class="c"># print the length of the element located at index 1</span>
+<span class="nb">echo</span> <span class="k">${#</span><span class="nv">unix</span><span class="p">[1]</span><span class="k">}</span>
+
+<span class="c"># print subset</span>
+<span class="nv">Unix</span><span class="o">=(</span><span class="s1">'Debian'</span> <span class="s1">'Red hat'</span> <span class="s1">'Ubuntu'</span> <span class="s1">'Suse'</span> <span class="s1">'Fedora'</span> <span class="s1">'UTS'</span> <span class="s1">'OpenLinux'</span><span class="o">)</span><span class="p">;</span>
+<span class="nb">echo</span> <span class="k">${</span><span class="nv">Unix</span><span class="p">[@]</span>:3:2<span class="k">}</span> <span class="c"># output: Suse Fedora</span>
+</code></pre></div></div>
+
+<h2 id="get-return-status-of-last-executed-command-1">Get return status of last executed command</h2>
+<p>Syntax: <code class="highlighter-rouge">?</code></p>
+
+<p>Example:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">ls</span> <span class="c"># assume ls runs successfully </span>
+<span class="nb">echo</span> <span class="nv">$?</span> <span class="c"># print 0 (return value of success status)</span>
+</code></pre></div></div>
+
+<h2 id="to-uppercase-and-to-lowercase-1">to uppercase and to lowercase</h2>
+<p>Example:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">var</span><span class="o">=</span><span class="s2">"aLaY"</span>
+<span class="nb">echo</span> <span class="k">${</span><span class="nv">var</span><span class="p">,,</span><span class="k">}</span> <span class="c"># to lowercase</span>
+<span class="nb">echo</span> <span class="k">${</span><span class="nv">var</span><span class="p">^^</span><span class="k">}</span> <span class="c"># to uppercase</span>
+</code></pre></div></div>
+
+<h2 id="21-1">2&gt;&amp;1</h2>
+<p>https://stackoverflow.com/questions/818255/in-the-shell-what-does-21-mean</p>
+
+<p>https://www.brianstorti.com/understanding-shell-script-idiom-redirect/</p>
+
+<p>File descriptor 1 is the <code class="highlighter-rouge">stdout</code>.</p>
+
+<p>File descriptor 2 is the <code class="highlighter-rouge">stderr</code>.</p>
+
+<p><code class="highlighter-rouge">2&gt;&amp;1</code> means “redirect the <code class="highlighter-rouge">stderr</code> to the same place we are redirectering the <code class="highlighter-rouge">stdout</code>”.</p>
+
+<p>Example:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>./main.out <span class="o">&gt;</span> output.txt 2&gt;&amp;1 <span class="c"># this will save stderr and stdout output to output.txt, but nothing appears on screen</span>
+
+<span class="nv">$ </span>./main.out 2&gt;&amp;1 | tee output.txt <span class="c"># this will save stderr and stdout to output.txt, they also appear on screen</span>
+<span class="sb">```</span><span class="c"># Contents</span>
+- <span class="o">[</span>file]<span class="o">(</span><span class="c">#file)</span>
+- <span class="o">[</span>find]<span class="o">(</span><span class="c">#find)</span>
+- <span class="o">[</span>locate]<span class="o">(</span><span class="c">#locate)</span>
+- <span class="o">[</span><span class="nb">grep</span><span class="o">](</span><span class="c">#grep)</span>
+- <span class="o">[</span>du]<span class="o">(</span><span class="c">#du)</span>
+- <span class="o">[</span>df]<span class="o">(</span><span class="c">#df)</span>
+- <span class="o">[</span>sort]<span class="o">(</span><span class="c">#sort)</span>
+- <span class="o">[</span>wc]<span class="o">(</span><span class="c">#wc)</span>
+- <span class="o">[</span>uptime]<span class="o">(</span><span class="c">#uptime)</span>
+- <span class="o">[</span>whatis]<span class="o">(</span><span class="c">#whatis)</span>
+- <span class="o">[</span>tee]<span class="o">(</span><span class="c">#tee)</span>
+- <span class="o">[</span>sed]<span class="o">(</span><span class="c">#sed)</span>
+- <span class="o">[</span>awk]<span class="o">(</span><span class="c">#awk)</span>
+- <span class="o">[</span><span class="nb">read</span><span class="o">](</span><span class="c">#read)</span>
+- <span class="o">[</span>cut]<span class="o">(</span><span class="c">#cut)</span>
+- <span class="o">[</span>tr]<span class="o">(</span><span class="c">#tr)</span>
+- <span class="o">[</span>uniq]<span class="o">(</span><span class="c">#uniq)</span>
+- <span class="o">[</span>xargs]<span class="o">(</span><span class="c">#xargs)</span>
+- <span class="o">[</span>traceroute]<span class="o">(</span><span class="c">#traceroute)</span>
+- <span class="o">[</span>dig]<span class="o">(</span><span class="c">#dig)</span>
+- <span class="o">[</span>telnet]<span class="o">(</span><span class="c">#telnet)</span>
+- <span class="o">[</span>netstat]<span class="o">(</span><span class="c">#netstat)</span>
+- <span class="o">[</span>nmap]<span class="o">(</span><span class="c">#nmap)</span>
+- <span class="o">[</span>Loops]<span class="o">(</span><span class="c">#Loops)</span>
+- <span class="o">[</span>Conditional]<span class="o">(</span><span class="c">#Conditional)</span>
+- <span class="o">[</span>Arithmethic]<span class="o">(</span><span class="c">#Arithmethic)</span>
+- <span class="o">[</span>Array]<span class="o">(</span><span class="c">#Array)</span>
+- <span class="o">[</span>Get]<span class="o">(</span><span class="c">#Get)</span>
+- <span class="o">[</span>to]<span class="o">(</span><span class="c">#to)</span>
+
+<span class="c"># Really Basics</span>
+<span class="c">## file</span>
+<span class="sb">`</span>file<span class="sb">`</span> find out <span class="nb">type </span>of files.
+example
+<span class="sb">```</span>bash
+<span class="nv">$ </span>file test.xt
+<span class="o">&gt;</span> test.txt: ASCII text
+</code></pre></div></div>
+
+<h2 id="find-2">find</h2>
+<p>find files. Example:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>find -type f -name main.c      ( f for files, d for dir )
+</code></pre></div></div>
+
+<h2 id="locate-2">locate</h2>
+<p>like files, but not search in the filesystem. it looks to updatedb. pros: faster than <code class="highlighter-rouge">find</code>. cons: not as consistent as <code class="highlighter-rouge">find</code>, especially when there is a change in the filesystem.
+example:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>locate main.c (will look every file containing main.c, like `grep main.c`)
+</code></pre></div></div>
+
+<h2 id="grep-2">grep</h2>
+<p>https://www.thegeekstuff.com/2009/03/15-practical-unix-grep-command-examples/</p>
+
+<p>Examples:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">cat </span>demo_file
+THIS LINE IS THE 1ST UPPER CASE LINE IN THIS FILE.
+this line is the 1st lower <span class="k">case</span> line <span class="k">in </span>this file.
+This Line Has All Its First Character Of The Word With Upper Case.
+
+Two lines above this line is empty.
+And this is the last line.
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">grep</span> <span class="s2">"this"</span> demo_file
+this line is the 1st lower <span class="k">case</span> line <span class="k">in </span>this file.
+Two lines above this line is empty.
+And this is the last line.
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># we make two files first</span>
+<span class="nv">$ </span>cp demo_file demo_file1
+<span class="nv">$ </span><span class="nb">grep</span> <span class="s2">"this"</span> demo_<span class="k">*</span>
+demo_file:this line is the 1st lower <span class="k">case</span> line <span class="k">in </span>this file.
+demo_file:Two lines above this line is empty.
+demo_file:And this is the last line.
+demo_file1:this line is the 1st lower <span class="k">case</span> line <span class="k">in </span>this file.
+demo_file1:Two lines above this line is empty.
+demo_file1:And this is the last line.
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># case insensitive search, using -i</span>
+<span class="nv">$ </span><span class="nb">grep</span> <span class="nt">-i</span> <span class="s2">"the"</span> defmo_file
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># match regex</span>
+<span class="nv">$ </span><span class="nb">grep</span> <span class="s2">"lines.*empty"</span> demo_file
+Two lines above this line is empty.
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># match exact string, not substring using -w (like ^word$)</span>
+<span class="nv">$ </span><span class="nb">grep</span> <span class="nt">-w</span> <span class="s2">"word"</span> file
+</code></pre></div></div>
+
+<h2 id="id-2">id</h2>
+<p>Checks users and group. Example:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>id
+<span class="nv">uid</span><span class="o">=</span>1000<span class="o">(</span>bintang<span class="o">)</span> <span class="nv">gid</span><span class="o">=</span>1000<span class="o">(</span>bintang<span class="o">)</span> <span class="nv">groups</span><span class="o">=</span>1000<span class="o">(</span>bintang<span class="o">)</span>,10<span class="o">(</span>wheel<span class="o">)</span>,971<span class="o">(</span>docker<span class="o">)</span>,974<span class="o">(</span>wireshark<span class="o">)</span> <span class="nv">context</span><span class="o">=</span>unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023
+</code></pre></div></div>
+
+<h2 id="chmod-2">chmod</h2>
+<p>Usual mode, refer here: http://permissions-calculator.org/info/</p>
+
+<p>Special mode:
+<strong>setuid</strong>: executable file with the setuid bit can be executed with the privileges of the file’s owner. <code class="highlighter-rouge">chmod 4xxx file</code> or <code class="highlighter-rouge">chmod u+s</code>.</p>
+
+<p><strong>setgid</strong>: executable file with the setgid can be executed with the privileges of the file’s group. <code class="highlighter-rouge">chmod 2xxx file</code> or <code class="highlighter-rouge">chmod g+s file</code>.</p>
+
+<p><strong>sticky bit</strong>: when a directory’s sticky bit is set, the filesystem treats the files in such directories in a special way so that <em>only the file owner’s, dir owner’s, or root can rename/delet the file</em>. Example: <code class="highlighter-rouge">/tmp</code> folder. <code class="highlighter-rouge">chmod 1xxx file</code>.</p>
+
+<h2 id="du-2">du</h2>
+<p>check file/dir size.
+example:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ du -h file.txt (-h to make it readable like 4.0K, 46M, etc)
+$ du -h foldername (will print the size recursively)
+$ du -h foldername -d 0 (-d for depth, 0 will print the size of foldername only)
+$ du -h foldername -d 1 (will print -d 0 and the recursive of depth 1)
+</code></pre></div></div>
+<h2 id="df-2">df</h2>
+<ul>
+  <li>show disk usage</li>
+  <li>find out which partition a directory is on. Command: <code class="highlighter-rouge">df -h /path/to/dir</code>
+    <h2 id="sort-2">sort</h2>
+    <p>example
+```bash
+$ cat file.txt
+b
+c
+a</p>
+  </li>
+</ul>
+
+<p>$ sort file.txt
+a
+b
+c</p>
+
+<p>$ sort -r file.txt
+c
+b
+a</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+For sorting numbers:
+```bash
+$ sort -n file.txt
+1
+1.5
+2
+5
+</code></pre></div></div>
+
+<h2 id="wc-2">wc</h2>
+<p>word count
+line counting
+byte counting</p>
+
+<h2 id="uptime-2">uptime</h2>
+<p>tells how long the system has been running.</p>
+
+<h2 id="whatis-2">whatis</h2>
+<p>display one-line manual page description of a command. example</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ whatis whatis
+whatis (1)           - display one-line manual page descriptions
+
+$ whatis tee
+tee (1)              - read from standard input and write to standard output and files
+tee (1p)             - duplicate standard input
+tee (2)              - duplicating pipe content
+</code></pre></div></div>
+
+<h2 id="tee-2">tee</h2>
+<p>Read from standard input and write to standard output and files. For example, if we use <code class="highlighter-rouge">ping google.com &gt; file.txt</code>,  the output will be in file.txt but not in stdout. But with tee, we can get both to stdout and file.txt. Example:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ping google.com | tee file.txt
+
+or we can even output to multiple files
+
+$ ping google.com | tee file.txt another.txt
+</code></pre></div></div>
+
+<h2 id="sed-2">sed</h2>
+<p>sed: stream editor for filtering and transforming text.</p>
+
+<p>Example 1 replacing string, <a href="https://unix.stackexchange.com/questions/159367/using-sed-to-find-and-replace">link</a>:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sed -i -e 's/before/after/g' hello.txt
+</code></pre></div></div>
+
+<h2 id="awk-2">awk</h2>
+<p>pattern scanning and processing language. huh?</p>
+
+<p>Example 1, printing column of a text <a href="https://www.tutorialspoint.com/awk/awk_basic_examples.htm">link</a>:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cat file.txt
+1) Amit     Physics   80
+2) Rahul    Maths     90
+
+$ awk '{print $1}' file.txt
+1)
+2)
+
+$ awk '{print $2 " " $4}' file.txt
+Amit 80
+Rahul 90
+
+# print line which has more than 18 chars
+$ awk 'length($0) &gt; 18' file.txt
+</code></pre></div></div>
+
+<h2 id="read-2">read</h2>
+<p>read input.</p>
+
+<p>Example:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">read </span>varname
+<span class="nb">echo</span> <span class="s2">"Hello </span><span class="nv">$varname</span><span class="s2">"</span>
+</code></pre></div></div>
+
+<h2 id="cut-2">cut</h2>
+<p>https://www.thegeekstuff.com/2013/06/cut-command-examples/</p>
+
+<p><code class="highlighter-rouge">cut -c2 test.txt</code>  print (like <code class="highlighter-rouge">cat</code>) but only the 2nd character from each line of the test.txt.</p>
+
+<p><code class="highlighter-rouge">cut -c1-3 test.txt</code> print character 1 to 3 (like <code class="highlighter-rouge">asu</code>, 3 character from the first character) from each line of the test.txt.</p>
+
+<p><code class="highlighter-rouge">cut -c3- test.txt</code> print from the 3rd character.</p>
+
+<p><code class="highlighter-rouge">cut -c-8 test.txt</code> print from the first to the 8th character from each line of the test.txt.</p>
+
+<p><code class="highlighter-rouge">cut -c2,7 test.txt</code>  print the 2nd and 7th characters from each line of the test.txt.</p>
+
+<p><code class="highlighter-rouge">cut -c- test.txt</code> same as <code class="highlighter-rouge">cat test.txt</code>.</p>
+
+<p><code class="highlighter-rouge">cut -d':' -f1 /etc/passwd</code>   -d is delimiter, -f is the field. in this case, the output would be something like:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>root
+bin
+sync
+nginx
+</code></pre></div></div>
+
+<h2 id="tr-2">tr</h2>
+<p>https://www.geeksforgeeks.org/tr-command-in-unix-linux-with-examples/</p>
+
+<p>tr stands for translage. tr is for translating and deleting characters.</p>
+
+<p>Syntax:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>tr [OPTION] SET1 [SET2]
+
+OPTION:
+-c: complements the set of characters in string
+-d: delete characters in the first set from the output
+-s: replaces repeated characters listed in the SET1 with single occurence
+-t: truncates SET1
+</code></pre></div></div>
+
+<p>Example 1: how to convert lower case to upper case</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">echo</span> <span class="s2">"Budj"</span> | tr <span class="s2">"[a-z]"</span> <span class="s2">"[A-Z]"</span>
+</code></pre></div></div>
+
+<p>Example 2: translate white-space to tabs</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">echo</span> <span class="s2">"dewa budjana"</span> | tr <span class="s2">"[:space:]"</span> <span class="s1">'\t'</span>
+</code></pre></div></div>
+
+<p>Example 3: tranlate braces to parenthesis</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">echo</span> <span class="s2">"{dewa} budjana"</span> | tr <span class="s1">'{}'</span> <span class="s1">'()'</span>
+or
+tr <span class="s1">'{}'</span> <span class="s1">'()'</span> file.txt
+</code></pre></div></div>
+
+<p>Example 4: delete specified char using -d</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">echo</span> <span class="s2">"hyang giri"</span> | tr <span class="nt">-d</span> <span class="s1">'g'</span> <span class="c"># otuput: hyan iri</span>
+<span class="nb">echo</span> <span class="s2">"dafuq 123"</span> | tr <span class="nt">-d</span> <span class="s2">"[:digit:]"</span> <span class="c"># output: dafuq</span>
+</code></pre></div></div>
+
+<p>Example 5: complement the sets using -c options</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">echo</span> <span class="s2">"dafuq 123"</span> | tr <span class="nt">-cd</span> <span class="s2">"[:digit:]"</span> <span class="c"># output: 123</span>
+</code></pre></div></div>
+
+<h2 id="uniq-2">uniq</h2>
+<p><code class="highlighter-rouge">uniq</code> = unique.</p>
+
+<p>Examples:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">cat </span>file.txt
+wanjir
+wanjir
+kancut men
+kancut
+
+<span class="nv">$ </span>uniq file.txt
+wanjir
+kancut men
+kancut
+
+<span class="nv">$ </span>uniq <span class="nt">-c</span> file.txt <span class="c"># it counts the number of repetitions</span>
+2 wanjir
+1 kancut men
+1 kancut
+
+<span class="nv">$ </span>uniq <span class="nt">-D</span> file.txt <span class="c"># print only duplicate lines</span>
+wanjir
+wanjir
+</code></pre></div></div>
+
+<h2 id="xargs-2">xargs</h2>
+<p>…</p>
+
+<h1 id="basic-networking-2">Basic Networking</h1>
+<h2 id="traceroute-2">traceroute</h2>
+<p>print the route packets trace to network host.
+Example:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ traceroute google.com
+</code></pre></div></div>
+
+<h2 id="dig-2">dig</h2>
+<p>DNS lookup utility. Example:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ dig geekflare.com
+</code></pre></div></div>
+
+<h2 id="telnet-2">telnet</h2>
+<p>user interface to the TELNET protocol. used to check if the connection is ok. example:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>telnet geekflare 443
+</code></pre></div></div>
+
+<h2 id="netstat-2">netstat</h2>
+<p>Print network connections, routing tables, interface statistics, masquerade connections, and multicast memberships.</p>
+
+<p>Review network connection and open sockets.</p>
+
+<p>Examples:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># display routing table</span>
+netstate <span class="nt">-r</span>
+
+<span class="c"># display network services</span>
+netstate <span class="nt">-i</span>
+
+<span class="c"># continuous monitorign</span>
+netstat <span class="nt">-c</span>
+
+<span class="c"># see tcp connections</span>
+netstat <span class="nt">-t</span>
+
+<span class="c"># see udp conn</span>
+netstate <span class="nt">-u</span>
+
+<span class="c"># see state LISTENING</span>
+netstate <span class="nt">-L</span>
+
+<span class="c"># practical use</span>
+netstate <span class="nt">-tulpn</span> <span class="c"># p: display programe name, n: numeric</span>
+</code></pre></div></div>
+
+<h2 id="lsof-2">lsof</h2>
+<p>lsof lists the open files associated with an application. Example:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>lsof <span class="nt">-i</span> tcp:80
+</code></pre></div></div>
+
+<h2 id="nmap-2">nmap</h2>
+<p>check opened ports. port scanner.</p>
+
+<h1 id="loop-conditional-etc-2">Loop, Conditional, etc</h1>
+<h2 id="loops-2">Loops</h2>
+<p>Example 1:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for </span>i <span class="k">in</span> <span class="o">{</span>1..4<span class="o">}</span>
+<span class="k">do
+    </span><span class="nb">echo</span> <span class="s2">"</span><span class="nv">$i</span><span class="s2">"</span>
+<span class="k">done</span>
+
+<span class="c"># output:</span>
+<span class="c"># 1</span>
+<span class="c"># 2</span>
+<span class="c"># 3</span>
+<span class="c"># 4</span>
+</code></pre></div></div>
+
+<p>Example 2:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for </span>i <span class="k">in</span> <span class="o">{</span>0..4..2<span class="o">}</span>
+<span class="k">do 
+    </span><span class="nb">echo</span> <span class="s2">"</span><span class="nv">$i</span><span class="s2">"</span>
+<span class="k">done</span>
+
+<span class="c"># output</span>
+<span class="c"># 0</span>
+<span class="c"># 2</span>
+<span class="c"># 4</span>
+</code></pre></div></div>
+
+<p>Example 3:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for </span>file <span class="k">in </span>server.cpp plain.zip
+<span class="k">do
+	</span>wc <span class="nv">$file</span>
+<span class="k">done</span>
+
+<span class="c"># output:</span>
+<span class="c"># 19  49 484 server.cpp</span>
+<span class="c"># 143900   815790 44879792 plain.zip</span>
+</code></pre></div></div>
+
+<h2 id="conditional-2">Conditional</h2>
+<p>Example 1:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">var</span><span class="o">=</span><span class="s2">"kancut"</span>
+<span class="k">if</span> <span class="o">[</span> <span class="s2">"</span><span class="nv">$var</span><span class="s2">"</span> <span class="o">=</span> <span class="s2">"abc"</span> <span class="o">]</span><span class="p">;</span> <span class="k">then
+    </span><span class="nb">echo</span> <span class="s2">"true"</span>
+<span class="k">else
+    </span><span class="nb">echo</span> <span class="s2">"false"</span>
+<span class="k">fi</span>
+</code></pre></div></div>
+
+<p>Example 2:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">x</span><span class="o">=</span>0
+<span class="nv">y</span><span class="o">=</span>1
+<span class="k">if</span> <span class="o">[</span> <span class="s2">"</span><span class="nv">$x</span><span class="s2">"</span> <span class="nt">-eq</span> <span class="s2">"</span><span class="nv">$y</span><span class="s2">"</span> <span class="o">]</span><span class="p">;</span> <span class="k">then
+    </span><span class="nb">echo</span> <span class="s2">"x is equal to y"</span>
+<span class="k">elif</span> <span class="o">[</span> <span class="s2">"</span><span class="nv">$x</span><span class="s2">"</span> <span class="nt">-gt</span> <span class="s2">"</span><span class="nv">$y</span><span class="s2">"</span> <span class="o">]</span><span class="p">;</span> <span class="k">then
+    </span><span class="nb">echo</span> <span class="s2">"x is greater than y"</span>
+<span class="k">elif</span> <span class="o">[</span> <span class="s2">"</span><span class="nv">$x</span><span class="s2">"</span> <span class="nt">-lt</span> <span class="s2">"</span><span class="nv">$y</span><span class="s2">"</span> <span class="o">]</span><span class="p">;</span> <span class="k">then
+    </span><span class="nb">echo</span> <span class="s2">"x is less than y"</span>
+<span class="k">fi
+
+if</span> <span class="o">[</span> <span class="s2">"</span><span class="nv">$x</span><span class="s2">"</span> <span class="nt">-ne</span> <span class="s2">"</span><span class="nv">$y</span><span class="s2">"</span> <span class="o">]</span><span class="p">;</span> <span class="k">then
+    </span><span class="nb">echo</span> <span class="s2">"x is not equal to y"</span>
+<span class="k">fi</span>
+</code></pre></div></div>
+
+<p>Example 3:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">name</span><span class="o">=</span><span class="s2">"jeff beck"</span>
+<span class="c"># check if it's an empty string</span>
+<span class="k">if</span> <span class="o">[</span> <span class="nt">-z</span> <span class="s2">"</span><span class="nv">$name</span><span class="s2">"</span> <span class="o">]</span><span class="p">;</span> <span class="k">then
+    </span><span class="nb">echo</span> <span class="s2">"name is an empty string"</span>
+<span class="k">fi</span>
+
+<span class="c"># check if the length is not zero</span>
+<span class="k">if</span> <span class="o">[</span> <span class="s2">"</span><span class="nv">$name</span><span class="s2">"</span> <span class="o">]</span><span class="p">;</span> <span class="k">then
+    </span><span class="nb">echo</span> <span class="s2">"name's length is NOT zero"</span>
+<span class="k">fi</span>
+</code></pre></div></div>
+
+<p>Example 4:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">file_1</span><span class="o">=</span><span class="s2">"server.cpp"</span>
+<span class="nv">file_2</span><span class="o">=</span><span class="s2">"one.cpp"</span>
+<span class="nv">dir_1</span><span class="o">=</span><span class="s2">"cpp"</span>
+<span class="nv">dir_2</span><span class="o">=</span><span class="s2">"catch2"</span>
+
+<span class="k">if</span> <span class="o">[</span> <span class="nt">-f</span> <span class="s2">"</span><span class="nv">$file_1</span><span class="s2">"</span> <span class="o">]</span><span class="p">;</span> <span class="k">then
+	</span><span class="nb">echo</span> <span class="s2">"</span><span class="nv">$file_1</span><span class="s2"> exists"</span>
+<span class="k">fi
+
+if</span> <span class="o">[</span> <span class="nt">-f</span> <span class="s2">"</span><span class="nv">$file_2</span><span class="s2">"</span> <span class="o">]</span><span class="p">;</span> <span class="k">then
+    </span><span class="nb">echo</span> <span class="s2">"</span><span class="nv">$file_2</span><span class="s2"> exists"</span>
+<span class="k">fi
+
+if</span> <span class="o">[</span> <span class="nt">-d</span> <span class="s2">"</span><span class="nv">$dir_1</span><span class="s2">"</span> <span class="o">]</span><span class="p">;</span> <span class="k">then
+    </span><span class="nb">echo</span> <span class="s2">"</span><span class="nv">$dir_1</span><span class="s2"> exists"</span>
+<span class="k">fi
+
+if</span> <span class="o">[</span> <span class="nt">-d</span> <span class="s2">"</span><span class="nv">$dir_2</span><span class="s2">"</span> <span class="o">]</span><span class="p">;</span> <span class="k">then
+    </span><span class="nb">echo</span> <span class="s2">"</span><span class="nv">$dir_2</span><span class="s2"> exists"</span>
+<span class="k">fi</span>
+</code></pre></div></div>
+
+<p><code class="highlighter-rouge">-f</code> and <code class="highlighter-rouge">-d</code> do not work recursively (i.e. they do not look inside other directories).</p>
+
+<p>For other than <code class="highlighter-rouge">-f</code> and <code class="highlighter-rouge">-d</code>,  see: http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_07_01.html</p>
+
+<h2 id="arithmethic-operations-2">Arithmethic Operations</h2>
+<p>Example:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">x</span><span class="o">=</span>2
+<span class="nv">y</span><span class="o">=</span>9
+<span class="nb">echo</span> <span class="sb">`</span>expr <span class="s2">"</span><span class="nv">$x</span><span class="s2">"</span> + <span class="s2">"</span><span class="nv">$y</span><span class="s2">"</span><span class="sb">`</span>
+<span class="nb">echo</span> <span class="sb">`</span>expr <span class="s2">"</span><span class="nv">$x</span><span class="s2">"</span> - <span class="s2">"</span><span class="nv">$y</span><span class="s2">"</span><span class="sb">`</span>
+<span class="nb">echo</span> <span class="sb">`</span>expr <span class="s2">"</span><span class="nv">$x</span><span class="s2">"</span> <span class="se">\*</span> <span class="s2">"</span><span class="nv">$y</span><span class="s2">"</span><span class="sb">`</span>
+<span class="nb">echo</span> <span class="sb">`</span>expr <span class="s2">"</span><span class="nv">$x</span><span class="s2">"</span> / <span class="s2">"</span><span class="nv">$y</span><span class="s2">"</span><span class="sb">`</span>
+
+<span class="nv">i</span><span class="o">=</span>0
+<span class="c">#increment</span>
+<span class="o">((</span><span class="nv">i</span><span class="o">=</span>i+1<span class="o">))</span>
+</code></pre></div></div>
+
+<h2 id="array-2">Array</h2>
+<p>Examples: https://www.thegeekstuff.com/2010/06/bash-array-tutorial/</p>
+
+<p>Example 1:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>unix[0]<span class="o">=</span><span class="s1">'Debian'</span>
+unix[1]<span class="o">=</span><span class="s1">'Fedora'</span>
+
+<span class="nb">echo</span> <span class="k">${</span><span class="nv">unix</span><span class="p">[1]</span><span class="k">}</span> <span class="c"># output: Fedora</span>
+</code></pre></div></div>
+
+<p>Example 2: <code class="highlighter-rouge">declare -a</code> declares an array</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">declare</span> <span class="nt">-a</span> <span class="nv">unix</span><span class="o">=(</span><span class="s1">'Debian'</span> <span class="s1">'Fedora'</span><span class="o">)</span>
+
+<span class="c"># print all elements</span>
+<span class="nb">echo</span> <span class="k">${</span><span class="nv">unix</span><span class="p">[*]</span><span class="k">}</span>
+
+<span class="c"># print the length of the array</span>
+<span class="nb">echo</span> <span class="k">${#</span><span class="nv">unix</span><span class="p">[*]</span><span class="k">}</span>
+
+<span class="c"># print the length of the element located at index 1</span>
+<span class="nb">echo</span> <span class="k">${#</span><span class="nv">unix</span><span class="p">[1]</span><span class="k">}</span>
+
+<span class="c"># print subset</span>
+<span class="nv">Unix</span><span class="o">=(</span><span class="s1">'Debian'</span> <span class="s1">'Red hat'</span> <span class="s1">'Ubuntu'</span> <span class="s1">'Suse'</span> <span class="s1">'Fedora'</span> <span class="s1">'UTS'</span> <span class="s1">'OpenLinux'</span><span class="o">)</span><span class="p">;</span>
+<span class="nb">echo</span> <span class="k">${</span><span class="nv">Unix</span><span class="p">[@]</span>:3:2<span class="k">}</span> <span class="c"># output: Suse Fedora</span>
+</code></pre></div></div>
+
+<h2 id="get-return-status-of-last-executed-command-2">Get return status of last executed command</h2>
+<p>Syntax: <code class="highlighter-rouge">?</code></p>
+
+<p>Example:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">ls</span> <span class="c"># assume ls runs successfully </span>
+<span class="nb">echo</span> <span class="nv">$?</span> <span class="c"># print 0 (return value of success status)</span>
+</code></pre></div></div>
+
+<h2 id="to-uppercase-and-to-lowercase-2">to uppercase and to lowercase</h2>
+<p>Example:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">var</span><span class="o">=</span><span class="s2">"aLaY"</span>
+<span class="nb">echo</span> <span class="k">${</span><span class="nv">var</span><span class="p">,,</span><span class="k">}</span> <span class="c"># to lowercase</span>
+<span class="nb">echo</span> <span class="k">${</span><span class="nv">var</span><span class="p">^^</span><span class="k">}</span> <span class="c"># to uppercase</span>
+</code></pre></div></div>
+
+<h2 id="21-2">2&gt;&amp;1</h2>
+<p>https://stackoverflow.com/questions/818255/in-the-shell-what-does-21-mean</p>
+
+<p>https://www.brianstorti.com/understanding-shell-script-idiom-redirect/</p>
+
+<p>File descriptor 1 is the <code class="highlighter-rouge">stdout</code>.</p>
+
+<p>File descriptor 2 is the <code class="highlighter-rouge">stderr</code>.</p>
+
+<p><code class="highlighter-rouge">2&gt;&amp;1</code> means “redirect the <code class="highlighter-rouge">stderr</code> to the same place we are redirectering the <code class="highlighter-rouge">stdout</code>”.</p>
+
+<p>Example:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>./main.out <span class="o">&gt;</span> output.txt 2&gt;&amp;1 <span class="c"># this will save stderr and stdout output to output.txt, but nothing appears on screen</span>
+
+<span class="nv">$ </span>./main.out 2&gt;&amp;1 | tee output.txt <span class="c"># this will save stderr and stdout to output.txt, they also appear on screen</span>
 </code></pre></div></div>
