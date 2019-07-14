@@ -11,7 +11,7 @@ Aalto University and KTH Royal Institute of Technology <br />
 Master of Science Student in Security and Cloud Computing <br />
 
 Nokia Bell Labs, Finland <br />
-Research Trainee, working on QUIC protocol
+Research Trainee, research on HTTP3 (HTTP over QUIC)
 
 ### Interests (not in order)
 - Guitars
@@ -21,10 +21,8 @@ Research Trainee, working on QUIC protocol
 - Guitars
 - Internet of Things
 - Distributed systems
-- Did I say "guitars"?
 
-Sad truth: I have much less knowledge and skills than my interests. So, if I am interested in something, it does not mean I am good at it.<br />
-The notes I gathered for my own interests: [here](./pages/interests.html).
+Sad truth: I suck at many/most/all of my interests. But I don't care. I just love them and like spending most of my time with them.
 
 ### Conference
 - "Performance evaluation of HTTP-CoAP proxy for wireless sensor and actuator networks" _2016 IEEE Asia Pacific Conference on Wireless and Mobile (APWiMob)_ [link](https://ieeexplore.ieee.org/document/7811451)
