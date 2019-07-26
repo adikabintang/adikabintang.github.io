@@ -1,3 +1,1 @@
-theme: jekyll-theme-minimal
-title: Adika Bintang Sulaeman's Homepage
-logo : /images/kancut.jpg
+remote_theme: "mmistakes/so-simple-theme"
