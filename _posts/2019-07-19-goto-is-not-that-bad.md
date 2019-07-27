@@ -1,5 +1,6 @@
 ---
 title: "'goto' Is Not That Bad"
+date: 2019-07-19T11:19:50-04:00
 categories:
   - Programming
 tags:
