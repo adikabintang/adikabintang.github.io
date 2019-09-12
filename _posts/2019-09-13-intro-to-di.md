@@ -9,7 +9,7 @@ tags:
 
 # Intro
 
-Consider this _tightly coupled_ objects:
+Consider these _tightly coupled_ objects:
 
 ```java
 
