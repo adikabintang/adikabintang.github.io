@@ -28,6 +28,8 @@ We (Sanadhi Sutandi, Jendra Dwiputra, and me) built this device, including the b
 
 Anyway, a bunch of sensors, STM32F1 ARM microcontrollers, C, PHP with Yii framework for the backend, were the main things of our project. We had some fun. Those people in the group were good and fun.
 
+Oh, we had [a video!](https://www.youtube.com/watch?v=OvE4thOgpaQ)
+
 ## Wheeled Robot, 2015
 
 ![beroda](images/beroda.jpeg)
