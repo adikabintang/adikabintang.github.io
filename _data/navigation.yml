@@ -16,3 +16,5 @@
   url: /about/
 # - title: External Page
 #   url: https://the-page.com/you-want-to-link-to.html
+- title: Projects
+  url: /projects/
