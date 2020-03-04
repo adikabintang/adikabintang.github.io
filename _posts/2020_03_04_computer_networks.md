@@ -7,7 +7,7 @@ tags:
   - Computer Networks
 ---
 
-I am a noob in computer networks. In fact, I am a noob in everything. The funny thing is I didn't like computer networks when I was started learning it in the Bachelor's, but now my work is around this area, especially cloud and edge infrastructure. Back then, I used to put most of my time and effort to learn embedded systems and robotics. I was not intereste in computer networks because the lecture at that time was a copy-paste from Cisco module. It was boring as hell.
+I am a noob in computer networks. In fact, I am a noob in everything. The funny thing is I didn't like computer networks when I was started learning it in the Bachelor's, but now my work is around this area, especially cloud and edge infrastructure. Back then, I used to put most of my time and effort to learn embedded systems and robotics. I was not interested in computer networks because the lecture at that time was a copy-paste from Cisco module. It was boring as hell.
 
 However, by the end of my Bachelor's study, I had to learn it because somehow my thesis was around the IoT network. So, here is what I learned about studying computer networks.
 
@@ -25,11 +25,11 @@ Tech blogs from companies such as [Cloudflare blog](https://blog.cloudflare.com/
 
 When I was in a Bachelor's, the course taught from the physical layer up to the application layer. It is understandable to teach it that way, because that's how it is built. However, for a learning purpose, I find it harder to understand.
 
-Consider this example; when we were in the elementary school, we were taught that the area of a circle is $\pi r^2$ without knowing where the formulae comes from. Then we go deeper as we go to higher grade and finally comes to the detail when we were in the college. So, learning from the surface to the bottom is not a new approach.
+Consider this example; when we were in the elementary school, we were taught that the area of a circle was $\pi r^2$ without knowing where the formulae came from. Then we go deeper as we go to higher grade and finally comes to the detail when we were in the college. So, learning from the surface to the bottom is not a new approach.
 
-I found it easier to do top-down approach, then followed by whatever we need to focus on. The book "Computer Networking: A Top-Down Approach" [[amazon](https://www.amazon.com/Computer-Networking-Top-Down-Approach-7th/dp/0133594149)] is very readable and I enjoyed reading it. 
+I found it easier to do top-down approach, then followed by whatever we need to focus on. The book "Computer Networking: A Top-Down Approach" [[amazon](https://www.amazon.com/Computer-Networking-Top-Down-Approach-7th/dp/0133594149)] is very readable, and I enjoyed reading it. 
 
-The top-down approach book is not that comprehensive on some parts like routing protocol, because the aim of the book is to introduce computer networks to Bachelor's student. I continued by reading "Computer Networking : Principles, Protocols and Practice" [[open.umn.edu](https://open.umn.edu/opentextbooks/textbooks/computer-networking-principles-protocols-and-practice)] which is deeper on some topics like TCP congestion control and routing protocol. I also found the "TCP/IP Networking" course from EPFL excellent, which we can access through [[EPFL moodle](https://moodlearchive.epfl.ch/2018-2019/course/view.php?id=523)].
+The top-down approach book is not that comprehensive on some parts like routing protocol, because the aim of the book is to introduce computer networks to Bachelor's students. I continued by reading "Computer Networking: Principles, Protocols and Practice" [[open.umn.edu](https://open.umn.edu/opentextbooks/textbooks/computer-networking-principles-protocols-and-practice)] which is deeper on some topics like TCP congestion control and routing protocol. I also found the "TCP/IP Networking" course from EPFL excellent, which we can access through [[EPFL moodle](https://moodlearchive.epfl.ch/2018-2019/course/view.php?id=523)].
 
 # We need to experiment to validate our understanding
 
