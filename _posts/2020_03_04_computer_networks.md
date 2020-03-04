@@ -1,6 +1,10 @@
 ---
 title: "Journey of Learning Computer Networks So Far"
 date: 2019-07-19T08:08:50-04:00
+categories:
+  - Computer Networks
+tags:
+  - Computer Networks
 ---
 
 I am a noob in computer networks. In fact, I am a noob in everything. The funny thing is I didn't like computer networks when I was started learning it in the Bachelor's, but now my work is around this area, especially cloud and edge infrastructure. Back then, I used to put most of my time and effort to learn embedded systems and robotics. I was not intereste in computer networks because the lecture at that time was a copy-paste from Cisco module. It was boring as hell.
