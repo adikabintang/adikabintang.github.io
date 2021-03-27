@@ -8,7 +8,7 @@ e-mail: firstname.middlename.firstletteroflastname@gmail.com
 
 ## Workplace (including ex-workplace) and schools
 
-**Facebook**, 2020 - Present <br />
+**Facebook**, 2020 - Present, Ireland <br />
 Production Engineer
 
 **Aalto University** and **KTH Royal Institute of Technology** <br />
