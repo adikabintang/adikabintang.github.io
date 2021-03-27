@@ -7,6 +7,10 @@ Name: Adika Bintang Sulaeman
 e-mail: firstname.middlename.firstletteroflastname@gmail.com
 
 ## Workplace (including ex-workplace) and schools
+
+**Facebook**, 2020 - Present <br />
+Production Engineer
+
 **Aalto University** and **KTH Royal Institute of Technology** <br />
 Master of Science Student in Security and Cloud Computing ([Erasmus Programme](https://secclo.eu/)) <br />
 
